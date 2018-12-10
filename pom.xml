@@ -121,11 +121,11 @@
             <scope>runtime</scope>
         </dependency>
          <!-- ojdbc7.jar example -->
-        <dependency>
+       <!-- <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc7</artifactId>
             <version>12.1.0</version>
-        </dependency>
+        </dependency>-->
 		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc6 -->
 		<!--<dependency>
 			<groupId>com.oracle</groupId>
