@@ -1,3 +1,4 @@
+/*
 package com.itsight.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,4 @@ public class EmailServiceImpl implements EmailService {
         message.setText("Demo");
         emailSender.send(message);
     }
-}
+}*/
