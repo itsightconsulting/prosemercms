@@ -103,18 +103,19 @@
 
 		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- 		<script> 
- 			if (!window.jQuery) {
- 				document.write('<script th:src="@{/js/libs/jquery-3.2.1.min.js}"><\/script>');
- 			}
- 		</script> -->
+
+		<script th:inline="javascript">
+            /*<![CDATA[*/
+            if (!window.jQuery) { var _ctx = document.querySelector('head meta[name="_ctx"]').getAttribute("content"); document.write('<script src=\"'+_ctx+'js/libs/jquery-3.2.1.min.js"><\/script>');}
+            /*]]>*/
+		</script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<!--	<script>
-			if (!window.jQuery.ui) {
-				document.write('<script th:src="@{/js/libs/jquery-ui.min.js"><\/script>');
-			}
-		</script> -->
+		<script th:inline="javascript">
+            /*<![CDATA[*/
+            if (!window.jQuery.ui) { var _ctx = document.querySelector('head meta[name="_ctx"]').getAttribute("content"); document.write('<script src=\"'+_ctx+'js/libs/jquery-ui.min.js"><\/script>');}
+            /*]]>*/
+		</script>
 
 		<!-- IMPORTANT: APP CONFIG -->
 		<script th:src="@{/js/app.config.js}"></script>

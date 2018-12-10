@@ -6,7 +6,7 @@ spring:
     suffix: .html
   jpa:
     hibernate:
-        ddl-auto: update
+        ddl-auto: none
         naming:
           strategy: org.hibernate.cfg.ImprovedNamingStrategy
   http:

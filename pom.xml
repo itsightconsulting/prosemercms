@@ -5,8 +5,8 @@
 
 	<groupId>com.itsight</groupId>
 	<artifactId>prosemer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>war</packaging>
 
 	<name>prosemer</name>
 	<description>Prosemer project</description>
@@ -121,7 +121,7 @@
             <scope>runtime</scope>
         </dependency>
          <!-- ojdbc7.jar example -->
-       <!-- <dependency>
+        <!--<dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc7</artifactId>
             <version>12.1.0</version>
