@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es-ES"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="_ctx" th:content="@{/}" />
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, miminum-scale=1, user-scalable=no" name="viewport"/>
+    <title>Prosemer</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
+    <style>
+      .no-ls{
+        list-style: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header th:replace="html-commons/en_header_web :: en-fg-header">
+    </header>
+    <!-- END HEADER -->
+    <div onclick="togglemenu.ocultarMenu()">
+      <div class="container">
+        <div class="buscador">
+          <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
+            <div class="styleselect">
+                <select id="AppLanguageW">
+                  <option value="0">Español</option>
+                  <option value="1" selected="selected">English</option>
+                </select>
+            </div>
+          </div>
+          <div class="icon"><a th:href="@{/web/en/research/search}"><img th:src="@{/img/lupa.png}"/></a></div>
+        </div>
+        <div class="row pd_right division">
+          <div class="col-md-4">
+            <!-- MENU VERTICAL -->
+            <div th:replace="html-commons/en_menu_web :: en-fg-menu-vertical">
+            </div>
+            <!-- END MENU VERTICAL -->
+            <div class="filtro">
+              <div class="head">
+                <ul>
+                  <li>
+                    <p th:text="'Achievements starting from '+${beneficiario} + '\'s research'" style="text-transform:initial;"></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="body" id="BodyEstudios">
+	              <div>
+	                <ul>
+	                  <li th:each="e : ${lstEstudios}">
+	                  		<a href="#">
+	                      		<p th:attr="data-id=${e.id}" class="title-estudio" th:text="${e.tituloPrincipal}" style="text-transform:initial;"></p>
+	                      	</a>
+	                  </li>
+	                </ul>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contenido estudio_select quienes_somos logros_section">
+              <div class="title">
+                <h2><strong th:text="${beneficiario}"></strong></h2><img th:src="@{/img/line.png}" class="guion"/>
+              </div>
+              <p style="font-size:14px;"><strong th:text="${msgCabecera != ''}?${msgCabecera}:'The events presented following has had Prosemer participation inside scheduled activity framework:'"></strong></p>
+              <div id="Coincidencias">
+	              <ul class="alcance">
+	                <li th:each="l : ${lstLogros}" th:utext="${l.descripcion}">
+	                </li>
+	              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER  -->
+    <footer th:replace="html-commons/footer_web :: fg-footer">
+    </footer>
+    <!-- END FOOTER  -->	
+    <script th:src="@{/js/public/vendor/vendor_all.js}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
+    <script th:src="@{/js/public/init.js}"></script>
+    <script th:src="@{/js/cw/logro/search.js}"></script>
+    
+  </body>
+</html>

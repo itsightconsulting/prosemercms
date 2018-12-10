@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/tokenfield-typeahead.css}"/>
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap-tokenfield.css}"/>
+	  </head>
+	<style type="text/css">
+		.modal-header {border:none; text-align: center; font-size: 1.4em;font-family: 'Raleway-Regular';background: #bfc8d0;color: white;}
+		#sortArchivos, #sortImagenes, #AliasList{padding: 0px;}
+		#sortArchivos li, #sortImagenes li , #FileList li{margin-bottom: 7px;}
+		#AliasList input{margin-bottom: 3.5px;width: 90%;}
+	</style>
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-edit fa-fw "></i> 
+									Gestión 
+								<span class="txt-color-black">> 
+									<b>Memoria del Programa</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+					<div class="row" id="view_list">
+				          <div class="col-sm-12 col-md-12 col-lg-12" >
+				            <table id="tblRegistros" data-mobile-responsive="true">
+				              <thead>
+				                <tr>
+				                  <th data-field="id" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Codigo"></th>
+								  <th data-field="nombreMenu" data-sortable="true" data-formatter="linkFormatter" data-halign="left" data-valign="middle" data-align="left">Nombre Menu</th>
+				                  <th data-field="fechaModificacion" data-halign="left" data-valign="middle" data-align="left">Fecha Modificación</th>
+				                  <th data-field="modificadoPor" data-halign="left" data-valign="middle" data-align="left">Modificado Por</th>
+				                  <th data-formatter="Opciones"  data-halign="center" data-valign="middle" data-align="center" data-width="120">Acciones</th>
+				                </tr>
+				              </thead>
+				            </table>
+				          </div>
+				    </div>
+				    <div class="row" id="view_register">
+				    	<div class="">
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-desktop"></i> </span>
+									<!-- Tittle form -->	
+										<h2><strong>Datos Generales</strong></h2>			
+								</header>
+								<div>
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										<form id="frm_registro" class="smart-form">
+											<fieldset>
+												<div class="">
+													<section class="col col-6">
+														<label class="label">Título Principal</label>
+														<label class="input"><i class="icon-append fa fa-asterisk"></i>
+															<input id="TituloPrincipal" name="TituloPrincipal" type="text" style="font-weight: bold;" />
+															<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+														</label>
+														<input id="UploadOnlyFile" type="file" accept=".pdf,.docx,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.rar" style="display: none;"/>
+														<input id="UploadResumenImage" type="file" accept=".jpeg,.jpg,.png" style="display: none;"/>
+														<input id="UploadPortadaImage" type="file" accept=".jpeg,.jpg,.png" style="display: none;"/>
+													</section>
+												</div>
+											</fieldset>
+											<input type="hidden" id="hIdMemoria"/>
+								            <footer class="">
+								                    <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+								                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+								            </footer>
+								        </form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<section id="widget-grid" class="">
+						<div class="row">
+							<!-- NEW WIDGET START -->
+							<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								
+								<!-- Widget ID (each widget will need unique ID)-->
+								<div class="jarviswidget jarviswidget-color-darken" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" >
+									<!-- widget options:
+										usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+										
+										data-widget-colorbutton="false"	
+										data-widget-editbutton="false"
+										data-widget-togglebutton="false"
+										data-widget-deletebutton="false"
+										data-widget-fullscreenbutton="false"
+										data-widget-custombutton="false"
+										data-widget-collapsed="true" 
+										data-widget-sortable="false"
+										
+									-->
+									<header>
+										<span class="widget-icon"> <i class="fa fa-pencil"></i> </span>
+										<h2><strong>Contenido</strong></h2>
+									</header>
+									<!-- widget div-->
+									<div>
+										<!-- widget edit box -->
+										<div class="jarviswidget-editbox">
+											<!-- This area used as dropdown edit box -->
+										</div>
+										<!-- end widget edit box -->
+										<!-- widget content -->
+										<div class="widget-body no-padding">
+											<textarea name="ckeditor" id="ckeditor">
+										    </textarea>	
+										</div>
+										<!-- end widget content -->
+									</div>
+									<!-- end widget div -->
+								</div>
+								<!-- end widget -->
+							</article>
+							<!-- WIDGET END -->
+					    </div>
+						</section>
+						</div>
+						<!-- end row -->
+					</section>
+	        </fieldset>
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/plugin/ckeditor/ckeditor.js}"></script>
+		<script th:src="@{/js/bootstrap-table.min.js}"></script>
+		<script th:src="@{/js/bootbox.min.js}"></script>
+		<script th:src="@{/js/cw/memoria/main.js}"></script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+		/*]]>*/
+		</script>
+
+	</body>
+
+</html>

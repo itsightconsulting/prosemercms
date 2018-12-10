@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-ES"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="_ctx" th:content="@{/}" />
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, miminum-scale=1, user-scalable=no" name="viewport"/>
+    <title>Prosemer</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
+  </head>
+  <style type="text/css">
+  .modal-header {border:none; text-align: center; font-size: 1.4em;font-family: 'Raleway-Regular';background: #bfc8d0;color: white;}
+  .modal-footer {text-align:left;}
+  .modal-footer .pull-left{font-family: 'Raleway-Regular';}
+  </style>
+  <body>
+    <!-- HEADER -->
+    <header th:replace="html-commons/header_web :: fg-header">
+    </header>
+    <!-- END HEADER -->
+    <div onclick="togglemenu.ocultarMenu()">
+      <style type="text/css">
+        .filtro {
+        	display: none;
+        }
+        .articulo_section .owl-nav {
+            top: 72px;
+        }
+        .owl-item {
+            height: auto;
+        }
+      </style>
+      <div class="container">
+        <div class="buscador">
+          <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
+            <div class="styleselect">
+              <select id="AppLanguageW">
+                  <option value="0" selected="selected">Español</option>
+                  <option value="1">English</option>
+              </select>
+            </div>
+          </div>
+          <div class="icon"><a th:href="@{/web/estudio/busqueda}"><img th:src="@{/img/lupa.png}"/></a></div>
+        </div>
+        <div class="row division">
+          <div class="col-md-4">
+            <!-- MENU VERTICAL -->
+            <div th:replace="html-commons/menu_web :: fg-menu-vertical">
+            </div>
+            <!-- END MENU VERTICAL -->
+          </div>
+          <div class="col-md-8">
+	          <div class="contenido estudio_select quienes_somos">
+	              <div class="title">
+	                <h2><strong th:utext="${marco.nombreMenu}">Marco Legal</strong></h2>
+	              </div><img th:src="@{/img/line.png}" class="guion"/>
+	              <div>
+	              	<p th:utext="${marco.contenido}">Texto</p>
+	              </div>
+	          </div>
+	      </div>
+        </div>
+        <div class="otros">
+          <h4>También <strong>te puede interesar.</strong></h4>
+        </div>
+        <div class="articulo_section">
+          <ul id="simple" class="owl-carousel">
+              <li th:each="s,i : ${array}">
+                <div class="contenido"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/>
+                  <h3> <a th:href="@{/} + ${s.url} + ${s.id}"><strong th:text="${s.titulo}">fotovoltaicos aislados</strong></a></h3><img th:src="@{/img/line.png}" class="guion"/>
+                  <p th:text="${s.resumen}"></p>
+                </div>
+              </li>
+           </ul>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER  -->
+    <footer th:replace="html-commons/footer_web :: fg-footer">
+    </footer>
+    <!-- END FOOTER  -->
+    <script th:src="@{/js/public/vendor/vendor_all.js}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
+    <script th:src="@{/js/public/init.js}"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+	  </head>
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-edit fa-fw "></i> 
+									Gestión 
+								<span class="txt-color-black">> 
+									<b>Tag</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+					<div class="row" id="view_list">
+					      <div class="col-sm-12 col-md-12 col-lg-12">
+					      <div class="alert alert-warning">
+					      	<label><strong>Importante: </strong> <br/>Los registros de tags se realizan directamente en el registro de algún contenido web(Estudio, Capacitación, etc.) simplemente ingresandolo en el campo de tag, <strong>estos se registrarán como tipo español o inglés de acuerdo al valor en el que el selector de idioma se encuentre.</strong></label>
+					      </div>
+						  </div>			
+				          <div class="col-sm-12 col-md-12 col-lg-12">
+				                  <form id="frm_busqueda">
+				                    <div class="form-horizontal">
+						                <div class="form-group">
+						                    <label class="col-md-1  control-label-left" for="txtFiltro"><b>Nombre:</b></label>
+						                    <div class="col-md-3">
+						                        <input name="Filtro" id="txtFiltro" type="text"  class="form-control input-sm ignore" maxlength="24" placeholder="Ingresa un nombre"/>
+						                    </div>
+						                    	
+						                    <div class="col-md-2 mrg">
+						                        <select name="TipoTag" id="TipoTag" class="form-control">
+														<option value="">-- Tipo Tag --</option>
+														<option th:each="tagType : ${lstTipoTag}" th:value="${tagType.id}" th:text="${tagType.nombre}">Tags</option>
+												</select>
+						                    </div>
+						                    <div class="col-md-1 col-xs-6 col-sm-1 text-align-center">
+						                    	<a id="btnFiltrar" href="javascript:void(0);" class="btn btn-primary" >Buscar</a>
+						                    </div>
+						                </div>
+	            					</div>
+				                  </form>
+				          </div>
+				          <div class="col-sm-12 col-md-12 col-lg-12" >
+				            <table id="tblRegistros" data-mobile-responsive="true">
+				              <thead>
+				                <tr>
+				                  <th data-field="id" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Codigo"></th>
+								  <th data-field="nombre" data-sortable="true" data-formatter="linkFormatter" data-halign="left" data-valign="middle" data-align="left">Nombre</th>
+				                  <th data-field="tipoTag.nombre" data-halign="left" data-valign="middle" data-align="left">Tipo</th>
+								  <th data-formatter="Opciones"  data-halign="center" data-valign="middle" data-align="center" data-width="60">Acciones</th>
+				                </tr>
+				              </thead>
+				            </table>
+				          </div>
+				    </div>
+				    <div class="row" id="view_register">
+					    <div class="">
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-desktop"></i> </span>
+									<!-- Tittle form -->	
+										<h2><strong>Datos Generales</strong></h2>			
+								</header>
+								<div>
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										<form id="frm_registro" class="smart-form">
+											<fieldset>
+												<div class="row">
+													<section class="col col-6">
+														<label class="label">Nombre</label>
+														<label class="input"><i class="icon-append fa fa-asterisk"></i>
+															<input id="Nombre" name="Nombre" type="text" placeholder="Titulo Principal" class="" maxlength="100" />
+															<input id="hIdTag" type="hidden" />
+															<input id="hIdTipoTag" type="hidden" />
+															<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+														</label>
+													</section>
+													<section class="col col-6">
+														<label class="label">Tipo Tag</label>
+														<select name="TipoTagId" id="TipoTagId" class="form-control">
+															<option th:each="tagType : ${lstTipoTag}" th:value="${tagType.id}" th:text="${tagType.nombre}">Tags</option>
+														</select>
+													</section>
+												</div>
+											</fieldset>
+								            <footer class="">
+								                    <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+								                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+								            </footer>
+								        </form>
+									</div>
+								</div>
+							</div>
+						</div>
+				    </div>
+	        	</section>
+	        </fieldset>
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/bootstrap-table.min.js}"></script>
+		<script th:src="@{/js/cw/tag/main.js}"></script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+		/*]]>*/
+		</script>
+
+	</body>
+
+</html>

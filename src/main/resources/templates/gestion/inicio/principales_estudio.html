@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+	  </head>
+	
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-object-group fa-fw txt-color-black"></i> 
+									Gestión 
+								<span class="txt-color-black">> 
+									<b>Inicio</b>
+								</span>
+								<span class="txt-color-black">> 
+									<b>Estudio</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+					<div class="row" id="view_list">
+				          <div class="col-sm-12 col-md-12 col-lg-12">
+				                  <form id="frm_busqueda">
+				                    <div class="form-horizontal">
+						                <div class="form-group">
+						                	<div class="col col-12">
+							                    <label class="col-md-1  control-label-left" for="txtFiltro"><b>Criterio:</b></label>
+							                    <div class="col-md-3">
+							                        <input name="Filtro" id="txtFiltro" type="text"  class="form-control input-sm ignore" maxlength="24" placeholder="Ingresa un criterio de búsqueda"/>
+							                    </div>
+							                    <label class="col-md-1 control-label-left" for="ddlTipo"><b>Tipo:</b></label>
+							                    <div class="col-md-2 mrg">
+							                        <select name="Tipo de Estudio" id="Tipo" class="form-control">
+							                        		<option value="">-- Todos --</option>
+															<option th:each="research : ${lstTipoEstudios}" th:value="${research.id}" th:text="${research.nombre}">Researchs</option>
+													</select>
+							                    </div>
+							                    <label class="col-md-1 control-label-left" for="ddlTipo"><b>Beneficiario:</b></label>
+							                    <div class="col-md-2 mrg">
+							                        <select name="Beneficiario" id="Beneficiario" class="form-control">
+															<option value="">-- Todos --</option>
+															<option th:each="beneficiary : ${lstBeneficarios}" th:value="${beneficiary.id}" th:text="${beneficiary.nombre}">Beneficiaries</option>
+													</select>
+							                    </div>
+							                    <div class="col-md-1 col-xs-6 col-sm-1 text-align-center">
+							                    	<a id="btnFiltrar" href="javascript:void(0);" class="btn btn-primary" >Buscar</a>
+							                    </div>
+							            	</div>
+						                </div>
+	            					</div>
+				                  </form>
+				          </div>
+				          <div class="col-sm-12 col-md-12 col-lg-12" >
+				            <table id="tblRegistros" data-mobile-responsive="true">
+				              <thead>
+				                <tr>
+				                  <th data-field="id" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Codigo"></th>
+								  <th data-field="titulo" data-sortable="true" data-halign="left" data-valign="middle" data-align="left" data-width="100">Título</th>
+				                  <th data-formatter="isActived" data-sortable="true" data-halign="center" data-valign="middle" data-align="center" data-width="60">Contenido de Inicio</th>
+								  <th data-formatter="Opciones"  data-halign="center" data-valign="middle" data-align="center" data-width="60">Acciones</th>
+				                </tr>
+				              </thead>
+				            </table>
+				          </div>
+				    </div>
+	        	</section>
+	        </fieldset>
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/bootstrap-table.min.js}"></script>
+		<script th:src="@{/js/cw/inicio/main_e.js}"></script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+		/*]]>*/
+		</script>
+
+	</body>
+
+</html>

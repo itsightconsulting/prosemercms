@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+		<style type="text/css">
+		
+		#sortArchivos, #sortImagenes, #FileList, #AliasList{
+			padding: 0px;
+		}
+		
+		#sortArchivos li, #sortImagenes li , #FileList li{
+			margin-bottom: 7px;
+		}
+		
+		 #AliasList input{
+			margin-bottom: 3.5px;
+			width: 90%;
+		}
+		
+		</style>
+	  </head>
+	
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-edit fa-fw "></i> 
+									Nuevo 
+								<span class="txt-color-black">> 
+									<b>Logro</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+				    <div class="row" id="register">
+					    <div class="col-sm-12 col-md-12 col-lg-12">
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-desktop"></i> </span>
+									<!-- Tittle form -->	
+										<h2><strong>Datos Generales</strong></h2>			
+								</header>
+								<div>
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										<form id="frm_registro" class="smart-form">
+											<fieldset>
+											
+												<div class="row">
+													<div class="col col-sm-12">
+														<div class="alert alert-info">
+															<span>IMPORTANTE: <strong><br/>Un logro puede ir asociado a uno o varios estudios o también puede ir asociado directamente a un beneficiario(Solo se puede usar una opción a la vez).<br/> Eso quiere decir que o bien seleccionamos un beneficiario de la lista o bien seleccionamos el botón Relacionar Estudio</strong></span>
+														</div>
+													</div>
+													</div>
+												<div class="row">
+													<section class="col col-6">
+														<label class="label">Beneficiario</label>
+														<select name="BeneficiarioId" id="BeneficiarioId" class="form-control">
+															<option value="">-- Seleccione --</option>
+															<option th:each="b : ${lstBeneficiarios}" th:value="${b.id}" th:text="${b.nombre}">Beneficiaries</option>
+														</select>
+													</section>
+												</div>
+												<div class="row">
+													<section class="col col-6">
+														<label class="label">Fecha del Logro</label>
+														<label class="input"><i class="icon-append fa fa-asterisk"></i>
+															<input id="FechaLogro" name="FechaLogro" type="date"/>
+															<input id="hIdBeneficiario" type="hidden" />
+															<input id="TipoEstudio" type="hidden" />
+															<input id="Beneficiario" type="hidden" />
+															<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+														</label>
+													</section>
+												</div>
+												<div class="row">
+													<section class="col col-6">
+																	<div class="alert alert-success" role="alert">
+																	  	<strong>Estudios relacionados al logro</strong>
+																	</div>
+																	<label class="label" style="text-align: center;"><strong></strong></label>
+																	<div class="input state-success" style="text-align: left;font-weight: bold;color: #305d8c; padding-left: 20px">
+																		<ol id="EstudioSeleccionado"></ol>
+																	</div>
+													</section>
+												</div>
+												<div class="row">
+													<section class="col col-6">
+														<section>
+															<div class="text-align-center">
+																<a href="#" onclick="" id="btnRelacionar" type="button" class="btn btn-success btn-lg bg-color-greenDark">Relacionar Estudio</a>
+																<a style="display:none;" href="#" onclick="" id="btnOcultoModal" type="button" class="btn btn-success btn-lg bg-color-greenDark" data-toggle="modal" data-target="#myModalEstudio">After Relacionar Estudio</a>
+																<div style="color: orange; font-weight: bold;">
+																<input id="hIdEstudio" name="hIdEstudio" type="hidden" />
+																</div>
+															</div>
+															
+														</section>
+														<div style="display:none;" id="TipoEstudios"><span th:each="research : ${lstTipoEstudios}">[<span th:text="${research.nombre}"></span>]</span></div>
+														<div style="display:none;" id="Beneficiarios"><span th:each="b : ${lstBeneficiarios}">[<span th:text="${b.nombre}"></span>]</span></div>
+													</section>
+												</div>
+											</fieldset>
+								            <footer class="">
+								                    <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+								                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+								            </footer>
+								        </form>
+									</div>
+								</div>
+							</div>
+						</div>
+				    </div>
+	        	</section>
+	        </fieldset>
+
+			<section id="widget-grid" class="">
+				
+					<!-- row -->
+					<div class="row">
+						
+						<!-- NEW WIDGET START -->
+						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" >
+								<!-- widget options:
+									usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+									
+									data-widget-colorbutton="false"	
+									data-widget-editbutton="false"
+									data-widget-togglebutton="false"
+									data-widget-deletebutton="false"
+									data-widget-fullscreenbutton="false"
+									data-widget-custombutton="false"
+									data-widget-collapsed="true" 
+									data-widget-sortable="false"
+									
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-pencil"></i> </span>
+									<h2><strong>Descripción del Logro</strong></h2>				
+									
+								</header>
+				
+								<!-- widget div-->
+								<div>
+									
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+										
+									</div>
+									<!-- end widget edit box -->
+									
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										
+											<textarea name="ckeditor">
+												
+				                			</textarea>						
+										
+									</div>
+									<!-- end widget content -->
+									
+								</div>
+								<!-- end widget div -->
+								
+							</div>
+							<!-- end widget -->
+				
+						</article>
+						<!-- WIDGET END -->
+						
+					</div>
+				
+					<!-- end row -->
+				
+			</section>
+				
+				<!-- MODALS -->
+				<!-- FIRST MODAL -->
+				<div class="modal fade" id="myModalEstudio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel"><strong>Estudios encontrados</strong></h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+										<header>
+											<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+											<h2>Default Tabs with border </h2>
+										</header>
+										<!-- widget div-->
+										<!-- widget edit box -->
+										<div class="jarviswidget-editbox">
+											<!-- This area used as dropdown edit box -->
+					
+										</div>
+										<!-- end widget edit box -->
+										<!-- widget content -->
+										<ul id="myTab1" class="nav nav-tabs bordered">
+											<li class="active">
+												<a href="#s1" data-toggle="tab">Coincidencias <span class="fa fa-list bg-color-blue txt-color-white"></span></a>
+											</li>
+										</ul>
+				
+										<div id="myTabContent1" class="tab-content padding-10">
+											<div class="tab-pane fade in active" id="s1">
+												<div class="">
+													<div class="row">
+														<div class="col-sm-12 col-md-12 col-lg-12" >
+															<form id="frm_busqueda_estudio">
+																<div class="form-group">
+																	<label class="col-md-2 control-label">Nombre Estudio:</label>
+																	<div class="col-md-8">
+																	<input id="NombreEstudio" type="text" class="form-control"/>
+																	</div>
+																	<div class="col-md-2">
+																	<input id="btnBuscaEstudio" type="button" class="btn btn-primary" value="Buscar"/>
+																	</div>
+																</div>
+															</form>
+														</div>
+													</div>
+													<div class="row">	
+														<div class="col-sm-12 col-md-12 col-lg-12" >
+												            <table id="tblEstudios" data-mobile-responsive="true" class="table table-condensed">
+												              <thead>
+												                <tr>
+												                  <th data-field="id" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Codigo"></th>
+																  <th data-field="tituloPrincipal" data-sortable="true" data-halign="left" data-valign="middle" data-align="left">Nombre</th>
+																  <th data-field="estudiosElegidos" data-checkbox="true" data-halign="left" data-valign="middle" data-align="left"></th>
+												                </tr>
+												              </thead>
+												            </table>
+												         </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									<!-- end widget content -->
+								<!-- end widget div -->
+										</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">
+									Guardar
+								</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/bootstrap-table.min.js}"></script>
+		<script th:src="@{/js/plugin/ckeditor/ckeditor.js}"></script>
+		<script th:src="@{'/js/cw/'+${type}+'/main.js'}"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-ES"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="_ctx" th:content="@{/}" />
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, miminum-scale=1, user-scalable=no" name="viewport"/>
+    <title>Prosemer</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
+  </head>
+  <style type="text/css">
+  .modal-header {border:none; text-align: center; font-size: 1.4em;font-family: 'Raleway-Regular';background: #bfc8d0;color: white;}
+  .modal-footer {text-align:left;}
+  .modal-footer .pull-left{font-family: 'Raleway-Regular';}
+  </style>
+  <body>
+    <!-- HEADER -->
+    <header th:replace="html-commons/header_web :: fg-header">
+    </header>
+    <!-- END HEADER -->
+    <div onclick="togglemenu.ocultarMenu()">
+      <style type="text/css">
+        .filtro {
+        	display: none;
+        }
+        .articulo_section .owl-nav {
+            top: 72px;
+        }
+        .owl-item {
+            height: auto;
+        }
+      </style>
+      <div class="container">
+        <div class="buscador">
+          <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
+            <div class="styleselect">
+              <select id="AppLanguageW">
+                  <option value="0" selected="selected">Español</option>
+                  <option value="1">English</option>
+              </select>
+            </div>
+          </div>
+          <div class="icon"><a th:href="@{/web/estudio/busqueda}"><img th:src="@{/img/lupa.png}"/></a></div>
+        </div>
+        <div class="row division">
+          <div class="col-md-4">
+            <!-- MENU VERTICAL -->
+            <div th:replace="html-commons/menu_web :: fg-menu-vertical">
+            </div>
+            <hr style="max-width: 95%"/>
+            <!-- END MENU VERTICAL -->
+            <div class="portada_descarga">
+              <div class="descargar">
+              	<div th:with="lenf=${#lists.size(files)}">
+		      		<div th:if="${lenf > 0}">
+						<h3>Recursos de <br/>presentación</h3>
+		                <ul>
+		                  <li th:each="file: ${files}">
+			              		<a th:href="@{/} + 'media/file/capacitacion/gt/0'+${file.rutaMediaWeb}" th:text="${file.alias}" ></a>
+			              </li>
+		                </ul>
+		      		</div>
+		      	</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contenido estudio_select">
+              <div class="title">
+                <h2><strong th:text="${capacitacion.tituloLargo}">Portafolio y potencial hidroeléctrico </strong></h2>
+              </div><img th:src="@{/img/line.png}" class="guion"/>
+              <ul>
+                <li th:if="${capacitacion.tituloEstudioReferencia != ''}">
+                  <h4>Estudio de referencia:</h4>
+                  <p th:text="${capacitacion.tituloEstudioReferencia}">Determinación del portafolio de proyectos hidroeléctricos de las cuencas de Apurímac, Madre de Dios, Purús, Grande, Chili, Tambo y Titicaca,</p>
+                </li>
+                <li>
+                  <h4>Descripcion:</h4>
+                  <p class="alcance" th:utext="${capacitacion.descripcion}">El objetivo del estudio fue obtener una cartera de proyectos hidroeléctricos que resulte de la optimización del uso de recursos hídricos en las cuencas de Apurímac, Madre de Dios, Purús, Grande, Chili, Tambo y Titicaca.Los principales productos del estudio son:</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div th:with="length=${#lists.size(images)}">
+	        <div class="otros" th:if="${length > 0}">
+	          <h4>Galería de <strong>Fotos</strong></h4>
+	        </div>
+	        <div class="articulo_section">
+	          <ul id="simple" class="owl-carousel">
+	          	<li th:each="image, i : ${images}" data-toggle="modal" data-target="#myModal">
+	          		<div class="contenido">
+	          			<a href="#myGallery" th:attr="data-slide-to=${i.index}"><img th:src="@{/} + 'media/image/capacitacion'+${image.rutaMediaWeb}"/></a>
+	                	<h3><strong th:text="'Foto '+ ${i.count} +' de '+ ${length}">Foto 1 de 4</strong></h3>
+	              	</div>
+	          	</li>
+	          </ul>
+	        </div>
+	    </div>
+        <div class="portada_descarga">
+          <div class="descargar descarga_movil">
+            <h3>Recursos de<br/>presentación</h3>
+            <ul>
+              <li th:each="file: ${files}">
+	             <a th:href="@{/} + 'media/file/capacitacion/gt/0'+${file.rutaMediaWeb}" th:text="${file.alias}" ></a>
+	          </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER  -->
+    <footer th:replace="html-commons/footer_web :: fg-footer">
+    </footer>
+    <!-- END FOOTER  -->
+    <!--begin modal window-->
+	<div class="modal fade" id="myModal">
+	<div class="modal-dialog modal-lg">
+	<div class="modal-content">
+	<div class="modal-header">Galería de la Capacitación
+	<div class="pull-left"></div>
+	<button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
+	</div>
+	<div class="modal-body">
+	
+	<!--CAROUSEL CODE GOES HERE-->
+	<!--begin carousel-->
+<div id="myGallery" class="carousel slide" data-interval="false">
+	<div class="carousel-inner">
+		<div class="item" th:each="image, i : ${images}"> <img th:src="@{/} + 'media/image/capacitacion'+${image.rutaMediaWeb}"/>
+			<div class="carousel-caption">
+			</div>
+		</div>
+	</div>
+<!--end carousel-inner-->
+<!--Begin Previous and Next buttons-->
+<a class="left carousel-control" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+<!--end carousel--></div>
+	<!--end modal-body--></div>
+	<div class="modal-footer">
+	<div class="pull-left">
+	<small>Fotografías de <a th:href="@{/web/inicio}" target="new">Capacitaciones Prosemer</a></small>
+	</div>
+	<button class="btn-sm close" type="button" data-dismiss="modal">Cerrar</button>
+	<!--end modal-footer--></div>
+	<!--end modal-content--></div>
+	<!--end modal-dialoge--></div>
+	<!--end myModal-->></div>
+    <script th:src="@{/js/public/vendor/vendor_all.js}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
+    <script th:src="@{/js/public/init.js}"></script>
+  </body>
+</html>

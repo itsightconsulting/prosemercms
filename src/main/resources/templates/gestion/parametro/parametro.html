@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+	  </head>
+	
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-edit fa-fw "></i> 
+									Gestión 
+								<span class="txt-color-black">> 
+									<b>Parametro</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+					<div class="row" id="view_list">
+				          <div class="col-sm-12 col-md-12 col-lg-12">
+				                  <form id="frm_busqueda">
+				                    <div class="form-horizontal">
+						                <div class="form-group">
+						                    <label class="col-md-1  control-label-left" for="txtFiltro"><b>Criterio:</b></label>
+						                    <div class="col-md-3">
+						                        <input name="Filtro" id="txtFiltro" type="text"  class="form-control input-sm ignore" maxlength="24" placeholder="Ingresa un criterio de búsqueda"/>
+						                    </div>
+						                    <div class="col-md-1 col-xs-6 col-sm-1 text-align-center">
+						                    	<a id="btnFiltrar" href="#" class="btn btn-primary" >Buscar</a>
+						                    </div>
+						                    <div class="col-md-1 col-xs-6 col-sm-1 col-lg-1 text-align-center">
+						                    	<a id="btnNuevo" href="#" class="btn btn-primary" >Nuevo</a>
+						                    </div>
+						                </div>
+	            					</div>
+				                  </form>
+				          </div>
+				          <div class="col-sm-12 col-md-12 col-lg-12" >
+				            <table id="tblRegistros" data-mobile-responsive="true">
+				              <thead>
+				                <tr>
+				                  <th data-field="id" data-sortable="true" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Código"></th>
+								  <th data-field="clave" data-sortable="true" data-formatter="linkFormatter" data-halign="left" data-valign="middle" data-align="left" data-title="Clave"></th>
+				                  <th data-field="valor" data-halign="left" data-valign="middle" data-align="left" data-title="Valor"></th>
+				                </tr>
+				              </thead>
+				            </table>
+				          </div>
+				    </div>
+				    <div class="row" id="view_register" >
+					    <div class="col-sm-7 col-md-7 col-lg-7">
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-desktop"></i> </span>
+									<!-- Tittle form -->	
+										<h2>Formulario</h2>			
+								</header>
+								<div>
+									<!-- widget content -->
+									<div class="widget-body no-padding ">
+										<form id="frm_registro" class="smart-form">
+													<fieldset class="">
+														<section class="">
+															<label class="input"><i class="icon-append fa fa-asterisk"></i>
+																<input id="Clave" name="Clave" type="text" placeholder="Clave" class="" maxlength="30" autocomplete="off" />
+																<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+									                    		<input id="hIdParametro" name="hIdParametro" type="hidden" value="0" />
+									                    		<input id="Clave" type="hidden" value="" />
+															</label>
+														</section>
+														<section class="">
+															<label class="input"><i class="icon-append fa fa-asterisk"></i>
+																<input id="Valor" name="Valor" type="text" placeholder="Valor" class="" maxlength="24" autocomplete="off" />
+																<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+															</label>
+														</section>
+													</fieldset>
+								            <footer class="">
+								                    <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+								                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+								            </footer>
+								        </form>
+									</div>
+								</div>
+							</div>
+							</div>
+							<div class="col-sm-5 col-md-5 col-lg-5 text-align-center">
+							</div>
+				    </div>
+	        	</section>
+	        </fieldset>
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/bootstrap-table.min.js}"></script>
+		<script th:src="@{'/js/cw/'+${type}+'/main.js'}"></script>
+		
+	</body>
+
+</html>

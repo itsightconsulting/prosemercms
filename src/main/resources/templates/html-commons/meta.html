@@ -1,0 +1,17 @@
+<meta th:fragment="fg-meta">
+		<title>CMS Prosemer </title>
+		<meta charset="UTF-8"/>
+		<meta name="_csrf" th:attr="content=${_csrf.token}"/>
+		<!-- default header name is X-CSRF-TOKEN -->
+		<meta name="_csrf_header" th:attr="content=${_csrf.headerName}"/>
+		<!-- CONTEXT PATH -->
+		<meta name="_ctx" th:content="@{/}" />
+		<!-- FAVICONS -->
+		<link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+		<link rel="icon" th:href="@{/img/favicon/favicon.ico}" type="image/x-icon"/>
+		<link rel="apple-touch-icon" th:href="@{/img/splash/sptouch-icon-iphone.png}"/>
+		<link rel="apple-touch-icon" sizes="76x76" th:href="@{/img/splash/touch-icon-ipad.png}"/>
+		<link rel="apple-touch-icon" sizes="120x120" th:href="@{/img/splash/touch-icon-iphone-retina.png}"/>
+		<link rel="apple-touch-icon" sizes="152x152" th:href="@{/img/splash/touch-icon-ipad-retina.png}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		</meta>

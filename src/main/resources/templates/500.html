@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-ES"
+	  xmlns:th="http://www.thymeleaf.org"
+      th:with="version = ${#ctx.servletContext.getAttribute('version')}">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, miminum-scale=1, user-scalable=no" name="viewport"/>
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="icon" th:href="@{/img/favicon/favicon.ico}" type="image/x-icon"/>
+    <title>Prosemer</title>
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.min.css}"/>
+  </head>
+  <style type="text/css">
+  .modal-header {border:none; text-align: center; font-size: 1.4em;font-family: 'Raleway-Regular';background: #bfc8d0;color: white;}
+  .modal-footer {text-align:left;}
+  .modal-footer .pull-left{font-family: 'Raleway-Regular';}
+  </style>
+  <body>
+    <!-- HEADER -->
+    <header th:fragment="fg-header">
+        <div id="menu" class="open_menu"><a href="javascript:togglemenu.ocultarMenu()" class="navigator_bar white"><span class="fa fa-bars"></span></a>
+        <div class="language">
+        </div>
+        <div class="search">
+          <div class="form-group">
+            <input type="text" class="form-control"/><a th:href="@{/web/estudio/busqueda}"><span class="fa fa-search"></span></a>
+          </div>
+        </div>
+        <div class="socios">
+          <ul class="logos">
+            <li class="foo-1"><a target="_blanket" href="http://www.minem.gob.pe/"><img th:src="@{/img/img1_footer.png}"/></a></li>
+            <li class="foo-2"><a target="_blanket" href="http://www.osinergmin.gob.pe/"><img th:src="@{/img/img2_footer.png}"/></a></li>
+            <li class="foo-3"><a target="_blanket" href="http://www.fonafe.gob.pe/"><img th:src="@{/img/img3_footer.png}"/></a></li>
+            <li class="foo-4"><a target="_blanket" href="https://www.petroperu.com.pe/"><img th:src="@{/img/img4_footer.png}"/></a></li>
+            <li class="foo-5"><a target="_blanket" href="https://www.iadb.org/en "><img th:src="@{/img/img5_footer.png}"/></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container"><a href="#" class="navigator_bar"><span class="fa fa-bars"></span></a>
+        <div class="header_img">
+          <ul class="un_logo">
+            <li class="hea-1" id="EnlaceInicio"><img th:src="@{/img/logo_prosemer.png}"/></li>
+            <li class="hea-2"><img th:src="@{/img/text_logo.png}" class="mobile"/></li>
+          </ul>
+          <ul class="dos_logo">
+            <li class="hea-3"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}"/></a></li>
+            <li class="hea-4"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}" class="bid_movil"/></a><a href="https://www.canada.ca/en.html"><img height="36" width="82" id="CanadianFlag" th:src="@{/img/bandera.png}"/></a></li>
+            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}"/></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+    <div>
+      <style type="text/css">
+        .filtro {
+        	display: none;
+        }
+        .articulo_section .owl-nav {
+            top: 72px;
+        }
+        .owl-item {
+            height: auto;
+        }
+      </style>
+      <div class="container">
+        <div class="buscador">
+          <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
+          </div>
+        </div>
+        <div class="row division">
+          <div class="col-md-4">
+            <!-- IMAGEN ERROR -->
+            <div class="portada_descarga">
+              <div class="portada">
+              	<div style="text-align: left; padding-left: 10px;">
+              	<h3><span><i class="fa fa-home"></i><a th:href="@{/web/inicio}">  Regresar a Inicio</a></span></h3>
+              	<h3><span><i class="fa fa-home"></i><a th:href="@{/web/en}">  Back to home</a></span></h3>
+              	</div>
+     			<img th:src="@{/img/error500.png}" style="max-width: 100%;"/>
+              </div>
+            </div>
+            <!-- END IMAGEN ERROR -->
+          </div>
+          <div class="col-md-8">
+	          <div class="contenido estudio_select quienes_somos">
+	              <div class="title">
+	                <h2><strong>ERROR 500</strong></h2>
+	              </div><img th:src="@{/img/line.png}" class="guion"/>
+	              <div id="Coincidencias">
+	              <div class="estudio01"><h3 style="color: #f97c7f;"><i class="fa fa-exclamation-circle"></i>  Ha ocurrido un error. Por favor intentarlo más tarde <br/></h3></div>
+	              <div class="estudio01"><h3 style="color: #f97c7f;"><i class="fa fa-exclamation-circle"></i>  There was an error. Please try again later</h3></div>
+	              </div>
+	          </div>
+	      </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER  -->
+    <footer>
+       <div class="container">
+        <ul class="direccion">
+          <li>
+            <p class="no_bullet">Central Telefónica	</p>
+          </li>
+          <li>
+            <p class="no_bullet">Central: (511) 311 5930</p>
+          </li>
+        </ul>
+        <ul class="direccion">
+          <li>
+            <p class="no_bullet"> <span>Dirección: </span>Jr. Junín 319, Cercado de Lima, Lima - Perú</p>
+          </li>
+          <li>
+            <p class="no_bullet"><span>Mesa de Partes: </span>Lunes a viernes de 08:30 am a 04:30 pm								</p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- END FOOTER  -->
+    <script th:src="@{/js/public/vendor/vendor_all.js}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
+  </body>
+</html>

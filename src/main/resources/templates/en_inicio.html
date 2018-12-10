@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es-ES"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="_ctx" th:content="@{/}" />
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <title>Prosemer</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
+    <style type="text/css">
+    .contenido h3{
+    	font-size: 24px;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="menu" class="open_menu"><a href="javascript:togglemenu.ocultarMenu()" class="navigator_bar white"><span class="fa fa-bars"></span></a>
+        <div class="language">
+          <div class="styleselect">
+            <select id="AppLanguage">
+              <option value="0" style="color:black;">Español</option>
+              <option value="1" style="color:black;" selected="selected">English</option>
+            </select>
+          </div>
+        </div>
+        <div class="search">
+          <div class="form-group">
+            <input type="text" class="form-control"/><a th:href="@{/web/en/research/search}"><span class="fa fa-search"></span></a>
+          </div>
+        </div>
+        <ul>
+        <!-- MOBILE MENU -->
+          <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">About us</a>
+            <ul class="dropdown-menu">
+              <li><a th:href="@{/web/en/history}">History</a></li>
+              <li><a th:href="@{/web/en/objectives}">Objectives</a></li>
+              <li><a th:href="@{/web/en/organitazional-structure}">Organitazional Structure</a></li>
+              <li><a th:href="@{/web/en/legal-framework}">Legal Framework</a></li>
+            </ul>
+          </li>
+          <li><a th:href="@{/web/en/program-memory}">Program Memory</a></li>
+          <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Achievements</a>
+          	<ul class="dropdown-menu">
+              <li><a th:href="@{/web/en/achievements/minem}">MINEM</a></li>
+	          <li><a th:href="@{/web/en/achievements/osinergmin}">OSINERGMIN</a></li>
+	          <li><a th:href="@{/web/en/achievements/fonafe}">FONAFE</a></li>
+	          <li><a th:href="@{/web/en/achievements/petroperu}">PETROPERU</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">RESEARCH</a>
+	            <ul class="dropdown-menu">
+	              <li><a th:href="@{/web/en/research/minem}">MINEM</a></li>
+		          <li><a th:href="@{/web/en/research/osinergmin}">OSINERGMIN</a></li>
+		          <li><a th:href="@{/web/en/research/fonafe}">FONAFE</a></li>
+		          <li><a th:href="@{/web/en/research/petroperu}">PETROPERU</a></li>
+	            </ul>
+	      </li>
+          <li><a th:href="@{/web/en/trainings/search}">Trainings</a></li>
+          <li><a th:href="@{/web/en/events/search}">Events</a></li>
+          <!-- END MOBILE MENU -->
+        </ul>
+          <!-- FOOTER IMAGES > MOBILE -->	
+        <div class="socios">
+          <ul class="logos">
+            <li class="foo-1"><a target="_blank" href="http://www.minem.gob.pe/"><img 		th:src="@{/img/img1_footer.png}"/></a></li>
+          	<li class="foo-2"><a target="_blank" href="http://www.osinergmin.gob.pe/"><img 	th:src="@{/img/img2_footer.png}"/></a></li>
+          	<li class="foo-3"><a target="_blank" href="http://www.fonafe.gob.pe/"><img 		th:src="@{/img/img3_footer.png}"/></a></li>
+          	<li class="foo-4"><a target="_blank" href="https://www.petroperu.com.pe/"><img 	th:src="@{/img/img4_footer.png}"/></a></li>
+          	<li class="foo-5"><a target="_blank" href="https://www.iadb.org/en "><img 		th:src="@{/img/img5_footer.png}"/></a></li>
+          </ul>
+        </div>
+        <!-- END FOOTER IMAGES > MOBILE -->
+      </div>
+      	<!-- HEADER IMAGES > MOBILE -->
+      <div class="container"><a href="javascript:togglemenu.mostrarMenu()" class="navigator_bar"><span class="fa fa-bars"></span></a>
+        <div class="header_img">
+          <ul class="un_logo">
+            <li class="hea-1" id="EnlaceInicio"><a th:href="@{/web/en}"><img th:src="@{/img/logo_prosemer.png}"/></a></li>
+            <li class="hea-2"><img th:src="@{/img/text_logo.png}" class="mobile"/></li>
+          </ul>
+          <ul class="dos_logo">
+            <li class="hea-3"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}"/></a></li>
+            <li class="hea-4"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}" class="bid_movil"/></a><a href="https://www.canada.ca/en.html"><img th:src="@{/img/bandera.jpg}" height="42" width="82" id="CanadianFlag"/></a></li>
+            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}"/></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- END HEADER IMAGES > MOBILE -->
+    </header>
+    <div onclick="togglemenu.ocultarMenu()">
+      <div id="myCarousel" data-ride="carousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li th:each="s, i : ${sliders}" data-target="#myCarousel" th:attr="data-slide-to=${i.index}" th:classappend="${s.flagPrincipal} ? 'active' : ''"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div th:each="s : ${sliders}" class="item bg_azul" th:classappend="${s.flagPrincipal} ? 'active' : ''" >
+          	<a th:href="${s.hyperVinculo}" target="_blank"><img th:src="@{/} + 'media/image/slider/'+${s.rutaImagenWeb}" class="img-responsive"/></a>
+          	<img th:src="@{/} + 'media/image/slider/'+${s.rutaImagenMobile}" class="img-responsive mobil"/>
+          </div>
+<!--           <div class="item bg_verde"> -->
+<!--           	<img th:src="@{/img/banner2_carousel.png}" class="img-responsive"/> -->
+<!--           	<img th:src="@{/img/banner1_mobil.jpg}" class="img-responsive mobil"/> -->
+<!--           </div> -->
+        </div>
+        <a href="#myCarousel" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#myCarousel" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+      <div class="container">
+        <div class="contenedor">
+          <ul class="menu">
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">ABOUT US</a>
+              <ul class="dropdown-menu">
+                <li><a th:href="@{/web/en/history}">HISTORY</a></li>
+                <li><a th:href="@{/web/en/objectives}">OBJECTIVES</a></li>
+                <li><a th:href="@{/web/en/organitazional-structure}">ORGANITAZIONAL STRUCTURE</a></li>
+                <li><a th:href="@{/web/en/legal-framework}">LEGAL FRAMEWORK</a></li>
+              </ul>
+            </li>
+            <li> <a th:href="@{/web/en/program-memory}">PROGRAM MEMORY</a></li>
+            <li class="dropdown"> <a href="#" data-toggle="dropdown" class="dropdown-toggle">ACHIEVEMENTS</a>
+	          	<ul class="dropdown-menu">
+	              <li><a th:href="@{/web/en/achievements/minem}">MINEM</a></li>
+		          <li><a th:href="@{/web/en/achievements/osinergmin}">OSINERGMIN</a></li>
+		          <li><a th:href="@{/web/en/achievements/fonafe}">FONAFE</a></li>
+		          <li><a th:href="@{/web/en/achievements/petroperu}">PETROPERU</a></li>
+	            </ul>
+          	</li>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">RESEARCH</a>
+	            <ul class="dropdown-menu">
+	              <li><a th:href="@{/web/en/research/minem}">MINEM</a></li>
+		          <li><a th:href="@{/web/en/research/osinergmin}">OSINERGMIN</a></li>
+		          <li><a th:href="@{/web/en/research/fonafe}">FONAFE</a></li>
+		          <li><a th:href="@{/web/en/research/petroperu}">PETROPERU</a></li>
+	            </ul>
+	        </li>
+            <li><a th:href="@{/web/en/trainings/search}">TRAININGS</a></li>
+          	<li><a th:href="@{/web/en/events/search}">EVENTS</a></li>
+          </ul>
+          <div class="buscador">
+            <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
+              <div class="styleselect">
+                <select id="AppLanguageW">
+                  <option value="0">Español</option>
+                  <option value="1" selected="selected">English</option>
+                </select>
+              </div>
+            </div>
+            <div class="icon"><a th:href="@{/web/en/research/search}"><img th:src="@{/img/lupa.png}"/></a></div>
+          </div>
+          <div class="articulo_section section1">
+            <div class="title">
+              <h2>Research for <strong>the energy planning development, renovables energies promotion </strong>and <strong>energetic efficient</strong></h2>
+            </div>
+            <ul id="simple" class="owl-carousel">
+              <li th:each="s,i : ${array}">
+                <div class="contenido"><img th:src="@{/} + 'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/>
+                  <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
+                  <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="articulo_section section2">
+            <div class="title">
+              <h2>Research for betterment <br/><strong>the management of the energy sector public companies</strong></h2>
+            </div>
+            <ul id="simple" class="owl-carousel">
+              <li th:each="s,i : ${array1}">
+                <div class="contenido"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/>
+                  <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
+                  <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="memoria_proyecto">
+        <div class="row contenido container">
+          <div class="col-md-4 no_padding">
+            <div class="title">
+              <h2>Program<strong> Memory</strong></h2>
+            </div><img th:src="@{/img/line_black.png}" class="guion"/>
+            <h4 th:text="${memory.titulo}">PROSEMER 2012-2018</h4>
+            <p th:text="${memory.resumen}"></p><a th:href="@{/web/en/program-memory}" class="btn_leermas">READ MORE</a>
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-5 imagen no_padding"><img th:src="@{/} +  'media/image/memoria'+${memory.rutaImagenPortada}" class="img-responsive"/></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="articulo_section section3">
+          <div class="title">
+            <h2><strong>Trainings</strong></h2>
+          </div>
+          <ul id="simple" class="owl-carousel">
+          	<li th:each="s,i : ${array2}">
+                <div class="contenido"><img th:src="@{/} + 'media/image/capacitacion'+${s.rutaImagenPortada}" class="img-responsive"/>
+                  <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
+                  <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
+                </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="logos">
+          <li class="foo-1"><a target="_blank" href="http://www.minem.gob.pe/"><img th:src="@{/img/img1_footer.png}"/></a></li>
+          <li class="foo-2"><a target="_blank" href="http://www.osinergmin.gob.pe/"><img th:src="@{/img/img2_footer.png}"/></a></li>
+          <li class="foo-3"><a target="_blank" href="http://www.fonafe.gob.pe/"><img th:src="@{/img/img3_footer.png}"/></a></li>
+          <li class="foo-4"><a target="_blank" href="https://www.petroperu.com.pe/"><img th:src="@{/img/img4_footer.png}"/></a></li>
+          <li class="foo-5"><a target="_blank" href="https://www.iadb.org/en "><img th:src="@{/img/img5_footer.png}"/></a></li>
+        </ul>
+        <ul class="informes">
+          <li>
+            <p>Central Telefónica	</p>
+          </li>
+          <li>
+            <p>Central: (511) 311 5930</p>
+          </li>
+        </ul><span class="line-text"></span>
+        <ul class="direccion">
+          <li>
+            <p class="no_bullet"> <span>Dirección: </span>Jr. Junín 319, Cercado de Lima, Lima - Perú</p>
+          </li>
+          <li>
+            <p class="no_bullet"><span>Mesa de Partes: </span>Lunes a viernes de 08:30 am a 04:30 pm								</p>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script th:src="@{/js/public/vendor/vendor_all.js}" type="text/javascript"></script>
+    <script th:src="@{/js/public/init.js}"></script>
+  </body>
+</html>

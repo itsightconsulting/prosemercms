@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/tokenfield-typeahead.css}"/>
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap-tokenfield.css}"/>
+		
+		<style type="text/css">
+		
+		#sortArchivos, #sortImagenes, #FileList, #AliasList{
+			padding: 0px;
+		}
+		
+		#sortArchivos li, #sortImagenes li , #FileList li{
+			margin-bottom: 7px;
+		}
+		
+		 #AliasList input{
+			margin-bottom: 3.5px;
+			width: 90%;
+		}
+		
+		</style>
+	  </head>
+	
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-edit fa-fw "></i> 
+									Nuevo 
+								<span class="txt-color-black">> 
+									<b>Estudio</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+				    <div class="row" id="register">
+					    <div class="col-sm-12 col-md-12 col-lg-12">
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-desktop"></i> </span>
+									<!-- Tittle form -->	
+										<h2><strong>Datos Generales</strong></h2>			
+								</header>
+								<div>
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										<form id="frm_registro" class="smart-form">
+											<fieldset>
+												<div class="row">
+													<section class="col col-6">
+														<label class="label">Título Principal</label>
+														<label class="input"><i class="icon-append fa fa-asterisk"></i>
+															<input id="TituloPrincipal" name="TituloPrincipal" type="text" placeholder="Titulo Principal" class="" maxlength="100" />
+															<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+														</label>
+													</section>
+													<section class="col col-6">
+															<label class="label">Tags relacionados al contenido</label>
+															<input id="Tags" name="Tags" class="form-control" value="" type="text"/>
+													</section>
+												</div>
+											</fieldset>
+											<fieldset>
+												<section>
+													<label class="label">Título Largo</label>
+													<label class="input"> <i class="icon-append fa fa-asterisk"></i>
+														<input id="TituloLargo" name="TituloLargo" type="text" placeholder="Título largo" maxlength="220" />
+														<b class="tooltip tooltip-top-right">
+															<i class="fa fa-warning txt-color-teal"></i> 
+															Obligatorio</b> 
+													</label>
+												</section>
+												<div class="row">
+													<section class="col col-6">
+														<label class="label">Consultor</label>
+														<label class="input"> <i class="icon-append fa fa-asterisk"></i>
+															<input  id="Consultor" name="Consultor" type="text" placeholder="Consultor" maxlength="120"/>
+															<b class="tooltip tooltip-top-right">
+																<i class="fa fa-warning txt-color-teal"></i> 
+																Obligatorio</b> 
+														</label>
+													</section>
+													<section class="col col-6">
+														<label class="label">Mes y año del estudio respectivamente</label>
+														<div class="row">
+															<section class="col col-6">
+																<select name="Mes" id="Mes" class="form-control">
+																	<option value="">-- Seleccione --</option><option value="0">Enero</option><option value="1">Febrero</option><option value="2">Marzo</option><option value="3">Abril</option><option value="4">Mayo</option><option value="5">Junio</option><option value="6">Julio</option><option value="7">Agosto</option><option value="8">Setiembre</option><option value="9">Octubre</option><option value="10">Noviembre</option><option value="11">Diciembre</option>
+																</select>
+															</section>
+															<section class="col col-6">
+																<label class="input"> <i class="icon-append fa fa-asterisk"></i>
+																	<input name="Anio" id="Anio" type="number" maxlength="4" th:value="${#calendars.format(#calendars.createNow(), 'yyyy')}"/>
+																	<b class="tooltip tooltip-top-right">
+																		<i class="fa fa-warning txt-color-teal"></i> 
+																		Obligatorio</b> 
+																</label>
+															</section>
+														</div>
+													</section>
+												</div>
+												<section>
+													<label class="label">Beneficiario</label>
+													<select name="BeneficiarioId" id="BeneficiarioId" class="form-control">
+														<option>-- Seleccione --</option>
+														<option th:each="beneficiary : ${lstBeneficarios}" th:value="${beneficiary.id}" th:text="${beneficiary.nombre}">Beneficiaries</option>
+													</select>
+												</section>
+												<section>
+													<label class="label">Responsable Por la Entidad</label>
+													<label class="input"> <i class="icon-append fa fa-asterisk"></i>
+														<input  id="ResponsableEntidad" name="ResponsableEntidad" type="text" placeholder="Responsable de la Entidad" maxlength="100"/>
+														<b class="tooltip tooltip-top-right">
+															<i class="fa fa-warning txt-color-teal"></i> 
+															Obligatorio</b> 
+													</label>
+												</section>
+												<section>
+													<label class="label">Tipo Estudio</label>
+													<select name="TipoEstudioId" id="TipoEstudioId" class="form-control">
+														<option>-- Seleccione --</option>
+														<option th:each="research : ${lstTipoEstudios}" th:value="${research.id}" th:text="${research.nombre}">Researchs</option>
+													</select>
+												</section>
+											</fieldset>
+											<fieldset>
+												<div class="row">
+													<section class="col col-6">
+														<section>
+															<div class="alert alert-warning" role="alert">
+															  	<strong>Atención!</strong> El peso total de los archivos subidos no puede exceder a 30MB's.
+															</div>
+															<label class="label">Imagen de Portada <br/><strong>(Resolución Óptima de 252px de ancho por 355px de alto o proporcional)</strong></label>
+																<div class="input input-file">
+																			<label class="input"><i class="icon-append fa fa-image"></i>
+																	            <input id="UploadImage" name="UploadImage" type="file" accept=".jpeg,.jpg,.png" class="form-control" data-show-preview="false" data-language="es" data-show-upload="false"/>
+																			</label>
+																</div>
+															<br/>
+															<label class="label">Imagen para el resumen <br/><strong>(Resolución Óptima de 292px de ancho por 195px de alto o proporcional)</strong></label>
+																<div class="input input-file">
+																			<label class="input"><i class="icon-append fa fa-image"></i>
+																	            <input id="ResumenImage" name="ResumenImage" type="file" accept=".jpeg,.jpg,.png" class="form-control" data-show-preview="false" data-language="es" data-show-upload="false"/>
+																			</label>
+																</div>
+														</section>
+														<section>
+															<label class="label">Galería de fotos y documentos del estudio <br/><strong>(Resolución mínima 360px por 241px o proporcional mayor)</strong></label>
+																<div class="input input-file">
+																			<label class="input"><i class="icon-append fa fa-file"></i>
+																	            <input id="ArchivosEstudio" name="ArchivosEstudio" type="file" accept=".jpeg,.jpg,.png,.pdf,.docx,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.zip,.rar" class="form-control" data-show-preview="false" data-language="es" data-show-upload="false" multiple="multiple"/>
+																			</label>
+																</div>
+														</section>
+														<section>
+																<div class="col col-6">
+																	<div class="text-align-center">
+																		<a href="#" onclick="" id="btnVerificar" type="button" class="btn btn-success btn-lg bg-color-blueDark" data-toggle="modal" data-target="#myModal">Verificar archivos</a>
+																	</div>
+																</div>
+																<div class="col col-6">
+																	<label class="label"><strong>Autogenerar Resumen</strong></label>
+																	<div class="inline-group">
+																		<label class="radio">
+																			<input type="radio" id="ResumenYoN" name="ResumenYoN" checked="checked"/>
+																			<i></i>SI</label>
+																		<label class="radio">
+																			<input type="radio" name="ResumenYoN" />
+																			<i></i>NO</label>
+																	</div>
+																</div>
+														</section>
+													</section>
+													<section class="col col-6">
+														<div class="text-align-center">
+															<div>
+															<label style="padding: 10px;"><b>Previsualización de Portada</b></label>
+															</div>
+															<img id="ImagenPortada" style="border: 1px solid gray;" align="middle" alt="Wildcard Image" th:src="@{/img/upload-empty.png}" class="rounded-circle" width="55%" height="355px"/>
+														</div>
+													</section>
+												</div>
+											</fieldset>
+								            <footer class="">
+								                    <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+								                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+								            </footer>
+								        </form>
+									</div>
+								</div>
+							</div>
+						</div>
+				    </div>
+	        	</section>
+	        </fieldset>
+
+			<section id="widget-grid" class="">
+				
+					<!-- row -->
+					<div class="row">
+						
+						<!-- NEW WIDGET START -->
+						<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" >
+								<!-- widget options:
+									usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+									
+									data-widget-colorbutton="false"	
+									data-widget-editbutton="false"
+									data-widget-togglebutton="false"
+									data-widget-deletebutton="false"
+									data-widget-fullscreenbutton="false"
+									data-widget-custombutton="false"
+									data-widget-collapsed="true" 
+									data-widget-sortable="false"
+									
+								-->
+								<header>
+									<span class="widget-icon"> <i class="fa fa-pencil"></i> </span>
+									<h2><strong>Alcance del Estudio</strong></h2>				
+									
+								</header>
+				
+								<!-- widget div-->
+								<div>
+									
+									<!-- widget edit box -->
+									<div class="jarviswidget-editbox">
+										<!-- This area used as dropdown edit box -->
+										
+									</div>
+									<!-- end widget edit box -->
+									
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										
+											<textarea name="ckeditor">
+												
+				                			</textarea>						
+										
+									</div>
+									<!-- end widget content -->
+									
+								</div>
+								<!-- end widget div -->
+								
+							</div>
+							<!-- end widget -->
+				
+						</article>
+						<!-- WIDGET END -->
+						
+					</div>
+				
+					<!-- end row -->
+				
+			</section>
+				
+				<!-- MODALS -->
+				
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel"><strong>Detalle de Archivos</strong></h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+										<header>
+											<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+											<h2>Default Tabs with border </h2>
+										</header>
+										<!-- widget div-->
+										<!-- widget edit box -->
+										<div class="jarviswidget-editbox">
+											<!-- This area used as dropdown edit box -->
+					
+										</div>
+										<!-- end widget edit box -->
+										<!-- widget content -->
+										<ul id="myTab1" class="nav nav-tabs bordered">
+											<li class="active">
+												<a href="#s1" data-toggle="tab">Ordenar <span class="badge bg-color-blue txt-color-white" id="FilesAmount">0</span></a>
+											</li>
+											<li>
+												<a href="#s2" onclick="javascript:ingresarAlias();" data-toggle="tab"><i class="fa fa-fw fa-lg fa-pencil-square"></i> Alias </a>
+											</li>
+										</ul>
+				
+										<div id="myTabContent1" class="tab-content padding-10">
+											<div class="tab-pane fade in active" id="s1">
+												<div class="">
+													<div class="row">
+														<div class="col-md-6">
+															<label>
+																<strong>Imágenes</strong>
+															</label>
+															<div class="form-group">
+																<ul id="sortImagenes"></ul>
+															</div>
+														</div>
+												
+														<div class="col-md-6">
+															<label>
+																<strong>Archivos</strong>
+															</label>
+															<div class="form-group">
+																<ul id="sortArchivos"></ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane fade" id="s2">
+												<div class="">
+													<div class="row">
+														<div class="col-md-6">
+															<label>
+																<strong>Nombre Archivo</strong>
+															</label>
+															<div class="form-group">
+																<ul id="FileList" class=""></ul>
+															</div>
+														</div>
+												
+														<div class="col-md-6">
+															<label>
+																<strong>Alias</strong>
+															</label>
+															<div class="form-group">
+																<ul id="AliasList" class=""></ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									<!-- end widget content -->
+				
+								<!-- end widget div -->
+				
+										</div>
+								</div>
+								<div class="row">
+									<div>
+										<div class="well well-sm well-primary">
+										<form class="form form-inline " role="form">
+											<div class="form-group">
+												<label>
+													<i class="fa fa-archive"></i> Tamaño total:
+													<strong>
+														<span id="FileSize">0 bytes</span>
+													</strong>
+												</label>
+											</div>
+										</form>
+										</div>
+									</div>
+								</div>
+				
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">
+									Cerrar
+								</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+				<!-- END MODALS -->
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/plugin/ckeditor/ckeditor.js}"></script>
+		<script th:src="@{/js/plugin/sliptree-bootstrap-tokenfield/bootstrap-tokenfield.js}"></script>
+		<script th:src="@{'/js/cw/'+${type}+'/main.js'}"></script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+					/*]]>*/
+		</script>
+
+	</body>
+
+</html>

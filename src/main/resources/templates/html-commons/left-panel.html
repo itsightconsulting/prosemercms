@@ -1,0 +1,93 @@
+<aside id="left-panel" th:fragment="fg-left-panel">
+			<!-- User info -->
+			<div class="login-info">
+				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
+					<a href="javascript:void(0);" id="show-shortcut">
+						<img th:src="@{/img/avatars/sunny.png}" alt="me" class="online" /> 
+						<span style="text-transform:uppercase;" th:text="${#authentication.name}">
+						</span>
+					</a>
+				</span>
+			</div>
+			<!-- end user info -->
+
+			<!-- NAVIGATION : This navigation is also responsive-->
+			<nav>
+				<!-- 
+				NOTE: Notice the gaps after each icon usage <i></i>..
+				Please note that these links work a bit different than
+				traditional href="" links. See documentation for details.
+				-->
+
+				<ul>
+					<li class="top-menu-invisible">
+						<a href="#" title="GestionContenidoWeb"><i class="fa fa-lg fa-fw fa-th txt-color-orange"></i> <span class="menu-item-parent">Contenido Web</span></a>
+						<ul>
+							<li class="" sec:authorize="hasRole('ROLE_ADMIN')">
+								<a href="#" title="Dashboard"><span class="menu-item-parent">Página Inicio</span></a>
+								<ul>
+									<li><a th:href="@{/gestion/slider/inicio}">Main Carrusel</a></li>
+									<li><a th:href="@{/gestion/inicio/estudio}">Main Estudios</a></li>
+									<li><a th:href="@{/gestion/inicio/capacitacion}">Main Capacitaciones</a></li>
+								</ul>
+							</li>
+							<li class="">
+								<a th:href="@{/gestion/quienes-somos/}" title="Dashboard"><span class="menu-item-parent">Quienes Somos</span></a>
+							</li>
+							<li class="">
+								<a th:href="@{/gestion/memoria/}" title="Dashboard"><span class="menu-item-parent">Memoria del Programa</span></a>
+							</li>
+							<li class="">
+								<a href="#" title="Dashboard"><span class="menu-item-parent">Logros</span></a>
+								<ul>
+									<li><a th:href="@{/gestion/logro/}">Listado</a></li>
+									<li><a th:href="@{/gestion/logro/nuevo}">Registro</a></li>
+								</ul>
+							</li>
+							<li class="">
+								<a href="#" title="Dashboard"><span class="menu-item-parent">Estudios</span></a>
+								<ul>
+									<li><a th:href="@{/gestion/estudio/}">Listado</a></li>
+									<li><a th:href="@{/gestion/estudio/nuevo}">Registro</a></li>
+								</ul>
+							</li>
+							<li class="">
+								<a href="#" title="Dashboard"><span class="menu-item-parent">Capacitaciones</span></a>
+								<ul>
+									<li><a th:href="@{/gestion/capacitacion/}">Listado</a></li>
+									<li><a th:href="@{/gestion/capacitacion/nuevo}">Registro</a></li>
+								</ul>
+							</li>
+							<li class="">
+								<a href="#" title="Dashboard"><span class="menu-item-parent">Eventos</span></a>
+								<ul>
+									<li><a th:href="@{/gestion/evento/}">Listado</a></li>
+									<li><a th:href="@{/gestion/evento/nuevo}">Registro</a></li>
+								</ul>
+							</li>
+							<li class="">
+								<a href="#" title="Dashboard"><span class="menu-item-parent">Tags</span></a>
+								<ul>
+									<li><a th:href="@{/gestion/tag/}">Listado</a></li>
+								</ul>
+							</li>
+						</ul>	
+					</li>
+					<li class="top-menu-invisible" sec:authorize="hasRole('ROLE_ADMIN')">
+						<a href="#" title="Administracion"><i class="fa fa-lg fa-fw fa-cube txt-color-blue"></i> <span class="menu-item-parent">Administración</span></a>
+						<ul>
+							<li>
+								<a th:href="@{/gestion/usuario/}" title="Dashboard"><span class="menu-item-parent">Usuarios</span></a>
+							</li>
+							<li class="">
+								<a th:href="@{/gestion/parametro/}" title="Dashboard"><span class="menu-item-parent">Parametros del Sistema</span></a>
+							</li>
+						</ul>	
+					</li>
+				</ul>
+			</nav>
+			<span class="minifyme" data-action="minifyMenu"> 
+				<i class="fa fa-arrow-circle-left hit"></i> 
+			</span>
+
+		</aside>

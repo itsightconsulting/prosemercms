@@ -1,0 +1,54 @@
+<div th:fragment="fg-js">
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script th:src="@{/js/plugin/pace/pace.min.js}"/>
+		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+			if (!window.jQuery) { var _ctx = document.querySelector('head meta[name="_ctx"]').getAttribute("content"); document.write('<script src=\"'+_ctx+'js/libs/jquery-3.2.1.min.js"><\/script>');}
+			/*]]>*/
+		</script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+			if (!window.jQuery) { var _ctx = document.querySelector('head meta[name="_ctx"]').getAttribute("content"); document.write('<script src=\"'+_ctx+'js/libs/jquery-ui.min.js"><\/script>');}
+			/*]]>*/
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script th:src="@{/js/app.config.js}"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+		<script th:src="@{/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js}"></script> 
+
+		<!-- BOOTSTRAP JS -->
+		<script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+
+		<!-- CUSTOM NOTIFICATION -->
+		<script th:src="@{/js/notification/SmartNotification.min.js}"></script>
+
+		<!-- JARVIS WIDGETS -->
+		<script th:src="@{/js/smartwidgets/jarvis.widget.min.js}"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script th:src="@{/js/plugin/jquery-validate/jquery.validate.min.js}"></script>
+
+		<!-- JQUERY UI + Bootstrap Slider -->
+		<script th:src="@{/js/plugin/bootstrap-slider/bootstrap-slider.min.js}"></script>
+
+		<!-- browser msie issue fix -->
+		<script th:src="@{/js/plugin/msie-fix/jquery.mb.browser.min.js}"></script>
+
+		<!-- FastClick: For mobile devices -->
+		<script th:src="@{/js/plugin/fastclick/fastclick.min.js}"></script>
+
+		<!-- MAIN APP JS FILE -->
+		<script th:src="@{/js/app.min.js}"></script>
+		
+		<!-- Bootsrap validator -->
+		
+		<!-- JS ITS -->
+		<script th:src="@{/js/jsfuente.js}"></script>
+		
+		</div>

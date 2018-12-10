@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: heroku
+  thymeleaf:
+    encoding: UTF-8
+    suffix: .html
+  jpa:
+    hibernate:
+        ddl-auto: update
+        naming:
+          strategy: org.hibernate.cfg.ImprovedNamingStrategy
+  http:
+    multipart:
+      max-request-size: 2048MB
+      max-file-size: 2048MB
+#Tomar en consideración para nuevos cambios en archivos JS el método de caching addResourceHandlers que se encuentra en la clase WebMvcConfiguration.java(paquete: component)

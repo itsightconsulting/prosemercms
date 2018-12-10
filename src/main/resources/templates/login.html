@@ -1,0 +1,279 @@
+<html  lang="en-us" id="extr-page"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+	<head>
+		<meta name="_csrf" th:attr="content=${_csrf.token}"/>
+		<!-- default header name is X-CSRF-TOKEN -->
+		<meta name="_csrf_header" th:attr="content=${_csrf.headerName}"/>
+		<meta name="_ctx" th:content="@{/}" />
+		<meta charset="utf-8"/>
+		<title> CMS Prosemer</title>
+		<meta name="description" content=""/>
+		<meta name="author" content=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+		<!-- #CSS Links -->
+		<!-- Basic Styles -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/font-awesome.min.css}"/>
+
+		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/smartadmin-production-plugins.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/smartadmin-production.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/smartadmin-skins.min.css}"/>
+
+		<!-- SmartAdmin RTL Support -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/smartadmin-rtl.min.css}"/>
+
+		<!-- We recommend you use "your_style.css" to override SmartAdmin
+		     specific styles this will also ensure you retrain your customization with each SmartAdmin update.
+		<link rel="stylesheet" type="text/css" media="screen" href="css/your_style.css"> -->
+
+		<!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/demo.min.css}"/>
+
+		<!-- #FAVICONS -->
+		<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"/>
+
+		<!-- #GOOGLE FONT -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700"/>
+		<!--<link id="google-maps-key" th:attr="data-api-g-key=${GOOGLE_API_KEY}"/>
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="async" defer="defer"></script>-->
+		<style>
+			.img-c{
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				border: 0.5px solid #e6e6e6;
+			}
+		</style>
+	</head>
+
+	<body class="animated fadeInDown">
+
+		<header id="header">
+			<div id="logo-group">
+				<span id="logo"> <img th:src="@{/img/logo-liferay.png}" alt="Liferay"/> </span>
+			</div>
+
+			<span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Deseas ver el portal público?</span> <a th:href="@{/web/inicio}" class="btn btn-danger">Ir al Portal</a> </span>
+
+		</header>
+
+		<div id="main" role="main">
+
+			<!-- MAIN CONTENT -->
+			<div id="content" class="container">
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
+						<h1 class="txt-color-red login-header-big">Prosemer CMS</h1>
+						<div class="hero">
+
+							<div class="pull-left login-desc-box-l">
+								<h4 class="paragraph-header"><strong>Portal de administración de contenidos del proyecto PROSEMER!</strong></h4>
+							</div>
+
+							<img th:src="@{/img/iphoneview.png}" class="pull-right display-image" alt="" style="width:210px"/>
+
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+						<div class="well no-padding">
+							<form id="login-form" class="smart-form client-form" action="#" th:action="@{/loginCheck}" method="post">
+								<header>
+									Login
+								</header>
+
+								<fieldset>
+									<section>
+										<label class="label">Correo</label>
+										<label class="input"> <i class="icon-append fa fa-user"></i>
+											<input type="hidden" name="username" id="username" minlength=""/>
+											<input type="text" name="usernamed" id="usernamed" placeholder="Correo electrónico"/>
+											<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+											<b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Ingresa tu correo electrónico</b></label>
+									</section>
+
+									<section>
+										<label class="label">Password</label>
+										<label class="input"> <i class="icon-append fa fa-lock"></i>
+											<input type="password" name="password" placeholder="Password"/>
+											<b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Ingresa tu password</b> </label>
+									</section>
+									<div th:if="${error =='error'}" class="alert alert-danger" role="alert"><i class="fa fa-warning"></i> Inválido captcha o correo o password </div>
+									<div th:if="${error =='expired'}" class="alert alert-danger" role="alert"><i class="fa fa-warning"></i> Su sesión ha expirado </div>
+									<!--<section>
+									<div id="html_element"></div>
+										<input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha"/>
+									</section>-->
+									<section>
+											<section class="col col-5">
+												<img id="ImgCaptcha" th:src="'data:image/png;base64,'+${captchaEnc}" style="position: center;" class="img-c"/>
+											</section>
+											<section class="col col-6 padding-top-10">
+												<label class="input">
+													<a href="javascript:void(0);" class="icon icon-prepend" title="Actualizar captcha" rel="tooltip" data-placement="top" data-original-title="Actualizar captcha">
+														<i class="fa fa-refresh" style="color: skyblue !important; font-size: 1.5em !important;" id="RefreshCaptcha"></i>
+													</a>
+													<input class="text-align-right" type="text" name="captchaCode" placeholder="Captcha" id="captchaCode"/>
+												</label>
+											</section>
+
+									</section>
+								</fieldset>
+								<footer>
+									<button type="submit" class="btn btn-primary" id="Send">
+										Entrar
+									</button>
+								</footer>
+							</form>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--================================================== -->
+
+		<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+		<script th:src="@{/js/plugin/pace/pace.min.js}"></script>
+
+	    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 		<script th:inline="javascript">
+            /*<![CDATA[*/
+ 		 		if (!window.jQuery) { var _ctx = document.querySelector('head meta[name="_ctx"]').getAttribute("content"); document.write('<script src=\"'+_ctx+'js/libs/jquery-3.2.1.min.js"><\/script>');}
+            /*]]>*/
+ 		 </script>
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script th:inline="javascript">
+            /*<![CDATA[*/
+            if (!window.jQuery) { var _ctx = document.querySelector('head meta[name="_ctx"]').getAttribute("content"); document.write('<script src=\"'+_ctx+'js/libs/jquery-ui.min.js"><\/script>');}
+            /*]]>*/
+		</script>
+
+		<!-- IMPORTANT: APP CONFIG -->
+		<script th:src="@{/js/app.config.js}"></script>
+
+		<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+		<script th:src="@{/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js}"></script> -->
+
+		<!-- BOOTSTRAP JS -->
+		<script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+
+		<!-- JQUERY VALIDATE -->
+		<script th:src="@{/js/plugin/jquery-validate/jquery.validate.min.js}"></script>
+
+		<!-- JQUERY MASKED INPUT -->
+		<script th:src="@{/js/plugin/masked-input/jquery.maskedinput.min.js}"></script>
+
+		<!-- GOOGLE RECAPTCHA V2's VALIDATION-->
+		<script th:src="@{/js/api/recaptcha-v2.min.js}" type="text/javascript"></script>
+
+		<!--[if IE 8]>
+
+			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+		<![endif]-->
+
+		<!-- MAIN APP JS FILE -->
+		<script th:src="@{/js/app.min.js}"></script>
+
+		<script th:inline="javascript">
+			runAllForms();
+
+            $(function() {
+                localStorage.setItem('idioma', 'es');
+				// Validation
+				$("#login-form").validate({
+					// Rules for form validation}
+					ignore: ".ignore",
+					highlight: function(element) {
+				        $(element).parent().removeClass('state-success').addClass("state-error");
+				        $(element).removeClass('valid');
+				    },
+				    unhighlight: function(element) {
+				        $(element).parent().removeClass("state-error").addClass('state-success');
+				        $(element).addClass('valid');
+				    },
+					rules : {
+                        username: {
+                            required : true,
+							minlength: function(){return Number($('#usernamed').val().length+5)},
+                        },
+						usernamed: {
+							required : true,
+							email: true,
+						},
+						password : {
+							required : true,
+							minlength : 8,
+							maxlength : 20
+						},
+                        captchaCode: {
+                            required : true,
+                            minlength : 5,
+							maxlength: 5,
+                        }
+	                   /* hiddenRecaptcha: {
+	                        required: function() {
+	                            if (grecaptcha.getResponse() == '') {
+	                                return !0
+	                            } else {
+	                                return !1
+	                            }
+	                        }
+	                    }*/
+					},
+
+					// Messages for form validation
+					messages : {
+                        username:{
+                            required: "",
+                            minlength: "",
+                        },
+                        usernamed : {
+							required : 'Ingresa tu correo',
+							email: 'Ingresa un correo válido',
+						},
+						password : {
+							required : 'Ingresa tu contraseña',
+							minlength : 'Ingresa mínimo 8 caracteres',
+						},
+	                    /*hiddenRecaptcha: {
+	                        required: "Realizar <strong>la verificación pertinente del captcha.</strong>",
+	                    }*/
+                        captchaCode:{
+                            required: "Ingrese el captcha",
+                            minlength: "",
+                            maxlength: "",
+                        }
+					},
+
+					// Do not change code below
+					errorPlacement : function(error, element) {
+						error.insertAfter(element.parent());
+					},
+                    invalidHandler: function(form, validator) {
+                        var errors = validator.numberOfInvalids();
+                        if (errors) {
+                            document.querySelector('#username').value = document.getElementById('usernamed').value+""+document.querySelector('#captchaCode').value;
+                        }
+                    }
+				});
+                document.querySelector('#RefreshCaptcha').addEventListener('click', refrescarCaptcha);
+                document.querySelector('#usernamed').addEventListener('focusout', checkUsername);
+                document.querySelector('#usernamed').addEventListener('keydown', checkUsername);
+                document.querySelector('#captchaCode').addEventListener('focusout', checkUsername);
+                document.querySelector('#captchaCode').addEventListener('keydown', checkUsername);
+			});
+
+		</script>
+
+	</body>
+</html>

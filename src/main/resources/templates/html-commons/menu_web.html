@@ -1,0 +1,31 @@
+    <div class="menu_vertical" th:fragment="fg-menu-vertical">
+              <ul class="markers">
+                <li><a href="#" data-toggle="dropdown" class="dropdown-toggle menu1">QUIENES SOMOS</a>
+                  <ul class="dropdown-menu">
+                    <li><a th:href="@{/web/historia}">HISTORIA</a></li>
+	              	<li><a th:href="@{/web/objetivos}">OBJETIVOS</a></li>
+	              	<li><a th:href="@{/web/estructura-organizacional}">ESTRUCTURA ORGANIZACIONAL</a></li>
+	              	<li><a th:href="@{/web/marco-legal}">MARCO LEGAL</a></li>
+                  </ul>
+                </li>
+                <li> <a th:href="@{/web/memoria-del-programa}" class="menu1">MEMORIA DEL PROGRAMA</a></li>
+                <li> <a href="#" data-toggle="dropdown" class="dropdown-toggle menu1">LOGROS</a>
+                  <ul class="dropdown-menu">
+                    <li><a th:href="@{/web/logros/minem}">MINEM</a></li>
+		            <li><a th:href="@{/web/logros/osinergmin}">OSINERGMIN</a></li>
+		            <li><a th:href="@{/web/logros/fonafe}">FONAFE</a></li>
+		            <li><a th:href="@{/web/logros/petroperu}">PETROPERU</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" data-toggle="dropdown" class="dropdown-toggle menu1">ESTUDIOS</a>
+                  <ul class="dropdown-menu">
+                    <li><a th:href="@{/web/estudios/minem}">MINEM</a></li>
+		          	<li><a th:href="@{/web/estudios/osinergmin}">OSINERGMIN</a></li>
+		          	<li><a th:href="@{/web/estudios/fonafe}">FONAFE</a></li>
+		          	<li><a th:href="@{/web/estudios/petroperu}">PETROPERU</a></li>
+                  </ul>
+                </li>
+                <li> <a th:href="@{/web/capacitacion/busqueda}"  class="menu1">CAPACITACIONES</a></li>
+            	<li> <a th:href="@{/web/evento/busqueda}"  class="menu1">EVENTOS</a></li>
+              </ul>
+    </div>

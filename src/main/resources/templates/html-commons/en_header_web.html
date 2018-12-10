@@ -1,0 +1,68 @@
+    <header th:fragment="en-fg-header">
+        <div id="menu" class="open_menu"><a href="javascript:togglemenu.ocultarMenu()" class="navigator_bar white"><span class="fa fa-bars"></span></a>
+        <div class="language">
+          <div class="styleselect">
+            <select id="AppLanguage">
+              <option value="0" style="color:black;">Español</option>
+              <option value="1" style="color:black;" selected="selected">English</option>
+            </select>
+          </div>
+        </div>
+        <div class="search">
+          <div class="form-group">
+            <input type="text" class="form-control"/><a th:href="@{/web/en/research/search}"><span class="fa fa-search"></span></a>
+          </div>
+        </div>
+        <ul>
+          <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">About Us</a>
+            <ul class="dropdown-menu">
+              <li><a th:href="@{/web/en/history}">History</a></li>
+              <li><a th:href="@{/web/en/objectives}">Objectives</a></li>
+              <li><a th:href="@{/web/en/organitazional-structure}">Organitazional Structure</a></li>
+              <li><a th:href="@{/web/en/legal-framework}">Legal Framework</a></li>
+            </ul>
+          </li>
+          <li><a th:href="@{/web/en/program-memory}">Program Memory</a></li>
+          <li><a href="#" data-toggle="dropdown" class="dropdown-toggle">Achievements</a>
+            <ul class="dropdown-menu">
+			  <li><a th:href="@{/web/en/achievements/minem}">MINEM</a></li>
+	          <li><a th:href="@{/web/en/achievements/osinergmin}">OSINERGMIN</a></li>
+	          <li><a th:href="@{/web/en/achievements/fonafe}">FONAFE</a></li>
+	          <li><a th:href="@{/web/en/achievements/petroperu}">PETROPERU</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">RESEARCH</a>
+	            <ul class="dropdown-menu">
+	              <li><a th:href="@{/web/en/research/minem}">MINEM</a></li>
+		          <li><a th:href="@{/web/en/research/osinergmin}">OSINERGMIN</a></li>
+		          <li><a th:href="@{/web/en/research/fonafe}">FONAFE</a></li>
+		          <li><a th:href="@{/web/en/research/petroperu}">PETROPERU</a></li>
+	            </ul>
+	      </li>
+          <li><a th:href="@{/web/en/trainings/search}">Trainings</a></li>
+          <li><a th:href="@{/web/en/events/search}">Events</a></li>
+        </ul>
+        <div class="socios">
+          <ul class="logos">
+            <li class="foo-1"><a target="_blanket" href="http://www.minem.gob.pe/"><img th:src="@{/img/img1_footer.png}"/></a></li>
+            <li class="foo-2"><a target="_blanket" href="http://www.osinergmin.gob.pe/"><img th:src="@{/img/img2_footer.png}"/></a></li>
+            <li class="foo-3"><a target="_blanket" href="http://www.fonafe.gob.pe/"><img th:src="@{/img/img3_footer.png}"/></a></li>
+            <li class="foo-4"><a target="_blanket" href="https://www.petroperu.com.pe/"><img th:src="@{/img/img4_footer.png}"/></a></li>
+            <li class="foo-5"><a target="_blanket" href="https://www.iadb.org/en "><img th:src="@{/img/img5_footer.png}"/></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container"><a href="javascript:togglemenu.mostrarMenu()" class="navigator_bar"><span class="fa fa-bars"></span></a>
+        <div class="header_img">
+          <ul class="un_logo">
+            <li class="hea-1" id="EnlaceInicio"><a th:href="@{/web/en}"><img th:src="@{/img/logo_prosemer.png}"/></a></li>
+            <li class="hea-2"><img th:src="@{/img/text_logo.png}" class="mobile"/></li>
+          </ul>
+          <ul class="dos_logo">
+            <li class="hea-3"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}"/></a></li>
+            <li class="hea-4"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}" class="bid_movil"/></a><a href="https://www.canada.ca/en.html"><img id="CanadianFlag" height="36" width="82" th:src="@{/img/bandera.jpg}"/></a></li>
+            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}"/></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>

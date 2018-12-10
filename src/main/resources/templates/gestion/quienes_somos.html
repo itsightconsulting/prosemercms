@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us"
+	  xmlns:th="http://www.thymeleaf.org"
+ 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  <head>
+		<!-- META -->
+		<link th:replace="html-commons/meta :: fg-meta"/>
+		<!-- END META -->
+		<!-- CSS FILES -->
+		<link th:replace="html-commons/css :: fg-css"/>
+		<!-- END CSS FILES -->
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/tokenfield-typeahead.css}"/>
+		<link rel="stylesheet" type="text/css" media="screen" th:href="@{/css/bootstrap-tokenfield.css}"/>
+	  </head>
+	<style type="text/css">
+		.modal-header {border:none; text-align: center; font-size: 1.4em;font-family: 'Raleway-Regular';background: #bfc8d0;color: white;}
+		#sortArchivos, #sortImagenes, #AliasList{padding: 0px;}
+		#sortArchivos li, #sortImagenes li , #FileList li{margin-bottom: 7px;}
+		#AliasList input{margin-bottom: 3.5px;width: 90%;}
+	</style>
+	<body class="">
+
+		<!-- HEADER -->
+		<div th:replace="html-commons/header :: fg-header"></div>
+		<!-- END HEADER -->
+
+		<!-- Left panel : Navigation area -->
+		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+		<div th:replace="html-commons/left-panel :: fg-left-panel"></div>
+		<!-- END NAVIGATION -->
+
+		<!-- MAIN PANEL -->
+		<div id="main" role="main">
+
+			<!-- RIBBON -->
+			<div id="ribbon">
+
+				<span class="ribbon-button-alignment"> 
+					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh"  rel="tooltip" data-html="true">
+						<i class="fa fa-refresh"></i>
+					</span> 
+				</span>
+
+				<!-- breadcrumb -->
+				<ol class="breadcrumb">
+				</ol>
+			</div>
+			<!-- END RIBBON -->
+
+			<!-- MAIN CONTENT -->
+			<div id="content">
+			<fieldset>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<h1 class="page-title txt-color-black">
+								<i class="fa fa-edit fa-fw "></i> 
+									Gestión 
+								<span class="txt-color-black">> 
+									<b>Quienes Somos</b>
+								</span>
+							</h1>
+						</div>
+					</div>
+					<div class="row" id="view_list">
+				          <div class="col-sm-12 col-md-12 col-lg-12" >
+				            <table id="tblRegistros" data-mobile-responsive="true">
+				              <thead>
+				                <tr>
+				                  <th data-field="id" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Codigo"></th>
+								  <th data-field="nombreMenu" data-sortable="true" data-formatter="linkFormatter" data-halign="left" data-valign="middle" data-align="left">Nombre Menu</th>
+				                  <th data-field="fechaModificacion" data-halign="left" data-valign="middle" data-align="left">Fecha Modificación</th>
+				                  <th data-field="modificadoPor" data-halign="left" data-valign="middle" data-align="left">Modificado Por</th>
+				                  <th data-formatter="Opciones"  data-halign="center" data-valign="middle" data-align="center" data-width="90">Acciones</th>
+				                </tr>
+				              </thead>
+				            </table>
+				          </div>
+				    </div>
+				    <div class="row" id="view_register">
+				    	<div class="">
+							<!-- Widget ID (each widget will need unique ID)-->
+							<div class="jarviswidget jarviswidget-color-darken" id="wid-id-1" data-widget-editbutton="false" data-widget-custombutton="false">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-desktop"></i> </span>
+									<!-- Tittle form -->	
+										<h2><strong>Datos Generales</strong></h2>			
+								</header>
+								<div>
+									<!-- widget content -->
+									<div class="widget-body no-padding">
+										<form id="frm_registro" class="smart-form">
+											<fieldset>
+												<div class="">
+													<section class="col col-6">
+														<label class="label">Nombre del Menu <strong>(No editable)</strong></label>
+														<label class="input"><i class="icon-append fa fa-asterisk"></i>
+															<input id="Menu" name="TituloPrincipal" type="text" disabled="disabled" style="font-weight: bold;" />
+															<input id="hIdContenidoMedia" type="hidden"/>
+															<b class="tooltip tooltip-bottom-right">Obligatorio</b>
+														</label>
+													</section>
+												</div>
+											</fieldset>
+											<input type="hidden" id="hIdQuienes"/>
+								            <footer class="">
+								                    <button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+								                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+								            </footer>
+								        </form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<section id="widget-grid" class="">
+						<div class="row">
+							<!-- NEW WIDGET START -->
+							<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								
+								<!-- Widget ID (each widget will need unique ID)-->
+								<div class="jarviswidget jarviswidget-color-darken" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" >
+									<!-- widget options:
+										usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+										
+										data-widget-colorbutton="false"	
+										data-widget-editbutton="false"
+										data-widget-togglebutton="false"
+										data-widget-deletebutton="false"
+										data-widget-fullscreenbutton="false"
+										data-widget-custombutton="false"
+										data-widget-collapsed="true" 
+										data-widget-sortable="false"
+										
+									-->
+									<header>
+										<span class="widget-icon"> <i class="fa fa-pencil"></i> </span>
+										<h2><strong>Contenido</strong></h2>
+									</header>
+									<!-- widget div-->
+									<div>
+										<!-- widget edit box -->
+										<div class="jarviswidget-editbox">
+											<!-- This area used as dropdown edit box -->
+										</div>
+										<!-- end widget edit box -->
+										<!-- widget content -->
+										<div class="widget-body no-padding">
+											<textarea name="ckeditor" id="ckeditor">
+										    </textarea>	
+										</div>
+										<!-- end widget content -->
+									</div>
+									<!-- end widget div -->
+								</div>
+								<!-- end widget -->
+							</article>
+							<!-- WIDGET END -->
+					    </div>
+						</section>
+						</div>
+						<!-- end row -->
+						<!-- FIRST MODAL -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
+										<h4 class="modal-title" id="myModalLabel"><strong>Detalle de Imágenes</strong></h4>
+									</div>
+									<div class="modal-body">
+										<div class="row">
+											<div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+												<header>
+													<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+													<h2>Default Tabs with border </h2>
+												</header>
+												<!-- widget div-->
+												<!-- widget edit box -->
+												<div class="jarviswidget-editbox">
+													<!-- This area used as dropdown edit box -->
+							
+												</div>
+												<!-- end widget edit box -->
+												<!-- widget content -->
+												<ul id="myTab1" class="nav nav-tabs bordered">
+													<li class="active">
+														<a href="#s1" data-toggle="tab">Resultados <span class="fa fa-list bg-color-blue txt-color-white"></span></a>
+													</li>
+												</ul>
+						
+												<div id="myTabContent1" class="tab-content padding-10">
+													<div class="tab-pane fade in active" id="s1">
+														<div class="">
+															<div class="row form-group">
+																<div class="col-sm-12 col-md-12 col-lg-12" >
+																	<form id="frm_busqueda_estudio">
+																		<div class="form-group alert alert-info">
+																			<label> <i class="fa fa-check-circle"></i> Info para imágenes:<br/><strong> Procurar subirlas con resolución mínima de 360px por 241px o proporcional mayor para una óptima visualización</strong></label>
+																		</div>
+																		<div class="form-group">
+																			<label class="col-md-2 control-label">Agregar nuevos:</label>
+																			<div class="col-md-4 form-group">
+																				<input id="UploadFiles" type="file" accept="" class="btn btn-default" multiple="multiple"/>
+																				<input id="UploadFile" type="file" accept=".jpeg,.jpg,.png" style="display: none;"/>
+																				<input id="UploadOnlyFile" type="file" accept=".pdf,.docx,.doc,.docx,.xls,.xlsx,.ppt,.pptx" style="display: none;"/>
+																			</div>
+																			<div class="col-md-2 form-group">
+																				<a href="#" onclick="" id="btnVerificar" type="button" class="btn btn-success bg-color-blueDark" data-toggle="modal" data-target="#myModalVerificar">Reordenar</a>
+																			</div>
+																			<div class="col-md-2 form-group">
+																				<input id="btnNuevosArchivos" type="button" class="btn btn-primary" value="Confirmar"/>
+																			</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+															<div class="row">	
+																<div class="col-sm-12 col-md-12 col-lg-12" >
+														            <table id="tblArchivos" data-mobile-responsive="true">
+														              <thead>
+														                <tr>
+														                  <th data-field="id" data-halign="center" data-valign="middle" data-align="center" data-width="20" data-title="Codigo"></th>
+																		  <th data-field="nombreMedia" data-halign="center" data-valign="middle" data-align="left">Nombre </th>
+																		  <th data-formatter="opcionesArchivos"  data-halign="center" data-valign="middle" data-align="center" data-width="90">Acciones</th>
+														                </tr>
+														              </thead>
+														            </table>
+														         </div>
+															</div>
+														</div>
+													</div>
+												</div>
+											<!-- end widget content -->
+										<!-- end widget div -->
+												</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">
+											Cerrar
+										</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+						<!-- SECOND MODALS FOR IMAGES -->
+						<!-- Creates the bootstrap modal where the image will appear -->
+						<div class="modal fade" id="myModalImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-lg">
+						    <div class="modal-content">
+						      <div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
+						        <h4 class="modal-title" id="myModalLabel"><strong>Visualización</strong></h4>
+						      </div>
+						      <div class="modal-body text-center">
+						        <img src="" id="Image" class="text-center" style="max-width: 100%"/>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+						<!-- END MODALS -->
+						<!-- THIRD MODAL FOR NEW FILES/IMAGES -->
+						<div class="modal fade" id="myModalVerificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel"><strong>Detalle de Imágenes</strong></h4>
+									</div>
+									<div class="modal-body">
+										<div class="row">
+											<div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+												<header>
+													<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+													<h2>Default Tabs with border </h2>
+												</header>
+												<!-- widget div-->
+												<!-- widget edit box -->
+												<div class="jarviswidget-editbox">
+													<!-- This area used as dropdown edit box -->
+							
+												</div>
+												<!-- end widget edit box -->
+												<!-- widget content -->
+												<ul id="myTab1" class="nav nav-tabs bordered">
+													<li class="active">
+														<a href="#s1" data-toggle="tab">Ordenar <span class="badge bg-color-blue txt-color-white" id="FilesAmount">0</span></a>
+													</li>
+												</ul>
+						
+												<div id="myTabContent1" class="tab-content padding-10">
+													<div class="tab-pane fade in active" id="s1">
+														<div class="">
+															<div class="row">
+																<div class="col-md-6">
+																	<label>
+																		<strong>Entradas</strong>
+																	</label>
+																	<div class="form-group">
+																		<ul id="sortArchivos"></ul>
+																		<ul id="sortImagenes"></ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											<!-- end widget content -->
+						
+										<!-- end widget div -->
+						
+												</div>
+										</div>
+										<div class="row">
+											<div>
+												<div class="well well-sm well-primary">
+												<form class="form form-inline " role="form">
+													<div class="form-group">
+														<label>
+															<i class="fa fa-archive"></i> Tamaño total:
+															<strong>
+																<span id="FileSize">0 bytes</span>
+															</strong>
+														</label>
+													</div>
+												</form>
+												</div>
+											</div>
+										</div>
+						
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">
+											Cerrar
+										</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+					</section>
+	        </fieldset>
+			</div>
+			<!-- END MAIN CONTENT -->
+
+		</div>
+		<!-- END MAIN PANEL -->
+		<!-- PAGE FOOTER -->
+		<div th:replace="html-commons/footer :: fg-footer"></div>
+		<!-- END PAGE FOOTER -->
+		<!-- IMPORTS JAVASCRIPT -->
+		<script th:replace="html-commons/js :: fg-js"/>
+		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
+		<script th:src="@{/js/plugin/ckeditor/ckeditor.js}"></script>
+		<script th:src="@{/js/bootstrap-table.min.js}"></script>
+		<script th:src="@{/js/cw/quienes-somos/main.js}"></script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+		/*]]>*/
+		</script>
+
+	</body>
+
+</html>
