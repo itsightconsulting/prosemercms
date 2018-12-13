@@ -62,6 +62,7 @@ function irListado(x) {
 }
 
 function exception(xhrStatus, xhrStatusText){
+    xhrStatusText = xhrStatusText == "" || xhrStatusText == undefined ? "error" : xhrStatusText;
 	$.smallBox({
 		content : "<i> Comuníquese con el administrador <br/> Code error: "+xhrStatus+" <br/> Detail: "+xhrStatusText+"</i>",
 		color: "#8a6d3b",
@@ -243,7 +244,7 @@ function cargarFile(f){
 	                            }
 	                        }
 	                    },
-		                error: function (xhr, ajaxOptions, thrownError) {
+		                error: function (xhr) {
 		                	if(xhr["responseJSON"] != null)
 		                		exception(xhr["status"], xhr["responseJSON"]["error"]);
 		                	else

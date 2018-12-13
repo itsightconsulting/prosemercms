@@ -95,6 +95,8 @@ public class StartUpListener implements ApplicationListener<ContextRefreshedEven
 	@Autowired
 	private EnEstudioService enEstudioService;
 
+	private final Long currentVersion = new Date().getTime();
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
     	//Main Seeders
@@ -138,6 +140,7 @@ public class StartUpListener implements ApplicationListener<ContextRefreshedEven
     	
     	context.setAttribute("MAIN_ROUTE", parametroService.findByClave("MAIN_ROUTE").getValor());
     	context.setAttribute("GOOGLE_API_KEY", parametroService.findByClave("GOOGLE_API_KEY").getValor());
+		context.setAttribute("version", currentVersion);
     	//Agregando variables al contexto si el valor del parámetro tiene algun valor diferente a vacio o NULL
     	Parametro pGenerico = parametroService.findByClave("INDEX_PAGE_STUDIES_1");
     	if(pGenerico.getValor()!= null && !pGenerico.getValor().equals("")) {

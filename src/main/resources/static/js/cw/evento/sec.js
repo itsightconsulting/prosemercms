@@ -662,8 +662,8 @@ var $table = $('#tblRegistros');
 					                            
 					                        }
 					                    },
-						                error: function (xhr, ajaxOptions, thrownError) {
-						                	exception(xhr["status"], xhr["responseJSON"]["error"]);
+						                error: function (xhr) {
+                                            exception(xhr["status"], xhr["responseJSON"] != undefined ? xhr["responseJSON"]["error"] : "Error");
 						                },
 					                    complete: function (data) {
 					                    	obtenerImagenesDirecto(parseInt(data.responseJSON));
@@ -720,8 +720,8 @@ var $table = $('#tblRegistros');
 					                            
 					                        }
 					                    },
-						                error: function (xhr, ajaxOptions, thrownError) {
-						                	exception(xhr["status"], xhr["responseJSON"]["error"]);
+						                error: function (xhr) {
+                                            exception(xhr["status"], xhr["responseJSON"] != undefined ? xhr["responseJSON"]["error"] : "Error");
 						                },
 					                    complete: function (data) {
 					                    	obtenerArchivosDirecto(parseInt(data.responseJSON));
@@ -830,13 +830,10 @@ var $table = $('#tblRegistros');
 			                	$.smallBox({content: "Se agregaron los registros satisfactoriamente..."});
 			                }
 			            },
-			            error: function (xhr, ajaxOptions, thrownError) {
-			            	if(xhr["responseJSON"] != null)
-		                		exception(xhr["status"], xhr["responseJSON"]["error"]);
-		                	else
-		                		exception(xhr["status"], xhr["status"]);
+			            error: function (xhr) {
+                            exception(xhr["status"], xhr["responseJSON"] != undefined ? xhr["responseJSON"]["error"] : "Error");
 			            },
-			            complete: function (data) {
+			            complete: function () {
 			            	if(aliasNames.length>0)
 			            		obtenerArchivos(id);
 			            	else

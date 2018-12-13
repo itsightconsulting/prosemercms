@@ -9901,3 +9901,444 @@
 [INFO ] 2018-12-10 16:04:33.890 [http-nio-8080-exec-8] AspectController - EstudioController.actualizarPortada(..) method called.
 [INFO ] 2018-12-10 16:04:34.084 [http-nio-8080-exec-8] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\8ce7b012-5737-4735-ab00-a00beb08eaa7.png
 [INFO ] 2018-12-10 16:04:45.094 [http-nio-8080-exec-9] AspectController - EstudioController.verificarRelaciones(..) method called.
+[INFO ] 2018-12-10 18:56:14.774 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 4220 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-10 18:56:14.825 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-11 10:45:28.373 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 12056 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-11 10:45:28.457 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-11 10:46:09.053 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-11 10:46:09.741 [restartedMain] ProsemerApplication - Started ProsemerApplication in 46.643 seconds (JVM running for 53.854)
+[INFO ] 2018-12-11 10:50:36.487 [http-nio-8080-exec-3] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-11 10:51:56.293 [http-nio-8080-exec-9] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-11 10:52:03.674 [http-nio-8080-exec-10] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 10:52:12.744 [http-nio-8080-exec-1] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 10:52:12.790 [http-nio-8080-exec-10] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 10:52:21.585 [http-nio-8080-exec-8] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-11 10:54:07.572 [http-nio-8080-exec-10] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 10:54:13.960 [http-nio-8080-exec-4] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 10:54:13.961 [http-nio-8080-exec-1] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 10:54:22.894 [http-nio-8080-exec-1] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-11 10:54:23.508 [http-nio-8080-exec-1] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\0fb352b9-110c-411a-b703-5e35b6a78554.png
+[INFO ] 2018-12-11 10:54:36.587 [http-nio-8080-exec-10] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 10:54:53.928 [http-nio-8080-exec-1] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 10:54:53.952 [http-nio-8080-exec-6] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 10:55:59.902 [http-nio-8080-exec-5] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 10:56:06.655 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 10:56:06.658 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 10:57:16.197 [http-nio-8080-exec-8] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 10:57:26.199 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 10:57:26.296 [http-nio-8080-exec-3] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 10:58:43.113 [http-nio-8080-exec-7] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 10:58:48.757 [http-nio-8080-exec-1] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 10:58:48.759 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 11:02:53.355 [http-nio-8080-exec-2] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 11:03:03.090 [http-nio-8080-exec-10] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 11:03:03.184 [http-nio-8080-exec-6] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 11:03:14.402 [http-nio-8080-exec-7] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-11 11:03:14.451 [http-nio-8080-exec-7] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\cef49225-d3d5-45e4-9a43-0450c77410c7.png
+[INFO ] 2018-12-11 15:43:32.541 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 10708 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-11 15:43:32.747 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-11 15:51:36.148 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 1880 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-11 15:51:36.153 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-11 16:59:30.540 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 4588 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-11 16:59:30.568 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-11 17:00:59.214 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-11 17:01:04.107 [restartedMain] ProsemerApplication - Started ProsemerApplication in 98.586 seconds (JVM running for 120.363)
+[INFO ] 2018-12-11 17:01:55.484 [http-nio-8080-exec-2] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-11 17:02:07.123 [http-nio-8080-exec-3] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-11 17:06:33.880 [http-nio-8080-exec-7] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 17:06:36.119 [http-nio-8080-exec-10] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 17:06:36.123 [http-nio-8080-exec-4] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 17:07:34.171 [http-nio-8080-exec-10] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-11 17:07:34.891 [http-nio-8080-exec-3] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-11 17:18:24.187 [http-nio-8080-exec-1] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-11 17:19:11.082 [http-nio-8080-exec-9] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-11 17:19:12.742 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-11 17:19:12.746 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 17:19:22.711 [http-nio-8080-exec-10] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-11 17:19:47.080 [http-nio-8080-exec-2] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-11 17:19:48.078 [http-nio-8080-exec-2] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\27\c88d9c90-66ae-447d-a616-425a9f48adc3.png
+[INFO ] 2018-12-11 17:19:49.971 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-11 17:19:57.300 [http-nio-8080-exec-6] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-11 17:19:57.511 [http-nio-8080-exec-7] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 11:10:58.133 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 12108 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 11:10:58.153 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-12 11:17:28.518 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 8472 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 11:17:28.554 [main] ProsemerApplicationTests - The following profiles are active: development
+[INFO ] 2018-12-12 11:18:25.720 [main] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 11:18:27.096 [main] ProsemerApplicationTests - Started ProsemerApplicationTests in 60.158 seconds (JVM running for 64.858)
+[INFO ] 2018-12-12 11:22:22.374 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7180 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 11:22:22.382 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 11:24:07.953 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 11:24:09.727 [restartedMain] ProsemerApplication - Started ProsemerApplication in 111.871 seconds (JVM running for 124.912)
+[INFO ] 2018-12-12 11:26:50.519 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7480 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 11:26:50.528 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 11:27:30.639 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 11:27:31.328 [restartedMain] ProsemerApplication - Started ProsemerApplication in 42.968 seconds (JVM running for 46.365)
+[INFO ] 2018-12-12 12:54:15.288 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 11556 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 12:54:15.439 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 12:55:44.678 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 12:55:54.779 [restartedMain] ProsemerApplication - Started ProsemerApplication in 107.042 seconds (JVM running for 141.277)
+[INFO ] 2018-12-12 12:55:58.527 [http-nio-8080-exec-1] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 12:56:41.937 [http-nio-8080-exec-1] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-12 12:56:52.717 [http-nio-8080-exec-9] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 12:56:56.563 [http-nio-8080-exec-3] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 12:56:56.567 [http-nio-8080-exec-6] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 12:57:34.554 [http-nio-8080-exec-7] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 12:57:35.193 [http-nio-8080-exec-7] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\4700b860-88e0-4f03-83b9-778558f33a87.jpg
+[INFO ] 2018-12-12 12:58:03.577 [http-nio-8080-exec-4] AspectController - EstudioController.actualizarPortada(..) method called.
+[INFO ] 2018-12-12 12:58:04.191 [http-nio-8080-exec-4] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\86b623e0-256e-45a5-9429-fd4a6e5a02f5.png
+[INFO ] 2018-12-12 13:00:49.876 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 5552 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 13:00:49.883 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:26:15.169 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 14044 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:26:15.264 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:30:26.375 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 11996 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:30:26.385 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:34:41.867 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 11136 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:34:41.877 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:38:01.679 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 5052 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:38:01.702 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:40:09.951 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 8136 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:40:09.958 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:41:17.830 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 10776 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:41:17.862 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:47:00.447 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 2388 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:47:00.455 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:50:36.846 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 9200 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:50:36.859 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:51:33.588 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 12720 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:51:33.599 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:53:22.383 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 1376 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:53:22.392 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:54:19.555 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 6472 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:54:19.562 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 14:59:03.171 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 8772 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 14:59:03.179 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:01:20.089 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 8756 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:01:20.096 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:03:30.460 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 6312 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:03:30.468 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:06:08.794 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 6604 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:06:08.800 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:08:14.105 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 13272 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:08:14.113 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:14:16.899 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 4540 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:14:16.904 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:21:42.159 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 11848 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:21:42.178 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:22:06.527 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 15:22:07.244 [restartedMain] ProsemerApplication - Started ProsemerApplication in 26.804 seconds (JVM running for 29.379)
+[INFO ] 2018-12-12 15:30:55.691 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 9856 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 15:30:55.747 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 15:31:32.647 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 15:31:33.049 [restartedMain] ProsemerApplication - Started ProsemerApplication in 39.333 seconds (JVM running for 44.526)
+[INFO ] 2018-12-12 15:31:54.416 [http-nio-8080-exec-1] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 15:31:57.524 [http-nio-8080-exec-2] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 15:31:57.550 [http-nio-8080-exec-3] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 15:32:01.895 [http-nio-8080-exec-4] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 15:32:14.966 [http-nio-8080-exec-3] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-12 15:32:20.284 [http-nio-8080-exec-1] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 15:32:22.256 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:32:22.264 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 15:32:23.378 [http-nio-8080-exec-7] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:32:24.481 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:32:58.106 [http-nio-8080-exec-5] AspectController - ImagenController.guardarImagenCKeditor(..) method called.
+[INFO ] 2018-12-12 15:32:59.760 [http-nio-8080-exec-5] ImagenController - > ROUTE: C:/ProsemerAppRepository/Media/Imagenes/95db0e54-a7f9-409f-bf3f-f6d7b279936e.jpg
+[INFO ] 2018-12-12 15:34:16.162 [http-nio-8080-exec-10] AspectController - ArchivoController.guardarArchivoCKeditor(..) method called.
+[INFO ] 2018-12-12 15:34:16.391 [http-nio-8080-exec-10] ArchivoController - > ROUTE: C:/ProsemerAppRepository/Media/Archivos/2024216f-4917-4c95-ab34-093da83ab388.docx
+[INFO ] 2018-12-12 15:36:39.172 [http-nio-8080-exec-1] AspectController - ImagenController.guardarImagenCKeditor(..) method called.
+[INFO ] 2018-12-12 15:36:39.185 [http-nio-8080-exec-1] ImagenController - > ROUTE: C:/ProsemerAppRepository/Media/Imagenes/e923a27f-78bc-4061-953f-116373a48546.png
+[INFO ] 2018-12-12 15:46:26.258 [http-nio-8080-exec-3] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:46:30.198 [http-nio-8080-exec-1] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:47:13.883 [http-nio-8080-exec-5] AspectController - ImagenController.guardarImagenCKeditor(..) method called.
+[INFO ] 2018-12-12 15:47:14.005 [http-nio-8080-exec-5] ImagenController - > ROUTE: C:/ProsemerAppRepository/Media/Imagenes/c787969a-bdb2-4374-acb8-8cfd54ee852b.jpg
+[INFO ] 2018-12-12 15:47:37.402 [http-nio-8080-exec-8] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:47:40.480 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:47:42.436 [http-nio-8080-exec-1] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:47:49.528 [http-nio-8080-exec-2] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:48:22.340 [http-nio-8080-exec-1] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:48:23.610 [http-nio-8080-exec-7] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:48:29.191 [http-nio-8080-exec-3] AspectController - ImagenController.guardarImagenCKeditor(..) method called.
+[INFO ] 2018-12-12 15:48:29.309 [http-nio-8080-exec-3] ImagenController - > ROUTE: C:/ProsemerAppRepository/Media/Imagenes/67b6d184-23d4-499a-8662-7de2506bc79e.jpg
+[INFO ] 2018-12-12 15:49:13.542 [http-nio-8080-exec-8] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:49:14.680 [http-nio-8080-exec-7] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:49:16.688 [http-nio-8080-exec-8] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 15:49:44.706 [http-nio-8080-exec-10] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 15:49:45.974 [http-nio-8080-exec-1] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:49:45.977 [http-nio-8080-exec-6] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 15:49:51.397 [http-nio-8080-exec-6] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 15:49:51.702 [http-nio-8080-exec-6] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\0147f5c4-b18b-4ac8-a77a-25f62ee547ad.png
+[INFO ] 2018-12-12 15:54:46.546 [http-nio-8080-exec-10] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 15:54:47.970 [http-nio-8080-exec-9] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:54:47.972 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 15:54:50.598 [http-nio-8080-exec-2] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 15:54:51.637 [http-nio-8080-exec-6] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 15:54:51.640 [http-nio-8080-exec-9] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:56:20.809 [http-nio-8080-exec-7] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 15:56:21.539 [http-nio-8080-exec-4] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:56:21.541 [http-nio-8080-exec-1] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 15:56:35.385 [http-nio-8080-exec-5] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 15:56:36.145 [http-nio-8080-exec-9] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 15:56:36.146 [http-nio-8080-exec-10] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 16:04:24.050 [http-nio-8080-exec-7] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 16:04:24.856 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 16:04:24.857 [http-nio-8080-exec-3] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 16:04:27.399 [http-nio-8080-exec-4] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 16:04:27.992 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 16:04:27.992 [http-nio-8080-exec-3] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 16:04:32.545 [http-nio-8080-exec-6] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 16:04:32.647 [http-nio-8080-exec-6] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\f48434ef-ff12-4a0d-b5dc-2f78c1816dce.jpg
+[INFO ] 2018-12-12 16:04:36.115 [http-nio-8080-exec-4] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 16:07:00.887 [http-nio-8080-exec-7] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 16:07:01.685 [http-nio-8080-exec-7] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 16:07:06.672 [http-nio-8080-exec-3] AspectController - ImagenController.guardarImagenCKeditor(..) method called.
+[INFO ] 2018-12-12 16:07:06.742 [http-nio-8080-exec-3] ImagenController - > ROUTE: C:/ProsemerAppRepository/Media/Imagenes/51cec5bd-66a7-4041-87dd-799db780ce04.jpg
+[INFO ] 2018-12-12 16:07:44.775 [http-nio-8080-exec-4] AspectController - ArchivoController.guardarArchivoCKeditor(..) method called.
+[INFO ] 2018-12-12 16:32:43.284 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 6608 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 16:32:43.396 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 16:34:34.697 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 14096 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 16:34:34.703 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 16:36:33.368 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7064 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 16:36:33.376 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 16:40:21.770 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 12872 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 16:40:21.781 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 16:43:45.735 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 228 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 16:43:45.810 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 16:44:54.147 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 16:44:55.887 [restartedMain] ProsemerApplication - Started ProsemerApplication in 80.584 seconds (JVM running for 91.078)
+[INFO ] 2018-12-12 16:51:01.008 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7064 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 16:51:01.026 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 16:51:25.381 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 16:51:26.255 [restartedMain] ProsemerApplication - Started ProsemerApplication in 26.652 seconds (JVM running for 31.78)
+[INFO ] 2018-12-12 16:53:00.994 [http-nio-8080-exec-2] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 16:53:17.791 [http-nio-8080-exec-5] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 16:56:13.826 [http-nio-8080-exec-1] SecurityServiceImpl - > Excepción | (?): ADMIN@PROSEMER.COMFE24R
+[INFO ] 2018-12-12 16:56:13.826 [http-nio-8080-exec-1] SecurityServiceImpl - > UsernameNotFoundException | (?): ADMIN@PROSEMER.COMFE24R
+[INFO ] 2018-12-12 16:56:13.981 [http-nio-8080-exec-6] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 16:56:23.053 [http-nio-8080-exec-9] AspectController - EstudioController.formularioEstudio(..) method called.
+[INFO ] 2018-12-12 16:56:27.452 [http-nio-8080-exec-2] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 16:56:31.519 [http-nio-8080-exec-9] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 16:56:32.409 [http-nio-8080-exec-5] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 16:56:32.417 [http-nio-8080-exec-10] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 16:56:35.270 [http-nio-8080-exec-4] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 16:56:58.911 [http-nio-8080-exec-5] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 16:57:00.402 [http-nio-8080-exec-5] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\fcbc0f76-8ad1-483b-8c30-99d35b9b1deb.png
+[INFO ] 2018-12-12 17:29:55.862 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 2564 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:29:55.917 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:32:03.343 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7996 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:32:03.354 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:33:12.311 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 10980 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:33:12.319 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:34:24.598 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 232 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:34:24.611 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:35:40.177 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 13904 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:35:40.185 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:36:03.582 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 17:36:04.096 [restartedMain] ProsemerApplication - Started ProsemerApplication in 25.18 seconds (JVM running for 27.927)
+[INFO ] 2018-12-12 17:39:49.087 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 14020 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:39:49.094 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:47:12.215 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 940 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 17:47:12.291 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 17:48:37.329 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 17:48:37.964 [restartedMain] ProsemerApplication - Started ProsemerApplication in 89.995 seconds (JVM running for 118.376)
+[INFO ] 2018-12-12 18:11:13.494 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7192 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 18:11:13.499 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 18:12:29.905 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 13544 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 18:12:29.912 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 18:14:23.797 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 9556 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 18:14:23.806 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 18:20:56.108 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 12684 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 18:20:56.120 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 18:21:18.573 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 18:21:19.068 [restartedMain] ProsemerApplication - Started ProsemerApplication in 24.275 seconds (JVM running for 26.971)
+[INFO ] 2018-12-12 18:24:20.586 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 232 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 18:24:20.595 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 18:24:43.943 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 18:24:44.289 [restartedMain] ProsemerApplication - Started ProsemerApplication in 24.767 seconds (JVM running for 26.731)
+[INFO ] 2018-12-12 18:24:53.151 [http-nio-8080-exec-3] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 18:25:04.423 [http-nio-8080-exec-9] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 18:25:20.929 [http-nio-8080-exec-5] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-12 18:27:27.789 [http-nio-8080-exec-5] AspectController - SliderController.principalSlider() method called.
+[INFO ] 2018-12-12 18:27:29.097 [http-nio-8080-exec-8] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:27:33.779 [http-nio-8080-exec-7] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:27:36.247 [http-nio-8080-exec-4] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:28:20.779 [http-nio-8080-exec-5] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 18:28:21.655 [http-nio-8080-exec-10] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-12 18:28:23.707 [http-nio-8080-exec-3] AspectController - InicioController.principalCapacitacion(..) method called.
+[INFO ] 2018-12-12 18:28:24.201 [http-nio-8080-exec-9] AspectController - ContenidoWebController.listContenidoWebByType(..) method called.
+[INFO ] 2018-12-12 18:28:26.455 [http-nio-8080-exec-8] AspectController - QuienesSomosController.principalQuienesSomos(..) method called.
+[INFO ] 2018-12-12 18:28:27.770 [http-nio-8080-exec-2] AspectController - QuienesSomosController.listAllWhoAreUs() method called.
+[INFO ] 2018-12-12 18:28:29.601 [http-nio-8080-exec-2] AspectController - EventoController.principalEvento(..) method called.
+[INFO ] 2018-12-12 18:28:30.550 [http-nio-8080-exec-2] AspectController - EventoController.listAllEvents(..) method called.
+[INFO ] 2018-12-12 18:28:30.553 [http-nio-8080-exec-6] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 18:28:33.306 [http-nio-8080-exec-5] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 18:28:34.307 [http-nio-8080-exec-10] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 18:28:34.310 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:28:36.901 [http-nio-8080-exec-5] AspectController - SliderController.principalSlider() method called.
+[INFO ] 2018-12-12 18:28:37.511 [http-nio-8080-exec-8] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:08.396 [http-nio-8080-exec-7] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:08.567 [http-nio-8080-exec-8] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:10.846 [http-nio-8080-exec-10] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:10.897 [http-nio-8080-exec-2] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:12.877 [http-nio-8080-exec-3] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:12.918 [http-nio-8080-exec-9] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:14.931 [http-nio-8080-exec-5] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:14.959 [http-nio-8080-exec-4] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:16.922 [http-nio-8080-exec-6] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:16.967 [http-nio-8080-exec-7] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:19.005 [http-nio-8080-exec-8] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:19.076 [http-nio-8080-exec-10] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:21.040 [http-nio-8080-exec-2] AspectController - SliderController.realizarBaja(..) method called.
+[INFO ] 2018-12-12 18:29:21.070 [http-nio-8080-exec-1] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:29:22.175 [http-nio-8080-exec-9] AspectController - SliderController.getSliderById(..) method called.
+[INFO ] 2018-12-12 18:29:22.224 [http-nio-8080-exec-5] AspectController - TipoImagenController.listAll() method called.
+[INFO ] 2018-12-12 18:29:22.228 [http-nio-8080-exec-4] AspectController - SliderImagenController.listAll(..) method called.
+[INFO ] 2018-12-12 18:29:33.253 [http-nio-8080-exec-8] AspectController - SliderImagenController.guardarArchivo(..) method called.
+[INFO ] 2018-12-12 18:29:33.417 [http-nio-8080-exec-8] SliderImagenController - > ROUTE: C:/ProsemerAppRepository/Slider/6fd4affd-0a92-41f3-a7eb-f17808707c5c.jpg
+[INFO ] 2018-12-12 18:29:33.434 [http-nio-8080-exec-1] AspectController - SliderImagenController.listAll(..) method called.
+[INFO ] 2018-12-12 18:29:48.763 [http-nio-8080-exec-4] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:30:16.859 [http-nio-8080-exec-6] AspectController - SliderController.addSlider(..) method called.
+[INFO ] 2018-12-12 18:30:17.014 [http-nio-8080-exec-8] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 18:30:19.587 [http-nio-8080-exec-2] AspectController - SliderController.getSliderById(..) method called.
+[INFO ] 2018-12-12 18:30:19.618 [http-nio-8080-exec-3] AspectController - TipoImagenController.listAll() method called.
+[INFO ] 2018-12-12 18:30:19.623 [http-nio-8080-exec-9] AspectController - SliderImagenController.listAll(..) method called.
+[INFO ] 2018-12-12 18:30:43.157 [http-nio-8080-exec-10] AspectController - SliderImagenController.guardarArchivo(..) method called.
+[INFO ] 2018-12-12 18:30:43.175 [http-nio-8080-exec-10] SliderImagenController - > ROUTE: C:/ProsemerAppRepository/Slider/f8727ae9-1ba8-4e34-811d-613f4fff0310.png
+[INFO ] 2018-12-12 18:30:43.191 [http-nio-8080-exec-7] AspectController - SliderImagenController.listAll(..) method called.
+[INFO ] 2018-12-12 18:30:47.990 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:31:03.588 [http-nio-8080-exec-3] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 18:31:04.085 [http-nio-8080-exec-5] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-12 18:31:08.499 [http-nio-8080-exec-2] AspectController - QuienesSomosController.principalQuienesSomos(..) method called.
+[INFO ] 2018-12-12 18:31:08.952 [http-nio-8080-exec-10] AspectController - QuienesSomosController.listAllWhoAreUs() method called.
+[INFO ] 2018-12-12 18:31:12.660 [http-nio-8080-exec-8] AspectController - WebEstaticoController.vistaHistoria(..) method called.
+[INFO ] 2018-12-12 18:31:16.390 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaObjetivos(..) method called.
+[INFO ] 2018-12-12 18:31:17.955 [http-nio-8080-exec-3] AspectController - WebEstaticoController.vistaEstructuraOrganizacional(..) method called.
+[INFO ] 2018-12-12 18:31:19.559 [http-nio-8080-exec-5] AspectController - WebEstaticoController.vistaMarcoLegal(..) method called.
+[INFO ] 2018-12-12 18:31:23.495 [http-nio-8080-exec-7] AspectController - QuienesSomosController.getQuienesSomosById(..) method called.
+[INFO ] 2018-12-12 18:31:33.688 [http-nio-8080-exec-3] AspectController - ArchivoController.guardarArchivoCKeditor(..) method called.
+[INFO ] 2018-12-12 18:31:33.793 [http-nio-8080-exec-3] ArchivoController - > ROUTE: C:/ProsemerAppRepository/Media/Archivos/86a380fc-af90-4e99-a6d1-5139e057b783.docx
+[INFO ] 2018-12-12 18:31:57.713 [http-nio-8080-exec-1] AspectController - ImagenController.guardarImagenCKeditor(..) method called.
+[INFO ] 2018-12-12 18:31:57.833 [http-nio-8080-exec-1] ImagenController - > ROUTE: C:/ProsemerAppRepository/Media/Imagenes/1d7e1393-a644-4581-a7a0-1a4db0e89ba9.png
+[INFO ] 2018-12-12 18:32:07.206 [http-nio-8080-exec-9] AspectController - QuienesSomosController.addWhoAreUs(..) method called.
+[INFO ] 2018-12-12 18:32:07.467 [http-nio-8080-exec-10] AspectController - QuienesSomosController.listAllWhoAreUs() method called.
+[INFO ] 2018-12-12 18:32:11.557 [http-nio-8080-exec-8] AspectController - WebEstaticoController.vistaHistoria(..) method called.
+[INFO ] 2018-12-12 18:32:13.527 [http-nio-8080-exec-5] AspectController - MediaFileController.getFileAsBytesArrayFree(..) method called.
+[INFO ] 2018-12-12 18:33:30.641 [http-nio-8080-exec-5] AspectController - MemoriaController.principalMemoria(..) method called.
+[INFO ] 2018-12-12 18:33:31.843 [http-nio-8080-exec-10] AspectController - MemoriaController.listAllWhoAreUs() method called.
+[INFO ] 2018-12-12 18:33:35.601 [http-nio-8080-exec-9] AspectController - MemoriaController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 18:33:35.666 [http-nio-8080-exec-9] MemoriaController - > ROUTE: C:\ProsemerAppRepository\MemoriaProyecto\580068dd-c024-4233-828e-3ce2833c32b2.jpeg
+[INFO ] 2018-12-12 18:33:38.892 [http-nio-8080-exec-10] AspectController - MemoriaController.actualizarPortada(..) method called.
+[INFO ] 2018-12-12 18:33:39.035 [http-nio-8080-exec-10] MemoriaController - > ROUTE: C:\ProsemerAppRepository\MemoriaProyecto\79fbaeef-fc2e-4feb-88f5-238d9f88d3c9.png
+[INFO ] 2018-12-12 18:33:40.841 [http-nio-8080-exec-5] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:33:46.548 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaMemoriaDelPrograma(..) method called.
+[INFO ] 2018-12-12 18:33:49.729 [http-nio-8080-exec-8] AspectController - MediaFileController.getFileAsBytesArrayMemoria(..) method called.
+[INFO ] 2018-12-12 18:33:52.117 [http-nio-8080-exec-6] AspectController - MediaFileController.getFileAsBytesArrayMemoria(..) method called.
+[INFO ] 2018-12-12 18:34:02.803 [http-nio-8080-exec-8] AspectController - MemoriaController.actualizar(..) method called.
+[INFO ] 2018-12-12 18:34:02.898 [http-nio-8080-exec-8] MemoriaController - > ROUTE: C:\ProsemerAppRepository\MemoriaProyecto\144c7665-d882-4451-91d9-2159b90f1763.docx
+[INFO ] 2018-12-12 18:34:02.945 [http-nio-8080-exec-4] AspectController - MemoriaController.listAllWhoAreUs() method called.
+[INFO ] 2018-12-12 18:34:04.602 [http-nio-8080-exec-3] AspectController - WebEstaticoController.vistaMemoriaDelPrograma(..) method called.
+[INFO ] 2018-12-12 18:34:06.063 [http-nio-8080-exec-5] AspectController - MediaFileController.getFileAsBytesArrayMemoria(..) method called.
+[INFO ] 2018-12-12 18:34:08.868 [http-nio-8080-exec-2] AspectController - MemoriaController.principalMemoria(..) method called.
+[INFO ] 2018-12-12 18:34:09.587 [http-nio-8080-exec-7] AspectController - MemoriaController.listAllWhoAreUs() method called.
+[INFO ] 2018-12-12 18:34:10.902 [http-nio-8080-exec-7] AspectController - LogroController.principalLogro(..) method called.
+[INFO ] 2018-12-12 18:34:11.718 [http-nio-8080-exec-5] AspectController - LogroController.listAll(..) method called.
+[INFO ] 2018-12-12 18:34:13.313 [http-nio-8080-exec-7] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:34:18.156 [http-nio-8080-exec-2] AspectController - WebEstaticoController.vistaBusquedaLogro(..) method called.
+[INFO ] 2018-12-12 18:34:22.457 [http-nio-8080-exec-8] AspectController - WebEstaticoController.vistaBusquedaLogro(..) method called.
+[INFO ] 2018-12-12 18:34:23.628 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaBusquedaLogro(..) method called.
+[INFO ] 2018-12-12 18:34:25.221 [http-nio-8080-exec-2] AspectController - WebEstaticoController.vistaBusquedaLogro(..) method called.
+[INFO ] 2018-12-12 18:34:40.085 [http-nio-8080-exec-9] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:34:41.276 [http-nio-8080-exec-5] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:34:42.374 [http-nio-8080-exec-1] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:34:42.730 [http-nio-8080-exec-10] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:34:43.055 [http-nio-8080-exec-7] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:35:03.623 [http-nio-8080-exec-4] AspectController - LogroController.listAll(..) method called.
+[INFO ] 2018-12-12 18:35:05.301 [http-nio-8080-exec-2] AspectController - LogroController.getLogroById(..) method called.
+[INFO ] 2018-12-12 18:35:09.546 [http-nio-8080-exec-8] AspectController - LogroController.add(..) method called.
+[INFO ] 2018-12-12 18:35:09.642 [http-nio-8080-exec-9] AspectController - LogroController.listAll(..) method called.
+[INFO ] 2018-12-12 18:35:17.889 [http-nio-8080-exec-7] AspectController - LogroController.getLogroById(..) method called.
+[INFO ] 2018-12-12 18:35:21.810 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:35:26.267 [http-nio-8080-exec-2] AspectController - WebEstaticoController.vistaBusquedaLogro(..) method called.
+[INFO ] 2018-12-12 18:35:29.387 [http-nio-8080-exec-10] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:35:30.073 [http-nio-8080-exec-8] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:35:31.025 [http-nio-8080-exec-4] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:35:31.530 [http-nio-8080-exec-9] AspectController - WebEstaticoController.consultarLogros(..) method called.
+[INFO ] 2018-12-12 18:35:36.158 [http-nio-8080-exec-1] AspectController - LogroController.add(..) method called.
+[INFO ] 2018-12-12 18:35:36.193 [http-nio-8080-exec-7] AspectController - LogroController.listAll(..) method called.
+[INFO ] 2018-12-12 18:35:43.319 [http-nio-8080-exec-5] AspectController - WebEstaticoController.vistaBusquedaLogro(..) method called.
+[INFO ] 2018-12-12 18:36:06.201 [http-nio-8080-exec-6] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 18:36:07.943 [http-nio-8080-exec-3] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-12 18:36:10.689 [http-nio-8080-exec-4] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:36:11.904 [http-nio-8080-exec-3] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:36:17.970 [http-nio-8080-exec-4] AspectController - LogroController.principalLogro(..) method called.
+[INFO ] 2018-12-12 18:36:18.631 [http-nio-8080-exec-5] AspectController - LogroController.listAll(..) method called.
+[INFO ] 2018-12-12 18:37:01.177 [http-nio-8080-exec-10] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 18:37:01.782 [http-nio-8080-exec-10] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 18:37:01.783 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:37:25.543 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:37:34.780 [http-nio-8080-exec-7] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:37:40.941 [http-nio-8080-exec-5] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:37:44.445 [http-nio-8080-exec-1] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 18:37:51.707 [http-nio-8080-exec-3] AspectController - EstudioController.guardarArchivosSecundary(..) method called.
+[INFO ] 2018-12-12 18:37:51.732 [http-nio-8080-exec-3] EstudioController - > ROUTE: C:/ProsemerAppRepository/Estudios/Imagenes/27/acd8f886-c253-4c7c-9ee0-575d2e8885c5.png
+[INFO ] 2018-12-12 18:37:51.740 [http-nio-8080-exec-3] EstudioController - > ROUTE: C:/ProsemerAppRepository/Estudios/Imagenes/27/e7b8c044-fdc5-4709-adc9-270cc7e4d958.png
+[INFO ] 2018-12-12 18:37:51.811 [http-nio-8080-exec-6] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 18:38:00.059 [http-nio-8080-exec-10] AspectController - EstudioController.guardarArchivosSecundary(..) method called.
+[INFO ] 2018-12-12 18:38:00.080 [http-nio-8080-exec-10] EstudioController - > ROUTE: C:/ProsemerAppRepository/Estudios/Imagenes/27/29c4e382-fd62-4c9a-91a4-39f3baa62f5d.png
+[INFO ] 2018-12-12 18:38:00.151 [http-nio-8080-exec-10] EstudioController - > ROUTE: C:/ProsemerAppRepository/Estudios/Imagenes/27/8fb65134-c765-4560-90d4-24677678e645.png
+[INFO ] 2018-12-12 18:38:00.191 [http-nio-8080-exec-9] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 18:38:01.472 [http-nio-8080-exec-7] AspectController - EstudioController.guardarArchivosSecundary(..) method called.
+[INFO ] 2018-12-12 18:38:01.481 [http-nio-8080-exec-7] EstudioController - > ROUTE: C:/ProsemerAppRepository/Estudios/Imagenes/27/badd5422-4d43-420e-951e-7bdae38c10bb.png
+[INFO ] 2018-12-12 18:38:01.487 [http-nio-8080-exec-7] EstudioController - > ROUTE: C:/ProsemerAppRepository/Estudios/Imagenes/27/8064b783-c6a8-4743-a6dc-3304e7a441aa.png
+[INFO ] 2018-12-12 18:38:01.512 [http-nio-8080-exec-5] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 18:38:08.231 [http-nio-8080-exec-8] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 18:38:08.869 [http-nio-8080-exec-10] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 18:38:08.871 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:38:26.571 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 18:38:28.471 [http-nio-8080-exec-7] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 18:38:37.137 [http-nio-8080-exec-8] AspectController - EstudioController.obtenerArchivos(..) method called.
+[INFO ] 2018-12-12 18:38:41.037 [http-nio-8080-exec-10] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 18:38:49.343 [http-nio-8080-exec-3] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 18:38:49.381 [http-nio-8080-exec-3] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\27\50395109-2e3d-4754-aa1a-30dfe4a8503b.jpeg
+[INFO ] 2018-12-12 18:39:59.580 [http-nio-8080-exec-3] AspectController - EstudioController.actualizarPortada(..) method called.
+[INFO ] 2018-12-12 18:39:59.676 [http-nio-8080-exec-3] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\22\e175a939-c0ad-4176-bc3c-617f673c39cc.png
+[INFO ] 2018-12-12 18:40:04.230 [http-nio-8080-exec-7] AspectController - EstudioController.actualizarPortada(..) method called.
+[INFO ] 2018-12-12 18:40:04.289 [http-nio-8080-exec-7] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\27\21617ec7-7263-4ae1-9119-a3e83d1d601c.png
+[INFO ] 2018-12-12 18:40:05.482 [http-nio-8080-exec-4] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 18:40:08.968 [http-nio-8080-exec-4] AspectController - WebEstaticoController.vistaTemplateEstudio(..) method called.
+[INFO ] 2018-12-12 18:40:14.722 [http-nio-8080-exec-8] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 19:17:46.986 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 1872 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 19:17:46.994 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 19:18:21.012 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 19:18:24.252 [restartedMain] ProsemerApplication - Started ProsemerApplication in 38.182 seconds (JVM running for 41.952)
+[INFO ] 2018-12-12 19:18:30.530 [http-nio-8080-exec-1] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 19:18:33.227 [http-nio-8080-exec-7] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 19:18:52.009 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-12 19:19:34.168 [http-nio-8080-exec-6] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 19:19:38.149 [http-nio-8080-exec-3] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-12 19:20:17.656 [http-nio-8080-exec-9] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-12 19:20:22.856 [http-nio-8080-exec-5] AspectController - SliderController.principalSlider() method called.
+[INFO ] 2018-12-12 19:20:23.564 [http-nio-8080-exec-6] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-12 19:20:26.256 [http-nio-8080-exec-1] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 19:20:27.553 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 19:20:27.554 [http-nio-8080-exec-4] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 19:20:34.127 [http-nio-8080-exec-2] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 19:20:35.258 [http-nio-8080-exec-2] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 19:20:35.258 [http-nio-8080-exec-6] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 19:21:02.438 [http-nio-8080-exec-4] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-12 19:21:03.637 [http-nio-8080-exec-3] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-12 19:21:03.643 [http-nio-8080-exec-2] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-12 19:21:06.710 [http-nio-8080-exec-1] AspectController - EstudioController.obtenerImagenes(..) method called.
+[INFO ] 2018-12-12 19:21:16.007 [http-nio-8080-exec-3] AspectController - EstudioController.actualizarImagenResumen(..) method called.
+[INFO ] 2018-12-12 19:21:16.084 [http-nio-8080-exec-3] EstudioController - > ROUTE: C:\ProsemerAppRepository\Estudios\Imagenes\16\4f28b021-2077-400b-a4da-91552261d041.png
+[INFO ] 2018-12-12 19:26:02.938 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 11312 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 19:26:02.945 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-12 19:31:15.699 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 11288 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 19:31:15.706 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-12 19:36:04.718 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 11180 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 19:36:04.907 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-12 19:51:15.967 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7896 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 19:51:15.972 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-12 19:51:44.811 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-12 19:51:45.293 [restartedMain] ProsemerApplication - Started ProsemerApplication in 30.535 seconds (JVM running for 33.423)
+[INFO ] 2018-12-12 19:55:32.872 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 8032 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-12 19:55:32.887 [main] ProsemerApplicationTests - The following profiles are active: production

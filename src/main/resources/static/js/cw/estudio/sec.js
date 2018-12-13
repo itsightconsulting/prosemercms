@@ -1,38 +1,38 @@
 			var $table = $('#tblRegistros');
 			var $tableFiles = $('#tblArchivos');
 			var $index = $('#hIdEstudio');
-			
+
 			let arrayArchivos = [];
 			let arrayImagenes = [];
 			var rawTags = "";
 			var alias = "";
-			
+
 			let modalFileSort = $('#sortArchivos').get(0);
 			let modalImageSort = $('#sortImagenes').get(0);
 			//CK EDITOR BODY
 			var iFrameBody = '';
-			
+
 				$(function() {
-					
+
 					$( "#sortArchivos" ).sortable();
 					$( "#sortArchivos" ).disableSelection();
-					
+
 					$( "#sortImagenes" ).sortable();
 					$( "#sortImagenes" ).disableSelection();
-					
+
 					$(document).on('keypress', function(e) {
 					    var tag = e.target.tagName.toLowerCase();
-					    if (e.keyCode === $.ui.keyCode.ENTER) 
+					    if (e.keyCode === $.ui.keyCode.ENTER)
 					       e.preventDefault();
 					});
-					
+
 					var token = $("meta[name='_csrf']").attr("content");
 					var header = $("meta[name='_csrf_header']").attr("content");
 					$(document).ajaxSend(function(e, xhr, options) {
 						xhr.setRequestHeader(header, token);
 					});
-					
-					
+
+
 					pageSetUp();
 					listarRegistros();
 					instanciarTags();
@@ -41,72 +41,72 @@
 					$('#CKFileI').change(function(){//Found it in jsfuentes.js
 						cargarImagen(this);
 					});
-					
+
 					$('#CKFile').change(function(){//Found it in jsfuentes.js
 						cargarFile(this);
 					});
-					
+
 					//V A L I D A T E
 					validarRegistros();
 					validarBusqueda();
-					
+
 					$("#btnNuevo").click(function () {
 				    	window.location.href = _ctx+'gestion/estudio/nuevo';
 				    });
-					
+
 					$("#btnGuardar").click(function () {
 				        registro();
 				    });
-					
+
 				    $("#btnCancelar").click(function () {
 				    	$('#Username').removeAttr('disabled');
 				        irListado($index);
 				    });
-				    
+
 				    $("#btnFiltrar").click(function () {
 				    	listarRegistros();
 				    });
-				    
+
 				    $("#btnNuevosArchivos").click(function(){
 				    	addFiles();
 				    });
-				    
+
 					$("#UploadFile").change(function(){
 						subirFileReemplazo(this);
 					});
-					
+
 					$("#UploadOnlyFile").change(function(){
 						subirOnlyFileReemplazo(this);
 					});
-					
-					$("#UploadFiles").change(function(){ 
+
+					$("#UploadFiles").change(function(){
 						subirArchivos(this);
 					});
-					
+
 					$("#UploadResumenImage").change(function(){
 						subirResumenImage(this);
 					})
-					
+
 					$("#UploadPortadaImage").change(function(){
 						subirPortadaImage(this);
 					})
-					
+
 					$('#myModalVerificar').on('hidden.bs.modal', function () {
 						reorganizarFileArrays();
 					});
-					
+
 					$('.modal').on('hidden.bs.modal', function () {
 						if(document.body.style.cssText.includes("padding-right"))
 							document.body.style.cssText=null;
 					});
-					
+
 					$('#myModal').on('hidden.bs.modal', function () {
 						$("#UploadFiles").val("");
 						modalFileSort.innerHTML = '';
 						modalImageSort.innerHTML = '';
 						$("#AliasList").get(0).innerHTML = '';
 					});
-					
+
 					$('#CKFileCopy').click(function(){
 						$('#CKFileRoute').select();
 						document.execCommand('copy');
@@ -124,7 +124,7 @@
 						$('#CKFileI').val('');
 						$('#CKFileRouteI').val('');
 					});
-					
+
 					//Compare for reorder arrays
 					compare = function compare(a,b) {
 						if (a.orden < b.orden)
@@ -134,7 +134,7 @@
 						return 0;
 					}
 				});
-				
+
 				function subirArchivos(fs){
 						 arrayArchivos = [];
 						 arrayImagenes = [];
@@ -144,24 +144,24 @@
 						 modalImageSort.innerHTML = '';
 						 $AliasList = $("#AliasList").get(0);
 						 $AliasList.innerHTML = '';
-						 
+
 						 let rawImages = "", rawFiles="", filesSize = 0;
-						 
+
 				         //Submit files
 			             var archivos = $("#UploadFiles").get(0);
-				         
+
 				         if ((file = fs.files[0])) {
-						        						        
+
 						     archivos = archivos.files;
-						     
+
 						     //Cantidad de archivos
 						     $('#FilesAmount').text(archivos.length);
-						        
+
 						     if(archivos != null){
-						    	 var nuevoOrden = [], iFile = 0,iImage = 0; 
+						    	 var nuevoOrden = [], iFile = 0,iImage = 0;
 
 							        	Array.from(archivos).forEach((file, i) => {
-							        		
+
 								            if(file.type.match('application') || file.type == ''){
 									            file.sizeFormat = formatBytes(file.size);
 									            arrayArchivos.push(file);
@@ -174,34 +174,34 @@
 								            	filesSize+=file.size;
 								            }
 								        });
-							        	
+
 							        modalImageSort.innerHTML = rawImages;
 						        	modalFileSort.innerHTML = rawFiles;
 									$AliasList.innerHTML = rawInputs;
 						     }
 						     //Asignando el tamaño de los archivos
 						     $('#FileSize').text(formatBytes(filesSize));
-						     
+
 				         }else{
 				             modalFileSort.innerHTML = '';
 				         }
 				}
-		
+
 				function listarRegistros() {
-					
+
 				    if ($("#frm_busqueda").valid()) {
-					
+
 					    $table.bootstrapTable('destroy');
 					    var dataRpta;
-				
+
 				    	var comodin = $("#txtFiltro").val();
 				        var estado  = $("#Estado").val();
 				        var beneficiario = $("#Beneficiario").val();
-				        
+
 				        if(comodin == null || comodin == ""){comodin = "0";}
 				        if(estado == null){estado = "-1";}
 				        if(beneficiario == null || beneficiario == ""){beneficiario = "0";}
-				        
+
 				        $table.bootstrapTable({
 				        	url: _ctx+lang+'gestion/estudio/obtenerListado/'+comodin+'/'+estado+'/'+beneficiario,
 				        	pagination: true,
@@ -214,7 +214,7 @@
 				        });
 					}
 				}
-				
+
 				function registro() {
 				    if ($("#frm_registro").valid()) {
 				    	iFrameBody = document.querySelectorAll('.cke_wysiwyg_frame')[0].contentDocument.querySelector('body');
@@ -232,15 +232,15 @@
 						params.flagResumen = false,
 						params.resumen = iFrameBody.textContent.substring(0,232).trim() + "...";
 						params.tags = tags;
-				                 
+
 				        $.ajax({
 				            type: 'POST',
-				            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+				            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 				            url: _ctx+lang+'gestion/estudio/agregar',
 				            dataType: "json",
 				            data: params,
 				            success: function (data, textStatus) {
-				                if (textStatus == "success") {   
+				                if (textStatus == "success") {
 				                	if(data=="-9"){
 				                		$.smallBox({
 											content : "<i> El registro ha fallado debido a que el nombre de estudio ya existe en el sistema...</i>",
@@ -250,7 +250,7 @@
 				                	}else{
 				                		$.smallBox({
 				                			content : "<i class='fa fa-child fa-2x'></i> <i>Actualización exitosa...!</i>",
-				                		}); 
+				                		});
 										registrandoNuevasTags(params.tags);
 				                	}
 				                }
@@ -275,15 +275,15 @@
 				    	}
 				    }
 				}
-				
+
 				function editar(id, beneficiario) {
 				    var param = new Object();
 				    param.id = id;
-				    				    
+
 				    $("#load_pace").show();
 				    $.ajax({
 				        type: 'GET',
-				        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+				        contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 				        url: _ctx+lang+'gestion/estudio/obtener',
 				        dataType: "json",
 				        data: param,
@@ -295,7 +295,7 @@
 				                $("#TituloPrincipal").val(data["tituloPrincipal"]);
 				                $("#TituloLargo").val(data["tituloLargo"]);
 								iFrameBody.innerHTML = data.alcance;
-								
+
 								$("#Consultor").val(data["consultor"]);
 								$("#ResponsableEntidad").val(data["responsableEntidad"]);
 								var fechaEstudio = data["fechaEstudio"].split("-");
@@ -318,7 +318,7 @@
 				        }
 				    });
 				}
-				
+
 				function desactivar(id, ix) {
 						$.SmartMessageBox({
 							title : "<i class='fa fa-bullhorn'></i> Notificaciones Prosemer",
@@ -328,11 +328,11 @@
 							if (ButtonPressed === "Si") {
 					        	var param = new Object();
 					            param.id = id;
-					            
+
 					            $("#load_pace").show();
 					            $.ajax({
 					                type: 'PUT',
-					    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+					    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 					                url: _ctx+'gestion/estudio/desactivar',
 					                dataType: "json",
 					                data: param,
@@ -370,15 +370,15 @@
 							}else{}
 						})
 				}
-				
+
 				function getBodyCKEditor(){
 					iFrameBody = document.querySelectorAll('.cke_wysiwyg_frame')[0].contentDocument.querySelector('body');
 				}
-				
+
 				function linkFormatter(value, row, index) {
 			        return String('<a class="editable editable-click" href="#" onclick="javascript:editar(' + row.id +','+ row.beneficiario.id +')" title="Editar">'+row.tituloPrincipal+'</a>', value);
 			    }
-				
+
 				function Opciones(value, row, index) {
 					opciones = `<a href='#' onclick='javascript:desactivar(${row.id}, ${index});' title='Actualizar status'><i class='glyphicon glyphicon-refresh'></i></a> &nbsp
 								<a href='#' onclick='javascript:obtenerArchivos(${row.id});' title='Gestionar Archivos' data-toggle='modal' data-target='#myModal'><i class='glyphicon glyphicon-file'></i></a> &nbsp
@@ -388,7 +388,7 @@
 								<a href='#' onclick='javascript:eliminar(${row.id}, ${index});' title='Eliminar estudio'><i class='glyphicon glyphicon-trash text-danger'></i></a> &nbsp`;
 		            return  opciones;
 		        }
-				
+
 				function isActived(value, row, index) {
 					if (row.flagActivo) {
 		                return '<span class="label label-success">Activo</span>';
@@ -396,7 +396,7 @@
 		                return '<span class="label label-danger">Inactivo</span>';
 		            }
 				}
-				
+
 				function instanciarTags(){
 					var tags = [];
 					$.ajax({
@@ -408,7 +408,7 @@
 			                	data.forEach((t, i) =>{
 				                	tags[i] = t.nombre;
 			                	});
-			                	
+
 			                	$('#Tags').tokenfield({
 									  autocomplete: {
 									    source: tags,
@@ -425,7 +425,7 @@
 			            }
 			        });
 				}
-				
+
 				function registrandoNuevasTags(tags){
 					tags = tags.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
 					rawTags = rawTags.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -442,7 +442,7 @@
 								}
 								$.ajax({
 						            type: 'POST',
-						            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+						            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 						            url: _ctx+'gestion/tag/agregar',
 						            dataType: "json",
 						            data: params,
@@ -460,7 +460,7 @@
 							instanciarTags();
 						}
 				}
-				
+
 				function obtenerArchivos(id){
 					document.querySelector('#filesInfo').innerHTML = `<label> <i class="fa fa-check-circle"></i> Info para archivos:<br/><strong> Los tipos de archivos permitidos a subir son word, excel, pdf, ppt, comprimidos zip o rar</strong></label>`;
 					$('#hIdEstudio').val(id);
@@ -478,7 +478,7 @@
 						},
 					});
 				}
-				
+
 				function obtenerImagenes(id){
 					console.log(id);
 					document.querySelector('#filesInfo').innerHTML = `<label> <i class="fa fa-check-circle"></i> Info para imágenes:<br/><strong> Procurar subirlas con resolución mínima de 360px por 241px o proporcional mayor para una óptima visualización</strong></label>`;
@@ -497,7 +497,7 @@
 						},
 					});
 				}
-				
+
 				function obtenerImagenesDirecto(id){
 					$tableFiles.bootstrapTable('destroy');
 					$tableFiles.bootstrapTable({
@@ -512,7 +512,7 @@
 						},
 					});
 				}
-				
+
 				function obtenerArchivosDirecto(id){
 					$tableFiles.bootstrapTable('destroy');
 					$tableFiles.bootstrapTable({
@@ -527,35 +527,35 @@
 						},
 					});
 				}
-				
+
 				function opcionesArchivos(value, row, index){
-					var opciones = ""; 
+					var opciones = "";
 					if(row.peso == null)
 						opciones = `<a href='#' onclick='javascript:visualizar("${row.rutaMediaWeb}");' title='Visualizar imagen'><i class='glyphicon glyphicon-eye-open'></i></a> &nbsp
 									<a href='#' onclick='javascript:reemplazar(${row.id}, 2);' title='Reemplazar'><i class='glyphicon glyphicon-cloud-upload'></i></a> &nbsp
 									<a href='#' onclick='javascript:baja(${row.id}, 2, ${index});' title='Eliminar'><i class='glyphicon glyphicon-trash text-danger'></i></a> &nbsp`;
 					else
-						
+
 					opciones = `<a href='#' onclick='javascript:descargar("${row.rutaMediaWeb}");' title='Descargar'><i class='glyphicon glyphicon-cloud-download'></i></a> &nbsp
 								<a href='#' onclick='javascript:reemplazar(${row.id}, 1);' title='Reemplazar'><i class='glyphicon glyphicon-cloud-upload'></i></a> &nbsp
 								<a href='#' onclick='javascript:baja(${row.id}, 1, ${index});' title='Eliminar'><i class='glyphicon glyphicon-trash text-danger'></i></a> &nbsp`;
             		return  opciones;
 				}
-				
+
 				function visualizar(ruta){
 					$('#Image').attr('src', _ctx+'media/image/estudio'+ruta);
 					$('#myModalImage').modal('show');
 				}
-				
+
 				function descargar(ruta){
 					window.location.href = _ctx+'media/file/estudio/gt/0'+ruta;
 					$.smallBox({
-						content: "La descarga ha iniciado...", 
+						content: "La descarga ha iniciado...",
 						iconSmall: "fa fa-cloud fa-2x",
 						color: "#296191"
 					});
 				}
-				
+
 				function reemplazarResumenImage(id){
 					$.smallBox({
 						content : "¿Estás seguro de querer reemplazar la imagen para el resumen? <p class='text-align-right'><a href='javascript:confirmarReemplazoResumenImage("+id+")' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
@@ -565,7 +565,7 @@
 						iconSmall: "",
 					});
 				}
-				
+
 				function reemplazarPortadaImage(id){
 					$.smallBox({
 						content : "¿Estás seguro de querer reemplazar la imagen de portada del estudio? <p class='text-align-right'><a href='javascript:confirmarReemplazoPortadaImage("+id+")' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
@@ -575,7 +575,7 @@
 						iconSmall: "",
 					});
 				}
-				
+
 				function reemplazar(id, tipo){
 					$.smallBox({
 						content : "¿Estás seguro de querer reemplazar el archivo o imagen? <p class='text-align-right'><a href='javascript:confirmarReemplazo("+id+","+tipo+")' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
@@ -585,7 +585,7 @@
 						iconSmall: "",
 					});
 				}
-				
+
 				function baja(id, tipo, index){
 					$.smallBox({
 						content : "¿Estás seguro de querer eliminar el registro? <p class='text-align-right'><a href='javascript:confirmarBaja("+id+","+tipo+","+index+");' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
@@ -595,7 +595,7 @@
 						iconSmall: "",
 					});
 				}
-				
+
 				function confirmarBaja(contenidoMediaId, tipo, index){
 					//Tipo - Archivo: 1 | Tipo - Imagen:  2
 					var tipoLiteral = '';
@@ -607,14 +607,14 @@
 						tipoLiteral = 'contenido-imagen';
 						break;
 					}
-					
+
 					$.ajax({
 			            type: 'DELETE',
-			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/'+tipoLiteral+'/eliminar/'+contenidoMediaId,
 			            dataType: "json",
 			            success: function (data, textStatus) {
-			                if (textStatus == "success") {   
+			                if (textStatus == "success") {
 			                	if(data=="-9"){
 			                		$.smallBox({
 										content: "<i> Ha ocurrido un error interno en el sistema. Comunicarse con el administrador...</i>",
@@ -633,7 +633,7 @@
 			            complete: function (data) {}
 			        });
 				}
-				
+
 				function confirmarReemplazo(contenidoMediaId, tipo){
 					//Tipo - Archivo: 1 | Tipo - Imagen:  2
 					$("#hIdContenidoMedia").val(contenidoMediaId);
@@ -649,30 +649,30 @@
 					else if(tipo == 2)
 	 	        		$('#UploadFile')[0].click();
 				}
-				
+
 				function confirmarReemplazoResumenImage(id){
 					$("#hIdEstudio").val(id);
 	 	        	$('#UploadResumenImage')[0].click();
 				}
-				
+
 				function confirmarReemplazoPortadaImage(id){
 					$("#hIdEstudio").val(id);
 	 	        	$('#UploadPortadaImage')[0].click();
 				}
-				
+
 				function agregarAlias(){
-					bootbox.prompt("Ingrese el alias:", function(result){ 
+					bootbox.prompt("Ingrese el alias:", function(result){
 						if(result){
 							alias = result;
 							$('#UploadOnlyFile')[0].click();
 						}
 					});
 				}
-				
+
 				function continuarSinAlias(){
 					$('#UploadOnlyFile')[0].click();
 				}
-				
+
 				function subirFileReemplazo(f){
 			         //submit the form here
 			         var _URL = window.URL || window.webkitURL;
@@ -681,12 +681,12 @@
 			             img = new Image();
 			             img.onload = function() {
 							        var genericFile = $("#UploadFile").get(0).files[0];
-									
+
 							        var data = new FormData();
-							        
+
 									data.append("image", genericFile);
 					                data.append("id", $("#hIdContenidoMedia").val());
-					                
+
 					                $.ajax({
 					                    type: 'PUT',
 					                    url: _ctx+'gestion/contenido-imagen/actualizar',
@@ -712,7 +712,7 @@
 							                        	iconSmall: "fa fa-refresh fa-2x"
 							                        });
 					                            }
-					                            
+
 					                        }
 					                    },
 						                error: function (xhr, ajaxOptions, thrownError) {
@@ -730,7 +730,7 @@
 			             img.src = _URL.createObjectURL(file);
 			         }
 				}
-				
+
 				function subirResumenImage(f){
 					//submit the form here
 			         var _URL = window.URL || window.webkitURL;
@@ -739,12 +739,12 @@
 			             img = new Image();
 			             img.onload = function() {
 							        var genericFile = $("#UploadResumenImage").get(0).files[0];
-									
+
 							        var data = new FormData();
-							        
+
 									data.append("file", genericFile);
 					                data.append("id", $("#hIdEstudio").val());
-					                
+
 					                $.ajax({
 					                    type: 'PUT',
 					                    url: _ctx+'gestion/estudio/imagen/resumen',
@@ -772,10 +772,10 @@
 					                            }
 					                        }
 					                    },
-						                error: function (xhr, ajaxOptions, thrownError) {
-						                	exception(xhr["status"], xhr["responseJSON"]["error"]);
+						                error: function (xhr) {
+						                	exception(xhr["status"], xhr["responseJSON"] != undefined ? xhr["responseJSON"]["error"] : "Error");
 						                },
-					                    complete: function (data) {
+					                    complete: function () {
 							            	$('#UploadResumenImage').val('');
 							            }
 					                });
@@ -786,7 +786,7 @@
 			             img.src = _URL.createObjectURL(file);
 			         }
 				}
-				
+
 				function subirPortadaImage(f){
 					//submit the form here
 			         var _URL = window.URL || window.webkitURL;
@@ -795,12 +795,12 @@
 			             img = new Image();
 			             img.onload = function() {
 							        var genericFile = $("#UploadPortadaImage").get(0).files[0];
-									
+
 							        var data = new FormData();
-							        
+
 									data.append("file", genericFile);
 					                data.append("id", $("#hIdEstudio").val());
-					                
+
 					                $.ajax({
 					                    type: 'PUT',
 					                    url: _ctx+'gestion/estudio/imagen/portada',
@@ -828,10 +828,10 @@
 					                            }
 					                        }
 					                    },
-						                error: function (xhr, ajaxOptions, thrownError) {
-						                	exception(xhr["status"], xhr["responseJSON"]["error"]);
-						                },
-					                    complete: function (data) {
+						                error: function (xhr) {
+                                            exception(xhr["status"], xhr["responseJSON"] != undefined ? xhr["responseJSON"]["error"] : "Error");
+                                        },
+					                    complete: function () {
 							            	$('#UploadPortadaImage').val('');
 							            }
 					                });
@@ -842,21 +842,21 @@
 			             img.src = _URL.createObjectURL(file);
 			         }
 				}
-				
+
 				function subirOnlyFileReemplazo(f){
 			         //submit the form here
-			         
+
 			         var file;
 			         if ((file = f.files[0])) {
-									
+
 							        var data = new FormData();
-							        
+
 									data.append("file", file);
 					                data.append("id", $("#hIdContenidoMedia").val());
 					                data.append("peso", formatBytes(file.size));
 					                if(alias.length > 0)
 					                	data.append("alias", alias);
-					                
+
 					                $.ajax({
 					                    type: 'PUT',
 					                    url: _ctx+'gestion/contenido-archivo/actualizar',
@@ -882,7 +882,7 @@
 							                        	iconSmall: "fa fa-refresh fa-2x"
 							                        });
 					                            }
-					                            
+
 					                        }
 					                    },
 						                error: function (xhr, ajaxOptions, thrownError) {
@@ -896,29 +896,29 @@
 					                });
 			         }
 				}
-				
+
 				function reorganizarFileArrays(){
 					var arrayOrdenFiles = [];
 					var arrayOrdenImages = [];
-					
+
 					Array.from(modalFileSort.children).
 						forEach((value, i) => {
 							var obj = {nuevo: ++i, antiguo: parseInt(value.textContent.split('.')[0])};
 							arrayOrdenFiles.push(obj);
 						}
 					);
-					
+
 					Array.from(modalImageSort.children).
 						forEach((value, i) => {
 							var obj = {nuevo: ++i, antiguo: parseInt(value.textContent.split('.')[0])};
 							arrayOrdenImages.push(obj);
 						}
 					);
-					
+
 					//Archivos
 					arrayArchivos.forEach((file,i) =>{
 						arrayOrdenFiles.forEach((order,ii)=>{
-							
+
 							if((i+1)===order.antiguo){
 								//Necesario para ejecutar el compare
 								file.orden = order.nuevo;
@@ -927,11 +927,11 @@
 						});
 					});
 					arrayArchivos.sort(compare);
-					
+
 					//Imagenes
 					arrayImagenes.forEach((file,i) =>{
 						arrayOrdenImages.forEach((order,ii)=>{
-							
+
 							if((i+1)===order.antiguo){
 								//Necesario para ejecutar el compare
 								file.orden = order.nuevo;
@@ -941,16 +941,16 @@
 					});
 					arrayImagenes.sort(compare);
 				}
-				
+
 				function addFiles() {
 					$('#btnNuevosArchivos').button('loading');
 					var aliasNames = [];
-			        
+
 			        var data = new FormData();
 			        var id = $('#hIdEstudio').val();
-			        			        
+
 			        data.append("EstudioId", id);
-			        
+
 					for (var i = 0; i < arrayArchivos.length; ++i) {
 						aliasNames = Array(arrayArchivos.length).fill(0);
 						data.append("Documentos", arrayArchivos[i]);
@@ -960,9 +960,9 @@
 					for (var i = 0; i < arrayImagenes.length; ++i) {
 						data.append("Imagenes", arrayImagenes[i]);
                 	}
-					
+
 					var alias = $('#AliasList').get(0);
-					
+
 					if(alias.innerHTML.length > 0){
 						alias = $('#AliasList').get(0).querySelectorAll('input');
 						Array.from(alias).forEach((input, i) => {
@@ -975,7 +975,7 @@
 					}
 					//Guardando Alias para los archivos
 					data.append("Alias", aliasNames);
-					
+
 			        $.ajax({
 			            type: 'POST',
 			            url: _ctx+'gestion/estudio/cargarArchivos/v2',
@@ -1010,7 +1010,7 @@
 			            }
 			        });
 				}
-				
+
 				function eliminar(id, ix){
 					$.smallBox({
 						content : "¿Estás seguro de querer eliminar el registro? <p class='text-align-right'><a href='javascript:confirmarEliminacion("+id+","+ix+");' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
@@ -1020,16 +1020,16 @@
 						iconSmall: "",
 					});
 				}
-				
+
 				function confirmarEliminacion(id, ix){
-					
+
 					$.ajax({
 			            type: 'GET',
-			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/estudio/verificar/relacion/'+id,
 			            dataType: "json",
 			            success: function (data, textStatus) {
-			                if (textStatus == "success") {   
+			                if (textStatus == "success") {
 			                	if(data=="-9" || data=="-88"){
 			                		$.smallBox({
 										content: "<i> Ha ocurrido un error interno en el sistema. Comunicarse con el administrador...</i>",
@@ -1044,21 +1044,21 @@
 			                				color: "alert",
 			                				iconSmall : "fa fa-warning fa-2x fadeInRight animated",
 			                				timeout: 10000,
-			                			}); 
+			                			});
 			                		else if(data == "2")
 			                			$.smallBox({
 			                				content : "<i> Este estudio esta relacionado con una o más logros. <br/>¿Desea proseguir y eliminarlo de todas formas?... <br/>** <strong>Los logros perderán la vinculación con el estudio. </strong></i><p class='text-align-left'><a href='javascript:preEliminacionAfterVerificario("+id+","+ix+","+data+");' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
 			                				color: "alert",
 			                				iconSmall : "fa fa-warning fa-2x fadeInRight animated",
 			                				timeout: 10000,
-			                			}); 
+			                			});
 			                		else if(data == "3")
 			                			$.smallBox({
 			                				content : "<i> Este estudio esta relacionado con capacitaciones y logros. <br/>¿Desea proseguir y eliminarlo de todas formas?... <br/>** <strong>Los logros y capacitaciones perderán la vinculación con el estudio. </strong></i><p class='text-align-left'><a href='javascript:preEliminacionAfterVerificario("+id+","+ix+","+data+");' class='btn btn-primary btn-sm'>Si</a> <a href='javascript:void(0);' class='btn btn-danger btn-sm'>No</a></p>",
 			                				color: "alert",
 			                				iconSmall : "fa fa-warning fa-2x fadeInRight animated",
 			                				timeout: 10000,
-			                			}); 
+			                			});
 			                		else
 			                			confirmarEliminacionAfterVerificacion(id,ix);
 			                	}
@@ -1070,15 +1070,15 @@
 			            complete: function (data) {}
 			        });
 				}
-				
+
 				function preEliminacionAfterVerificario(id, ix, s){
 					$.ajax({
 			            type: 'PUT',
-			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/estudio/relacion/deshacer/'+id+'/'+s,
 			            dataType: "json",
 			            success: function (data, textStatus) {
-			                if (textStatus == "success") {   
+			                if (textStatus == "success") {
 			                	if(data=="-9" || data=="-88"){
 			                		$.smallBox({
 										content: "<i> Ha ocurrido un error interno en el sistema. Comunicarse con el administrador...</i>",
@@ -1096,16 +1096,16 @@
 			            complete: function (data) {}
 			        });
 				}
-				
+
 				function confirmarEliminacionAfterVerificacion(id, ix){
-					
+
 					$.ajax({
 			            type: 'DELETE',
-			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
+			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/estudio/eliminar/'+id,
 			            dataType: "json",
 			            success: function (data, textStatus) {
-			                if (textStatus == "success") {   
+			                if (textStatus == "success") {
 			                	if(data=="-9" || data=="-88"){
 			                		$.smallBox({
 										content: "<i> Ha ocurrido un error interno en el sistema. Comunicarse con el administrador...</i>",
@@ -1124,9 +1124,9 @@
 			            complete: function (data) {}
 			        });
 				}
-				
+
 				function validarRegistros()
-				{            
+				{
 				    $("#frm_registro").validate({
 				    	errorClass		: errorClass,
 						errorElement	: errorElement,
@@ -1216,9 +1216,9 @@
 				        }
 				    });
 				}
-				
+
 				function validarBusqueda()
-				{            
+				{
 				    $("#frm_busqueda").validate({
 				        ignore: ".ignore",
 				        errorClass: "my-error-class",
@@ -1240,7 +1240,7 @@
 				            }
 				        },
 				        submitHandler: function () {
-							
+
 				        }
 				    });
 				}

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es-ES"
 	  xmlns:th="http://www.thymeleaf.org"
- 	  xmlns:sec="http://www.thymeleaf.org">
+      xmlns:sec="http://www.thymeleaf.org"
+      th:with="version = ${#ctx.servletContext.getAttribute('version')}">
   <head>
     <meta charset="utf-8"/>
     <meta name="_ctx" th:content="@{/}" />
@@ -90,8 +91,8 @@
     <footer th:replace="html-commons/footer_web :: fg-footer">
     </footer>
     <!-- END FOOTER  -->
-    <script th:src="@{/js/public/vendor/vendor_all.js}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
-    <script th:src="@{/js/public/init.js}"></script>
-    <script th:src="@{/js/cw/evento/search.js}"></script>
+    <script th:src="@{/js/public/vendor/vendor_all.js}+'?'+${version}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
+    <script th:src="@{/js/public/init.js}+'?'+${version}"></script>
+    <script th:src="@{/js/cw/evento/search.js}+'?'+${version}"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: heroku
+    active: production
   thymeleaf:
     encoding: UTF-8
     suffix: .html
@@ -9,6 +9,9 @@ spring:
         ddl-auto: none
         naming:
           strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    #properties:
+      #hibernate:
+        #default_schema: PROSEMER
   http:
     multipart:
       max-request-size: 2048MB

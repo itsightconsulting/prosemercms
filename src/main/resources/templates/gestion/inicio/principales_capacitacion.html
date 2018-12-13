@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us"
 	  xmlns:th="http://www.thymeleaf.org"
- 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  xmlns:sec="http://www.thymeleaf.org"
+	  th:with="version = ${#ctx.servletContext.getAttribute('version')}">
  	  <head>
 		<!-- META -->
 		<link th:replace="html-commons/meta :: fg-meta"/>
@@ -100,8 +101,8 @@
 		<!-- IMPORTS JAVASCRIPT -->
 		<script th:replace="html-commons/js :: fg-js"/>
 		<!-- OTRAS LIBRERIAS DISTINTAS AL TEMPLATE -->
-		<script th:src="@{/js/bootstrap-table.min.js}"></script>
-		<script th:src="@{/js/cw/inicio/main_c.js}"></script>
+		<script th:src="@{/js/bootstrap-table.min.js}+'?'+${version}"></script>
+		<script th:src="@{/js/cw/inicio/main_c.js}+'?'+${version}"></script>
 		<script th:inline="javascript">
 		/*<![CDATA[*/
 		/*]]>*/

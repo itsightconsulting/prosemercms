@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us"
 	  xmlns:th="http://www.thymeleaf.org"
- 	  xmlns:sec="http://www.thymeleaf.org">
+ 	  xmlns:sec="http://www.thymeleaf.org"
+	  th:with="version = ${#ctx.servletContext.getAttribute('version')}">
  	  <head>
 		<!-- META -->
 		<link th:replace="html-commons/meta :: fg-meta"/>
