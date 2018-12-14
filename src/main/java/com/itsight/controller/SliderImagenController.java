@@ -1,11 +1,13 @@
 package com.itsight.controller;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.itsight.domain.dto.SliderImagenDto;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,8 +49,16 @@ public class SliderImagenController {
 	}
 	
 	@GetMapping(value = "/listarTodos")
-	public @ResponseBody List<SliderImagen> listAll(@RequestParam(value = "id") int sliderId) throws JsonProcessingException {
-		return sliderImagenService.findBySliderId(sliderId);
+	public @ResponseBody List<SliderImagenDto> listAll(@RequestParam(value = "id") int sliderId) throws JsonProcessingException {
+		Slider slider = sliderService.getSliderById(sliderId);
+		List<SliderImagenDto> lstSliderImagen = new ArrayList<>();
+		if(slider != null){
+			if(slider.getRutaImagenWeb() != null && slider.getRutaImagenWeb().length() > 0 && !slider.getRutaImagenWeb().equals("none"))
+				lstSliderImagen.add(new SliderImagenDto(1, slider.getRutaImagenWeb()));
+			if(slider.getRutaImagenMobile() != null && slider.getRutaImagenMobile().length() > 0 && !slider.getRutaImagenMobile().equals("none"))
+				lstSliderImagen.add(new SliderImagenDto(2, slider.getRutaImagenMobile()));
+		}
+		return lstSliderImagen;
 	}
 	
 	@PostMapping(value = "/agregar")

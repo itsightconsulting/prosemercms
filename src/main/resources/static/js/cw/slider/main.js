@@ -345,12 +345,13 @@
 				            		var prefixId = "preImagen";
 				            		var i = 0;
 				            		for(x in data){
-				            			var tipoImagenId = data[x]["tipoImagen"]["id"];
+				            			var tipoImagenId = data[x]["tipoImagen"];
 				            			$('#'+prefixId+tipoImagenId).attr('onclick','javascript:previsualizar("'+data[x]["nombreMedia"]+'")');
 				            			$('#'+prefixId+tipoImagenId).attr('title','Previsualizar imagen');
 				            			$('#'+prefixId+tipoImagenId).attr('data-toggle','modal');
 				            			$('#'+prefixId+tipoImagenId).attr('data-target','#myModalImage');
-				            			$('#'+prefixId+tipoImagenId).children().attr('class','glyphicon glyphicon-eye-open');
+                                        $('#'+prefixId+tipoImagenId).children().removeClass('glyphicon glyphicon-eye-close');
+				            			$('#'+prefixId+tipoImagenId).children().addClass('glyphicon glyphicon-eye-open');
 				            			$('#'+prefixId+tipoImagenId).removeAttr('style');
 				            			if(i == 0)
 				            				photoWeb = data[x]["nombreMedia"];
