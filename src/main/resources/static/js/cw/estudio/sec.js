@@ -688,7 +688,7 @@
 					                data.append("id", $("#hIdContenidoMedia").val());
 
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+'gestion/contenido-imagen/actualizar',
 					                    data : data,
 					                    contentType : false,
@@ -746,7 +746,7 @@
 					                data.append("id", $("#hIdEstudio").val());
 
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+'gestion/estudio/imagen/resumen',
 					                    data : data,
 					                    contentType : false,
@@ -802,7 +802,7 @@
 					                data.append("id", $("#hIdEstudio").val());
 
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+'gestion/estudio/imagen/portada',
 					                    data : data,
 					                    contentType : false,
@@ -858,7 +858,7 @@
 					                	data.append("alias", alias);
 
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+'gestion/contenido-archivo/actualizar',
 					                    data : data,
 					                    contentType : false,

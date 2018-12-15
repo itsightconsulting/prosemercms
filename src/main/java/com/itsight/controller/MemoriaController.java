@@ -95,7 +95,7 @@ public class MemoriaController {
 		return memoriaService.listAll();
 	}
 	
-	@PutMapping(value = "/archivo")
+	@PostMapping(value = "/archivo")
 	public @ResponseBody String actualizar(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id,
@@ -150,7 +150,7 @@ public class MemoriaController {
 		}
 	}
 	
-	@PutMapping(value = "/imagen/resumen")
+	@PostMapping(value = "/imagen/resumen")
 	public @ResponseBody String actualizarImagenResumen(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id){
@@ -197,7 +197,7 @@ public class MemoriaController {
 		}
 	}
 	
-	@PutMapping(value = "/imagen/portada")
+	@PostMapping(value = "/imagen/portada")
 	public @ResponseBody String actualizarPortada(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id){

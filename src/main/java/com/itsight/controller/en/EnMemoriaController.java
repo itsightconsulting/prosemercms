@@ -79,7 +79,7 @@ public class EnMemoriaController {
 		return memoriaService.listAll();
 	}
 	
-	@PutMapping(value = "/archivo")
+	@PostMapping(value = "/archivo")
 	public @ResponseBody String actualizar(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id,
@@ -134,7 +134,7 @@ public class EnMemoriaController {
 		}
 	}
 	
-	@PutMapping(value = "/imagen/portada")
+	@PostMapping(value = "/imagen/portada")
 	public @ResponseBody String actualizarPortada(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id){

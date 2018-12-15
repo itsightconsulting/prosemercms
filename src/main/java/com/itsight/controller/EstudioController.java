@@ -510,7 +510,7 @@ public class EstudioController {
 
 	}
 	
-	@PutMapping(value = "/imagen/resumen")
+	@PostMapping(value = "/imagen/resumen")
 	public @ResponseBody String actualizarImagenResumen(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id){
@@ -559,7 +559,7 @@ public class EstudioController {
 		}
 	}
 	
-	@PutMapping(value = "/imagen/portada")
+	@PostMapping(value = "/imagen/portada")
 	public @ResponseBody String actualizarPortada(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id){

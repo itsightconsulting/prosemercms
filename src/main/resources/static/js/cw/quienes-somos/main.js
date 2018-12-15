@@ -370,7 +370,7 @@
 					                data.append("id", $("#hIdContenidoMedia").val());
 					                
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: '/gestion/contenido-imagen/actualizar',
 					                    data : data,
 					                    contentType : false,

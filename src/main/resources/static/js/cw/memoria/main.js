@@ -278,7 +278,7 @@
 					                	data.append("alias", alias);
 					                
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+lang+'gestion/memoria/archivo',
 					                    data : data,
 					                    contentType: false,
@@ -335,7 +335,7 @@
 					                data.append("id", $("#hIdMemoria").val());
 					                
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+'gestion/memoria/imagen/resumen',
 					                    data : data,
 					                    contentType : false,
@@ -394,7 +394,7 @@
 					                data.append("id", $("#hIdMemoria").val());
 					                
 					                $.ajax({
-					                    type: 'PUT',
+					                    type: 'POST',
 					                    url: _ctx+lang+'gestion/memoria/imagen/portada',
 					                    data : data,
 					                    contentType : false,

@@ -456,7 +456,7 @@ public class CapacitacionController {
 		return "1";
 	}
 	
-	@PutMapping(value = "/imagen/resumen")
+	@PostMapping(value = "/imagen/resumen")
 	public @ResponseBody String actualizar(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id){

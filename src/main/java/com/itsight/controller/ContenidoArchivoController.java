@@ -8,14 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.itsight.domain.ContenidoArchivo;
@@ -46,7 +39,7 @@ public class ContenidoArchivoController {
 		return "1";
 	}
 	
-	@PutMapping(value = "/actualizar")
+	@PostMapping(value = "/actualizar")
 	public @ResponseBody String actualizar(
 				@RequestPart(value = "file", required = false) MultipartFile file,
 				@RequestParam(value = "id") int id,
