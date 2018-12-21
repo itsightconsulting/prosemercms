@@ -11110,3 +11110,138 @@
 [INFO ] 2018-12-14 16:57:51.046 [http-nio-8080-exec-9] AspectController - EstudioController.listAllResearchs(..) method called.
 [INFO ] 2018-12-14 16:58:00.436 [http-nio-8080-exec-1] AspectController - AuthController.loginForm(..) method called.
 [INFO ] 2018-12-14 16:58:00.480 [http-nio-8080-exec-2] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-17 10:02:11.334 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 6952 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-17 10:02:11.398 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-17 10:05:29.009 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 9804 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-17 10:05:29.017 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-18 09:51:47.256 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 8836 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-18 09:51:47.616 [restartedMain] ProsemerApplication - The following profiles are active: production
+[INFO ] 2018-12-18 09:52:43.926 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 8984 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-18 09:52:43.942 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-18 09:53:15.166 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-18 09:53:16.133 [restartedMain] ProsemerApplication - Started ProsemerApplication in 33.463 seconds (JVM running for 35.589)
+[INFO ] 2018-12-18 09:53:49.060 [http-nio-8080-exec-4] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 09:54:00.628 [http-nio-8080-exec-6] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 09:54:10.754 [http-nio-8080-exec-4] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:54:12.198 [http-nio-8080-exec-8] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:54:31.714 [http-nio-8080-exec-6] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:54:32.574 [http-nio-8080-exec-4] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:01.623 [http-nio-8080-exec-6] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:55:03.178 [http-nio-8080-exec-10] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:17.515 [http-nio-8080-exec-8] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:55:18.743 [http-nio-8080-exec-9] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:33.180 [http-nio-8080-exec-6] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:55:34.763 [http-nio-8080-exec-3] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:42.693 [http-nio-8080-exec-1] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:55:44.277 [http-nio-8080-exec-3] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:44.585 [http-nio-8080-exec-2] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:55:46.017 [http-nio-8080-exec-9] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:59.024 [http-nio-8080-exec-3] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:55:59.728 [http-nio-8080-exec-2] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:55:59.972 [http-nio-8080-exec-9] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:56:00.863 [http-nio-8080-exec-2] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:03.618 [http-nio-8080-exec-2] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:04.671 [http-nio-8080-exec-9] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:07.810 [http-nio-8080-exec-7] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:08.695 [http-nio-8080-exec-6] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:11.589 [http-nio-8080-exec-7] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:12.338 [http-nio-8080-exec-8] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:31.530 [http-nio-8080-exec-1] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:32.376 [http-nio-8080-exec-1] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:32.994 [http-nio-8080-exec-9] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:33.811 [http-nio-8080-exec-6] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:38.988 [http-nio-8080-exec-5] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:39.728 [http-nio-8080-exec-1] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:40.911 [http-nio-8080-exec-5] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:41.555 [http-nio-8080-exec-3] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:42.662 [http-nio-8080-exec-3] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:43.430 [http-nio-8080-exec-4] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:48.810 [http-nio-8080-exec-6] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:58:49.518 [http-nio-8080-exec-10] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 09:58:54.814 [http-nio-8080-exec-9] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:11.264 [http-nio-8080-exec-8] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:12.668 [http-nio-8080-exec-6] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:14.077 [http-nio-8080-exec-4] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:15.348 [http-nio-8080-exec-9] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:16.305 [http-nio-8080-exec-10] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:16.839 [http-nio-8080-exec-7] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 09:59:32.833 [http-nio-8080-exec-4] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:00:44.835 [http-nio-8080-exec-1] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:00:45.418 [http-nio-8080-exec-10] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:02:08.784 [http-nio-8080-exec-8] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:02:09.608 [http-nio-8080-exec-7] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 10:02:09.784 [http-nio-8080-exec-6] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:02:10.400 [http-nio-8080-exec-3] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 10:02:32.139 [http-nio-8080-exec-9] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:02:51.790 [http-nio-8080-exec-8] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:03:30.168 [http-nio-8080-exec-10] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:03:38.565 [http-nio-8080-exec-1] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:03:40.637 [http-nio-8080-exec-3] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:04:13.166 [http-nio-8080-exec-4] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:04:18.145 [http-nio-8080-exec-7] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:04:24.058 [http-nio-8080-exec-5] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:04:26.035 [http-nio-8080-exec-3] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:04:30.067 [http-nio-8080-exec-10] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:04:42.321 [http-nio-8080-exec-10] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:04:50.989 [http-nio-8080-exec-6] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:04:55.099 [http-nio-8080-exec-2] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:05:13.077 [http-nio-8080-exec-3] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:05:14.172 [http-nio-8080-exec-8] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-18 10:05:14.172 [http-nio-8080-exec-1] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-18 10:05:16.505 [http-nio-8080-exec-1] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:05:20.828 [http-nio-8080-exec-4] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:05:25.079 [http-nio-8080-exec-3] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:05:50.118 [http-nio-8080-exec-1] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:05:51.830 [http-nio-8080-exec-1] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:06:03.336 [http-nio-8080-exec-2] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:08:01.566 [http-nio-8080-exec-6] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:08:09.627 [http-nio-8080-exec-5] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:08:26.815 [http-nio-8080-exec-10] AspectController - SliderController.principalSlider() method called.
+[INFO ] 2018-12-18 10:08:27.691 [http-nio-8080-exec-10] AspectController - SliderController.listAllSlider(..) method called.
+[INFO ] 2018-12-18 10:08:29.893 [http-nio-8080-exec-5] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:08:35.457 [http-nio-8080-exec-5] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:08:37.914 [http-nio-8080-exec-9] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:08:38.518 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-18 10:08:43.036 [http-nio-8080-exec-5] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:09:17.731 [http-nio-8080-exec-4] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:09:22.895 [http-nio-8080-exec-2] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:09:29.036 [http-nio-8080-exec-1] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:09:35.513 [http-nio-8080-exec-1] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:09:40.414 [http-nio-8080-exec-9] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:09:45.731 [http-nio-8080-exec-4] AspectController - InicioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:09:46.255 [http-nio-8080-exec-9] AspectController - ContenidoWebController.listContenidoWebByStudyTypePrincipales(..) method called.
+[INFO ] 2018-12-18 10:09:48.595 [http-nio-8080-exec-7] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:09:53.437 [http-nio-8080-exec-4] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:09:58.399 [http-nio-8080-exec-3] AspectController - EstudioController.principalEstudio(..) method called.
+[INFO ] 2018-12-18 10:09:58.875 [http-nio-8080-exec-8] AspectController - TagController.listAllTags() method called.
+[INFO ] 2018-12-18 10:09:58.875 [http-nio-8080-exec-2] AspectController - EstudioController.listAllResearchs(..) method called.
+[INFO ] 2018-12-18 10:10:04.613 [http-nio-8080-exec-4] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:10:52.250 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 7420 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-18 10:10:52.318 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-18 10:11:15.847 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-18 10:11:16.125 [restartedMain] ProsemerApplication - Started ProsemerApplication in 25.131 seconds (JVM running for 27.967)
+[INFO ] 2018-12-18 10:11:52.096 [http-nio-8080-exec-1] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:11:58.231 [http-nio-8080-exec-6] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:12:07.638 [http-nio-8080-exec-4] AspectController - AuthController.welcome() method called.
+[INFO ] 2018-12-18 10:12:25.298 [http-nio-8080-exec-10] AspectController - AuthController.loginForm(..) method called.
+[INFO ] 2018-12-18 10:16:00.034 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 13736 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-18 10:16:00.070 [main] ProsemerApplicationTests - The following profiles are active: production
+[INFO ] 2018-12-20 11:21:48.491 [restartedMain] ProsemerApplication - Starting ProsemerApplication on lpt-its-05 with PID 9388 (C:\Users\Consultor2015\workspace-sts\prosemer-tfs\target\classes started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-20 11:21:48.509 [restartedMain] ProsemerApplication - The following profiles are active: development
+[INFO ] 2018-12-20 11:22:28.851 [restartedMain] StartUpListener - > Init user already exists(USER: admin@prosemer.com | PASSWORD: @dmin@2018 <
+[INFO ] 2018-12-20 11:22:29.936 [restartedMain] ProsemerApplication - Started ProsemerApplication in 43.607 seconds (JVM running for 54.518)
+[INFO ] 2018-12-20 11:22:50.031 [http-nio-8080-exec-7] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:24:14.698 [http-nio-8080-exec-7] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:24:17.764 [http-nio-8080-exec-5] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:24:33.663 [http-nio-8080-exec-9] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:24:45.444 [http-nio-8080-exec-8] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:25:05.117 [http-nio-8080-exec-1] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:25:10.525 [http-nio-8080-exec-2] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:25:49.361 [http-nio-8080-exec-9] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:25:50.788 [http-nio-8080-exec-1] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:39:14.068 [http-nio-8080-exec-9] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:39:16.053 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaInicio(..) method called.
+[INFO ] 2018-12-20 11:41:32.360 [http-nio-8080-exec-6] AspectController - WebEstaticoController.vistaBusquedaEvento(..) method called.
+[INFO ] 2018-12-20 11:41:38.025 [http-nio-8080-exec-4] AspectController - WebEstaticoController.consultarTagsEventos() method called.
+[INFO ] 2018-12-20 11:52:37.039 [main] ProsemerApplicationTests - Starting ProsemerApplicationTests on lpt-its-05 with PID 4624 (started by Consultor2015 in C:\Users\Consultor2015\workspace-sts\prosemer-tfs)
+[INFO ] 2018-12-20 11:52:37.045 [main] ProsemerApplicationTests - The following profiles are active: production
