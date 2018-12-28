@@ -17,6 +17,9 @@
     .contenido h3{
     	font-size: 21px;
     }
+    .img-responsive:hover{
+        opacity: .65;
+    }
     </style>
   </head>
   <body>
@@ -86,9 +89,9 @@
             <li class="hea-2"><img th:src="@{/img/text_logo.png}" class="mobile"/></li>
           </ul>
           <ul class="dos_logo">
+            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}"/></a></li>
             <li class="hea-3"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}"/></a></li>
             <li class="hea-4"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}" class="bid_movil"/></a><a href="https://www.canada.ca/en.html"><img class="" th:src="@{/img/bandera.jpg}" height="36" width="82" id="CanadianFlag"/></a></li>
-            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}"/></a></li>
           </ul>
         </div>
       </div>
@@ -159,7 +162,7 @@
             </div>
             <ul id="simple" class="owl-carousel">
               <li th:each="s,i : ${array}">
-                <div class="contenido"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/>
+                <div class="contenido"><a th:href="@{/}+${s.url} + ${s.id}"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/></a>
                   <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
                   <p th:text="${s.resumen}"></p><a th:href="@{/}+${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
                 </div>
@@ -172,7 +175,7 @@
             </div>
             <ul id="simple" class="owl-carousel">
               <li th:each="s,i : ${array1}">
-                <div class="contenido"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/>
+                <div class="contenido"><a th:href="@{/}+${s.url} + ${s.id}"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/></a>
                   <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
                   <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
                 </div>
@@ -191,7 +194,7 @@
             <p th:text="${memoria.resumen}"></p><a th:href="@{/web/memoria-del-programa}" class="btn_leermas">LEER MÁS</a>
           </div>
           <div class="col-md-3"></div>
-          <div class="col-md-5 imagen no_padding"><img th:src="@{/}+'media/image/memoria'+${memoria.rutaImagenPortada}" class="img-responsive"/></div>
+          <div class="col-md-5 imagen no_padding"><a th:href="@{/web/memoria-del-programa}"><img th:src="@{/}+'media/image/memoria'+${memoria.rutaImagenPortada}" class="img-responsive"/></a></div>
         </div>
       </div>
       <div class="container">
@@ -201,7 +204,7 @@
           </div>
           <ul id="simple" class="owl-carousel">
           	<li th:each="s,i : ${array2}">
-                <div class="contenido"><img th:src="@{/}+'media/image/capacitacion'+${s.rutaImagenPortada}" class="img-responsive"/>
+                <div class="contenido"><a th:href="@{/} + ${s.url} + ${s.id}"><img th:src="@{/}+'media/image/capacitacion'+${s.rutaImagenPortada}" class="img-responsive"/></a>
                   <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
                   <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
                 </div>

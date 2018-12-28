@@ -1,11 +1,5 @@
 * {
-    /*
-    list-style: none;
-    */
     text-decoration: none;
-    /*
-    border: none;
-    */
     outline: 0
 }
 
@@ -138,6 +132,13 @@ legend {
     src: url(../fonts/Raleway-ThinItalic.ttf) format("truetype")
 }
 
+#CanadianFlag {
+    max-width: 120px;
+    max-height: 71px;
+    width: auto;
+    height: auto
+}
+
 .header_img {
     display: inline-block;
     padding: 25px 0
@@ -153,7 +154,7 @@ legend {
 }
 
 .header_img ul.dos_logo {
-    margin-left: 54px
+    margin-left: 44px
 }
 
 .header_img ul.dos_logo .hea-3 img {
@@ -166,7 +167,8 @@ legend {
 }
 
 .header_img ul.dos_logo .hea-5 img {
-    max-width: 280px
+    max-width: 240px;
+    margin-right: 10px
 }
 
 .bid_movil {
@@ -389,15 +391,16 @@ img.img-responsive.mobil {
     padding-left: 0
 }
 
-.memoria_section table td{
-    padding: 15px !important;
+.memoria_section table td {
+    padding: 15px!important
 }
 
 .memoria_section ol {
-    padding-left: 40px !important;
+    padding-left: 40px!important
 }
-.memoria_section ul{
-    padding-left: 40px !important;
+
+.memoria_section ul {
+    padding-left: 40px!important
 }
 
 footer {
@@ -444,7 +447,7 @@ footer ul li:last-child {
 }
 
 footer ul.logos {
-    margin: 0 39px 20px;
+    margin: 0 39px 20px 10%;
     padding: 0
 }
 
@@ -488,7 +491,6 @@ footer .informes li p {
 }
 
 footer .line-text {
-    border-bottom: 1px solid #e5e4e4;
     display: block;
     width: 100%;
     left: 0;
@@ -538,7 +540,7 @@ footer .line-text {
 .menu_vertical ul ul.dropdown-menu {
     position: relative;
     margin: 0 5% 0 15%;
-    max-width: 100%;
+    max-width: 100%
 }
 
 .menu_vertical ul ul.dropdown-menu li {
@@ -675,7 +677,7 @@ footer .line-text {
 
 .estudio_select ul {
     padding-left: 40px;
-    list-style: none;
+    list-style: none
 }
 
 .estudio_select ul li h4 {
@@ -771,29 +773,29 @@ footer .line-text {
     border: 2px solid #00a0b7
 }
 
-.quienes_somos table th{
-    padding: 15px !important;
+.quienes_somos table th {
+    padding: 15px!important
 }
 
-.quienes_somos table td{
-    padding: 15px !important;
+.quienes_somos table td {
+    padding: 15px!important
 }
 
 .quienes_somos ol {
-    padding-left: 40px !important;
+    padding-left: 40px!important
 }
 
-.quienes_somos ol li{
-    padding-bottom: 5px !important;
+.quienes_somos ol li {
+    padding-bottom: 5px!important
 }
 
-.quienes_somos ul{
-    padding-left: 40px !important;
-    list-style: outside;
+.quienes_somos ul {
+    padding-left: 40px!important;
+    list-style: outside
 }
 
-.quienes_somos ul li{
-    padding-bottom: 5px !important;
+.quienes_somos ul li {
+    padding-bottom: 5px!important
 }
 
 .memoria_section .estudio {
@@ -925,7 +927,7 @@ footer .line-text {
 
 .filtro .head ul {
     padding-left: 70px;
-    list-style: none;
+    list-style: none
 }
 
 .filtro .head ul li {
@@ -950,7 +952,7 @@ footer .line-text {
 #BodyFechas {
     overflow: hidden;
     height: 410px;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 #BodyFechas div {
@@ -982,12 +984,12 @@ footer .line-text {
 }
 
 #alcanceLogros {
-    padding-left: 40px !important;
-    list-style: none !important;
+    padding-left: 40px!important;
+    list-style: none!important
 }
 
-#menu li{
-    list-style: none !important;
+#menu li {
+    list-style: none!important
 }
 
 .filtro .body,
@@ -1031,7 +1033,7 @@ footer .line-text {
 
 .owl-item {
     padding-right: 30px;
-    height: 540px
+    height: 505px
 }
 
 .owl-item:hover .plus:after {
@@ -1351,7 +1353,7 @@ footer .line-text {
         padding-right: 30px
     }
     .un_logo img {
-        width: 80px !important;
+        width: 80px!important
     }
     .dos_logo {
         float: right;
@@ -1375,8 +1377,15 @@ footer .line-text {
         max-width: 140px!important;
         margin-top: 5px
     }
+    #CanadianFlag {
+        max-width: 120px;
+        max-height: 71px;
+        width: auto;
+        height: auto
+    }
     .bid_movil {
-        display: inline-block
+        display: inline-block;
+        height: 27px;
     }
     .contenido h4 {
         font-size: 14.79px
@@ -1385,13 +1394,12 @@ footer .line-text {
         font-size: 12px
     }
     .contenido h3 {
-        font-size: 15px !important;
+        font-size: 15px!important;
         height: 65px
     }
-    .contenido .img-responsive{
-        height: 150px !important;
+    .contenido .img-responsive {
+        height: 150px!important
     }
-
     .contenido .guion {
         margin: 0 0 20px
     }
@@ -1493,14 +1501,13 @@ footer .line-text {
 }
 
 @media only screen and (max-width:600px) {
-    .contenido .img-responsive{
-        height: 150px !important;
+    .contenido .img-responsive {
+        height: 150px!important
     }
-
     .carousel-inner .item img.img-responsive.mobil {
         display: block;
         width: 358px;
-        height: 239px;
+        height: 239px
     }
     .carousel-inner .item img.img-responsive {
         display: none
