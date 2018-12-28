@@ -71,7 +71,7 @@
               </div>
               <p style="font-size:14px;"><strong th:text="${msgCabecera != ''}?${msgCabecera}:'The events presented following has had Prosemer participation inside scheduled activity framework:'"></strong></p>
               <div id="Coincidencias">
-	              <ul class="alcance">
+	              <ul class="alcance" id="alcanceLogros">
 	                <li th:each="l : ${lstLogros}" th:utext="${l.descripcion}">
 	                </li>
 	              </ul>
