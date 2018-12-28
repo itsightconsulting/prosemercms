@@ -1,2 +1,0 @@
-[WARN ] 2018-06-13 13:59:32.050 [http-nio-8080-exec-5] ParametroController - could not execute statement; SQL [n/a]; constraint [uk_ilbxn7qfajl4myendxm6cj6do]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
-[WARN ] 2018-06-13 14:16:43.424 [http-nio-8080-exec-4] ParametroController - could not execute statement; SQL [n/a]; constraint [uk_ilbxn7qfajl4myendxm6cj6do]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
