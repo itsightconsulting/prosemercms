@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: production
+    active: development
   thymeleaf:
     encoding: UTF-8
     suffix: .html

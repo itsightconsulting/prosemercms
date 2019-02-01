@@ -108,10 +108,10 @@
 				                	}
 				                }
 				            },
-				            error: function (xhr, ajaxOptions, thrownError) {
-				            	exception(xhr["status"], xhr["responseJSON"]["error"]);
+				            error: function (xhr) {
+				            	exception(xhr["status"], xhr["responseJSON"] != undefined ? xhr["responseJSON"]["error"] : "Ha ocurrido un error, comunicarse con el administrador. Gracias.");
 				            },
-				            complete: function (data) {
+				            complete: function () {
 				            	limpiarBusqueda();
 				            	irListado($index);
 				            	listarRegistros();
@@ -362,7 +362,7 @@
 				            	}
 				            }
 				        },
-				        error: function (xhr, ajaxOptions, thrownError) {
+				        error: function (xhr) {
 				        	exception(xhr["status"], xhr["responseJSON"]["error"]);
 				        },
 				        complete: function (data) {

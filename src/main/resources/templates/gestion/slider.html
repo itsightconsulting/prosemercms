@@ -81,7 +81,7 @@
 				                  <form id="frm_busqueda">
 				                    <div class="form-horizontal">
 						                <div class="form-group">
-						                    <label class="col-md-1 control-label-left" for="ddlEstado"><strong>Estado:</strong></label>
+						                    <label class="col-md-1 control-label-left"><strong>Estado:</strong></label>
 						                    <div class="col-md-2 mrg">
 						                        <select name="Estado" id="Estado" class="form-control input-sm ignore">
 						                            <option value="-1">TODOS</option>
@@ -135,7 +135,7 @@
 												<div class="row">
 													<section class="col col-6">
 														<div class="alert alert-warning" role="alert">
-														  	<strong>Importante!</strong> Las imagenes deberán ser <strong>asociadas después del registro <br/>Por otra parte "javascript:void(0);" se traduce a una imagen sin enlace y este debe permanecer así o solo actualizarse por una url válida</strong>
+														  	<strong>Importante!</strong> Las imagenes deberán ser <strong>asociadas después del registro <br/>Por otra parte el caracter almohadilla "#" se traduce a una imagen sin enlace y este debe permanecer así o solo actualizarse por una url válida</strong>
 														</div>
 													</section>
 												</div>
@@ -144,7 +144,7 @@
 															<section class="">
 																<label class="label">Ingrese el enlace referente al slide <strong>(No es obligatorio)</strong></label>
 																<label class="input">
-							                    					<input id="HyperVinculo" name="HyperVinculo" type="text" placeholder="Ejemplo: http://google.com" class="" maxlength="30" autocomplete="off" />
+							                    					<input id="HyperVinculo" name="HyperVinculo" type="text" placeholder="Ejemplo: http://google.com" class="" maxlength="225" autocomplete="off" />
 												                    <input id="hIdSlider" name="hIdSlider" type="hidden" value="0" />
 												                    <input id="hIdTipoImagen" name="hIdTipoImagen" type="hidden" value="0" />
 												                    <input id="hWImage" name="hWImage" type="hidden" value="" />
@@ -203,12 +203,12 @@
 				    </div>
 				    <!-- FIRST MODALS FOR IMAGES -->
 					<!-- Creates the bootstrap modal where the image will appear -->
-					<div class="modal fade" id="myModalImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade" id="myModalImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel0" aria-hidden="true">
 					  <div class="modal-dialog modal-lg">
 					    <div class="modal-content">
 					      <div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" title="Close"> <span class="glyphicon glyphicon-remove"></span></button>
-					        <h4 class="modal-title" id="myModalLabel"><strong>Previsualización</strong></h4>
+					        <h4 class="modal-title" id="myModalLabel0"><strong>Previsualización</strong></h4>
 					      </div>
 					      <div class="modal-body text-center">
 					        <img src="" id="Image" class="text-center" style="max-width: 90%"/>

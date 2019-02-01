@@ -45,8 +45,7 @@ public class ViewConstant {
 	public static final String EN_MAIN_OBJETIVOS = "en/objetivos";
 	public static final String EN_MAIN_ESTRUCTURA_ORGANIZACIONAL = "en/estructura_organizacional";
 	public static final String EN_MAIN_MARCOLEGAL = "en/marco_legal";
-	public static final String EN_MAIN_MEMORIA_DEL_PROYECTO = "en/memoria";
-	
+
 	public static final String MAIN_PROJECT_MEMORY = "en/memoria";
 	
 	public static final String MAIN_PARAMETRO = "gestion/parametro/parametro";
@@ -62,6 +61,7 @@ public class ViewConstant {
 	public static final String MAIN_TIPO_IMAGEN = "gestion/tipo-imagen";
 	
 	public static final String INICIO = "inicio";
+	public static final String REDIRECT_INICIO = "redirect:/web/inicio";
 	public static final String EN_INICIO = "en_inicio";
 	public static final String LOGIN = "login";
 	public static final String ERROR403 = "../public/error/403";

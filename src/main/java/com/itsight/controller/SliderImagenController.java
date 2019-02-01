@@ -65,7 +65,6 @@ public class SliderImagenController {
 	public @ResponseBody String addSliderImagen(@ModelAttribute SliderImagen sliderImagen) {
 			
 			if(sliderImagen.getId() == 0 ){
-				
 				sliderImagenService.add(sliderImagen);
 				return "1";
 			}else {

@@ -1,5 +1,16 @@
+.articulo_section #simple li,
+footer ul li {
+    list-style: none
+}
+
+*,
+.contenido .btn_leermas,
+.dropdown-menu li a:hover,
+.menu li a {
+    text-decoration: none
+}
+
 * {
-    text-decoration: none;
     outline: 0
 }
 
@@ -12,7 +23,15 @@ html {
 
 blockquote,
 body,
-p {
+dd,
+dl,
+dt,
+fieldset,
+form,
+li,
+ol,
+p,
+ul {
     margin: 0;
     padding: 0
 }
@@ -20,22 +39,6 @@ p {
 a img,
 iframe {
     border: none
-}
-
-dd,
-dl,
-dt,
-li,
-ol,
-ul {
-    margin: 0;
-    padding: 0
-}
-
-fieldset,
-form {
-    margin: 0;
-    padding: 0
 }
 
 fieldset {
@@ -144,13 +147,18 @@ legend {
     padding: 25px 0
 }
 
+.header_img ul,
+.header_img ul li {
+    display: inline
+}
+
 .header_img ul {
-    display: inline;
     padding: 0
 }
 
-.header_img ul li {
-    display: inline
+.bid_movil,
+img.img-responsive.mobil {
+    display: none
 }
 
 .header_img ul.dos_logo {
@@ -166,25 +174,21 @@ legend {
     margin-right: 17px
 }
 
+.hea-5 {
+    padding-bottom: 5px
+}
+
 .header_img ul.dos_logo .hea-5 img {
     max-width: 240px;
     margin-right: 10px
 }
 
-.bid_movil {
-    display: none
-}
-
 .carousel-inner .bg_azul {
-    background: url(../img/banner1_bg.jpg) no-repeat center center
+    background: url(../img/banner1_bg.jpg) center center no-repeat
 }
 
 .carousel-inner .bg_verde {
-    background: url(../img/banner2_bg.jpg) no-repeat center center
-}
-
-img.img-responsive.mobil {
-    display: none
+    background: url(../img/banner2_bg.jpg) center center no-repeat
 }
 
 .item img {
@@ -203,8 +207,12 @@ img.img-responsive.mobil {
     margin-right: 80px
 }
 
+.buscador .icon,
+.buscador .idioma {
+    display: inline
+}
+
 .menu li a {
-    text-decoration: none;
     color: #34495e;
     font-family: Avenir-Book
 }
@@ -233,7 +241,6 @@ img.img-responsive.mobil {
 
 .dropdown-menu li a:hover {
     color: #fed743;
-    text-decoration: none;
     background-color: transparent
 }
 
@@ -248,12 +255,8 @@ img.img-responsive.mobil {
     text-align: right
 }
 
-.buscador .idioma {
-    display: inline
-}
-
 .buscador .idioma .styleselect {
-    background: url(../img/select.png) no-repeat right;
+    background: url(../img/select.png) right no-repeat;
     background-position-x: 63px;
     background-size: 13px;
     display: inline;
@@ -272,10 +275,6 @@ img.img-responsive.mobil {
     -moz-appearance: none;
     font-size: 13px;
     appearance: none
-}
-
-.buscador .icon {
-    display: inline
 }
 
 .contenido h3 {
@@ -312,7 +311,6 @@ img.img-responsive.mobil {
     color: #fa2929;
     font-family: Raleway-Bold;
     font-size: 15px;
-    text-decoration: none;
     border: 3px solid #f97c7f;
     padding: 10px 0;
     border-radius: 30px;
@@ -320,6 +318,11 @@ img.img-responsive.mobil {
     margin-top: 26px;
     display: block;
     text-align: center
+}
+
+.estudio p,
+footer .line-text {
+    border-bottom: 1px solid #e5e4e4
 }
 
 .title h2 {
@@ -341,10 +344,6 @@ img.img-responsive.mobil {
     padding: 0 0 0 40px
 }
 
-.articulo_section #simple li {
-    list-style: none
-}
-
 .articulo_section .owl-nav {
     position: absolute;
     top: 285px;
@@ -352,25 +351,24 @@ img.img-responsive.mobil {
     width: 100%
 }
 
+.articulo_section .owl-nav .owl-next,
 .articulo_section .owl-nav .owl-prev {
-    float: left;
-    background-image: url(../img/indicator_left.png);
     width: 30px;
     height: 49px;
     color: transparent;
     background-size: cover;
-    display: inline-block;
+    display: inline-block
+}
+
+.articulo_section .owl-nav .owl-prev {
+    float: left;
+    background-image: url(../img/indicator_left.png);
     margin-left: -80px
 }
 
 .articulo_section .owl-nav .owl-next {
     float: right;
     background-image: url(../img/indicator_right.png);
-    width: 30px;
-    height: 49px;
-    color: transparent;
-    background-size: cover;
-    display: inline-block;
     margin-right: -40px
 }
 
@@ -395,10 +393,7 @@ img.img-responsive.mobil {
     padding: 15px!important
 }
 
-.memoria_section ol {
-    padding-left: 40px!important
-}
-
+.memoria_section ol,
 .memoria_section ul {
     padding-left: 40px!important
 }
@@ -414,7 +409,6 @@ footer ul {
 }
 
 footer ul li {
-    list-style: none;
     display: inline;
     margin-right: 58px
 }
@@ -424,11 +418,7 @@ footer ul li img {
     max-height: 47px
 }
 
-footer ul .foo-1 img {
-    max-width: 183px;
-    max-height: 47px
-}
-
+footer ul .foo-1 img,
 footer ul .foo-3 img {
     max-width: 183px;
     max-height: 47px
@@ -521,7 +511,6 @@ footer .line-text {
 }
 
 .menu_vertical ul.markers li:hover:before {
-    font-weight: 700;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     text-rendering: auto;
@@ -583,20 +572,19 @@ footer .line-text {
     padding: 0 40px
 }
 
+.portada_descarga .descargar h3,
+.portada_descarga .portada h4 {
+    padding-left: 46px;
+    font-family: Raleway-Bold
+}
+
 .portada_descarga .portada {
     margin-bottom: 50px
 }
 
 .portada_descarga .portada h4 {
     color: #199eb5;
-    padding-left: 46px;
-    font-family: Raleway-Bold;
     font-size: 14px
-}
-
-.portada_descarga .descargar h3 {
-    padding-left: 46px;
-    font-family: Raleway-Bold
 }
 
 .portada_descarga .descargar ul {
@@ -629,7 +617,6 @@ footer .line-text {
 }
 
 .estudio p {
-    border-bottom: 1px solid #e5e4e4;
     padding-bottom: 40px
 }
 
@@ -646,19 +633,23 @@ footer .line-text {
     line-height: 5px
 }
 
-.estudio ul .title h2:before {
+.estudio ul .title h2:before,
+.estudio_select ul li h4:before {
     content: '.';
+    position: relative;
+    top: -7px;
+    font-size: 2px;
+    background-color: #f97c7f;
+    width: 5px;
+    height: 5px
+}
+
+.estudio ul .title h2:before {
     margin-right: 10px;
     margin-left: -20px;
     color: #f97c7f;
-    position: relative;
-    top: -7px;
     border-radius: 50%;
-    width: 5px;
-    padding: 4px;
-    font-size: 2px;
-    height: 5px;
-    background-color: #f97c7f
+    padding: 4px
 }
 
 .estudio .descarga li {
@@ -691,18 +682,11 @@ footer .line-text {
 }
 
 .estudio_select ul li h4:before {
-    content: '.';
     margin-right: 10px;
     margin-left: -20px;
     color: #f97c7f;
-    position: relative;
-    top: -7px;
     border-radius: 50%;
-    width: 5px;
-    padding: 3px 4px;
-    font-size: 2px;
-    height: 5px;
-    background-color: #f97c7f
+    padding: 3px 4px
 }
 
 .estudio_select ul li ul.alcance li:before {
@@ -773,29 +757,23 @@ footer .line-text {
     border: 2px solid #00a0b7
 }
 
+.quienes_somos table td,
 .quienes_somos table th {
     padding: 15px!important
 }
 
-.quienes_somos table td {
-    padding: 15px!important
-}
-
-.quienes_somos ol {
+.quienes_somos ol,
+.quienes_somos ul {
     padding-left: 40px!important
 }
 
-.quienes_somos ol li {
+.quienes_somos ol li,
+.quienes_somos ul li {
     padding-bottom: 5px!important
 }
 
 .quienes_somos ul {
-    padding-left: 40px!important;
     list-style: outside
-}
-
-.quienes_somos ul li {
-    padding-bottom: 5px!important
 }
 
 .memoria_section .estudio {
@@ -822,8 +800,7 @@ footer .line-text {
 .division .col-md-8 {
     width: 68.666667%;
     background-color: #f2f9fe;
-    padding: 0 35px;
-    padding-bottom: 20px
+    padding: 0 35px 20px
 }
 
 .division .col-md-4 {
@@ -900,6 +877,13 @@ footer .line-text {
     border-radius: 50%
 }
 
+.filtro .body ul li p,
+.filtro .head ul li p {
+    font-size: 13px;
+    font-family: Raleway-Regular;
+    text-transform: uppercase
+}
+
 .estudio01 .descarga .inf_archivo {
     top: 50px
 }
@@ -930,15 +914,17 @@ footer .line-text {
     list-style: none
 }
 
+#alcanceLogros,
+#menu li {
+    list-style: none!important
+}
+
 .filtro .head ul li {
     padding: 0 5px
 }
 
 .filtro .head ul li p {
-    font-family: Raleway-Regular;
     color: #e5e4e4;
-    font-size: 13px;
-    text-transform: uppercase;
     margin-top: -15px
 }
 
@@ -955,7 +941,16 @@ footer .line-text {
     margin-bottom: 10px
 }
 
-#BodyFechas div {
+.filtro .body ul,
+.filtro .body-tags ul {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+#BodyEstudios div,
+#BodyFechas div,
+#BodyTags div {
     height: 100%;
     width: 100%;
     overflow-y: auto
@@ -966,30 +961,13 @@ footer .line-text {
     height: 140px
 }
 
-#BodyTags div {
-    height: 100%;
-    width: 100%;
-    overflow-y: auto
-}
-
 #BodyEstudios {
     overflow: hidden;
     height: 410px
 }
 
-#BodyEstudios div {
-    height: 100%;
-    width: 100%;
-    overflow-y: auto
-}
-
 #alcanceLogros {
-    padding-left: 40px!important;
-    list-style: none!important
-}
-
-#menu li {
-    list-style: none!important
+    padding-left: 40px!important
 }
 
 .filtro .body,
@@ -998,16 +976,10 @@ footer .line-text {
 }
 
 .filtro .body ul {
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
     padding-left: 45px
 }
 
 .filtro .body-tags ul {
-    margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
     padding-left: 15px
 }
 
@@ -1019,11 +991,8 @@ footer .line-text {
 }
 
 .filtro .body ul li p {
-    font-size: 13px;
-    font-family: Raleway-Regular;
     margin: 0;
     color: #e5e4e4;
-    text-transform: uppercase;
     display: inline-block
 }
 
@@ -1049,32 +1018,23 @@ footer .line-text {
     overflow: hidden
 }
 
-.carousel-control {
-    opacity: 1
-}
-
-.carousel-control.left {
-    background-image: none!important
-}
-
-.carousel-control.right {
-    background-image: none!important
-}
-
-.navigator_bar {
-    display: none
-}
-
+.fa-plus,
+.navigator_bar,
 .open_menu {
     display: none
 }
 
-.no_padding {
-    padding: 0
+.carousel-control {
+    opacity: 1
 }
 
-.fa-plus {
-    display: none
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none!important
+}
+
+.no_padding {
+    padding: 0
 }
 
 @media only screen and (min-width:1023px) and (max-width:1300px) {
@@ -1124,6 +1084,9 @@ footer .line-text {
 }
 
 @media only screen and (min-width:600px) and (max-width:800px) {
+    .foo-5{
+        display: none !important;
+    }
     .estudio {
         padding-right: 40px
     }
@@ -1143,13 +1106,20 @@ footer .line-text {
 }
 
 @media only screen and (max-width:800px) {
+    .foo-5{
+        display: none !important;
+    }
+
+    footer div.container.text-align-center {
+        padding-left: 0px !important;
+    }
     .container {
         padding-left: 40px;
         padding-right: 0;
         position: relative
     }
     .styleselect {
-        background: url(../img/select_verde.png) no-repeat right;
+        background: url(../img/select_verde.png) right no-repeat;
         background-position-x: 74px;
         background-size: 23px;
         display: inline;
@@ -1219,7 +1189,7 @@ footer .line-text {
         margin-left: 15px
     }
     ul.logos li.foo-3 img {
-        max-width: 80px
+        max-width: 140px
     }
     ul.logos li.foo-4 {
         margin: 10px 25px 0
@@ -1375,17 +1345,18 @@ footer .line-text {
     }
     .dos_logo .hea-5 img {
         max-width: 140px!important;
-        margin-top: 5px
+        margin-top: 5px;
+        margin-right: 0px !important;
     }
     #CanadianFlag {
-        max-width: 120px;
+        max-width: 90px;
         max-height: 71px;
         width: auto;
         height: auto
     }
     .bid_movil {
         display: inline-block;
-        height: 27px;
+        height: 27px
     }
     .contenido h4 {
         font-size: 14.79px
@@ -1509,21 +1480,20 @@ footer .line-text {
         width: 358px;
         height: 239px
     }
-    .carousel-inner .item img.img-responsive {
+    .carousel-inner .item img.img-responsive,
+    .estudio .descarga {
         display: none
+    }
+    .estudio .mobil .inf_archivo h3,
+    .owl-item {
+        height: auto
     }
     .title h2 {
         font-size: 19px;
         padding-right: 28px
     }
-    .owl-item {
-        height: auto
-    }
     .estudio {
         padding-right: 40px
-    }
-    .estudio .descarga {
-        display: none
     }
     .estudio .descarga img {
         max-width: 100%!important
@@ -1538,8 +1508,5 @@ footer .line-text {
     }
     .estudio .mobil .inf_archivo .btn_leermas {
         margin: 0
-    }
-    .estudio .mobil .inf_archivo h3 {
-        height: auto
     }
 }

@@ -44,11 +44,16 @@ public class AuthController {
 	
 	private static final Logger LOGGER = LogManager.getLogger(AuthController.class);
 
-	private ServletContext context;
+	//private ServletContext context;
 
-	public AuthController(ServletContext context) {
+	public AuthController(/*ServletContext context*/) {
 		// TODO Auto-generated constructor stub
-		this.context = context;
+		/*this.context = context;*/
+	}
+
+	@GetMapping(value = {"", "/"})
+	public ModelAndView mainPortal() {
+		return new ModelAndView(ViewConstant.REDIRECT_INICIO);
 	}
 
 	@GetMapping(value = "/login")
@@ -90,7 +95,7 @@ public class AuthController {
 		return mav;
 	}
 
-	@GetMapping(value = {"/administracion/bienvenido","/"})
+	@GetMapping(value = {"/administracion/bienvenido"})
 	public String welcome() {
 		return "bienvenido";
 	}
@@ -122,7 +127,7 @@ public class AuthController {
 		if(session.getAttribute("idioma").equals("es")) {
 			session.setAttribute("idioma","us");
 			return "us";
-		}else {
+		} else {
 			session.setAttribute("idioma","es");
 			return "es";
 		}
@@ -159,5 +164,4 @@ public class AuthController {
 		}
 		return "-1";
 	}
-
 }

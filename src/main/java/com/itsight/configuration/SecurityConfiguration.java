@@ -32,6 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		
 		http
 		.authorizeRequests()
+		.antMatchers("/").permitAll()
 		.antMatchers("/web/**").permitAll()
 		.antMatchers("/validation/recaptcha-v2").permitAll()
 		.antMatchers("/media/**").permitAll();
