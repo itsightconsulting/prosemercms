@@ -4,11 +4,20 @@
  	  xmlns:sec="http://www.thymeleaf.org"
       th:with="version = ${#ctx.servletContext.getAttribute('version')}">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script th:attr="async=''" src="https://www.googletagmanager.com/gtag/js?id=UA-133878345-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133878345-1');
+    </script>
     <meta charset="utf-8"/>
     <meta name="_ctx" th:content="@{/}" />
     <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <title>Prosemer</title>
+    <title>Portal Prosemer</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.min.css}+'?'+${version}"/>
@@ -44,7 +53,7 @@
             <ul class="dropdown-menu">
               <li><a th:href="@{/web/en/history}">History</a></li>
               <li><a th:href="@{/web/en/objectives}">Objectives</a></li>
-              <li><a th:href="@{/web/en/organitazional-structure}">Organitazional Structure</a></li>
+              <li><a th:href="@{/web/en/organizational-structure}">Organizational Structure</a></li>
               <li><a th:href="@{/web/en/legal-framework}">Legal Framework</a></li>
             </ul>
           </li>
@@ -72,11 +81,11 @@
           <!-- FOOTER IMAGES > MOBILE -->	
         <div class="socios">
           <ul class="logos">
-            <li class="foo-1"><a target="_blank" href="http://www.minem.gob.pe/"><img 		th:src="@{/img/img1_footer.png}"/></a></li>
-          	<li class="foo-2"><a target="_blank" href="http://www.osinergmin.gob.pe/"><img 	th:src="@{/img/img2_footer.png}"/></a></li>
-          	<li class="foo-3"><a target="_blank" href="http://www.fonafe.gob.pe/"><img 		th:src="@{/img/img3_footer.png}"/></a></li>
-          	<li class="foo-4"><a target="_blank" href="https://www.petroperu.com.pe/"><img 	th:src="@{/img/img4_footer.png}"/></a></li>
-          	<li class="foo-5"><a target="_blank" href="https://www.iadb.org/en "><img 		th:src="@{/img/img5_footer.png}"/></a></li>
+            <li class="foo-1"><a target="_blank" href="http://www.minem.gob.pe/"><img 		th:src="@{/img/img1_footer.png}+'?'+${version}"/></a></li>
+          	<li class="foo-2"><a target="_blank" href="http://www.osinergmin.gob.pe/"><img 	th:src="@{/img/img2_footer.png}+'?'+${version}"/></a></li>
+          	<li class="foo-3"><a target="_blank" href="http://www.fonafe.gob.pe/"><img 		th:src="@{/img/img3_footer.png}+'?'+${version}"/></a></li>
+          	<li class="foo-4"><a target="_blank" href="https://www.petroperu.com.pe/"><img 	th:src="@{/img/img4_footer.png}+'?'+${version}"/></a></li>
+          	<li class="foo-5"><a target="_blank" href="https://www.iadb.org/en "><img 		th:src="@{/img/img5_footer.png}+'?'+${version}"/></a></li>
           </ul>
         </div>
         <!-- END FOOTER IMAGES > MOBILE -->
@@ -85,13 +94,13 @@
       <div class="container"><a href="javascript:togglemenu.mostrarMenu()" class="navigator_bar"><span class="fa fa-bars"></span></a>
         <div class="header_img">
           <ul class="un_logo">
-            <li class="hea-1" id="EnlaceInicio"><a th:href="@{/web/en}"><img th:src="@{/img/logo_prosemer.png}"/></a></li>
-            <li class="hea-2"><img th:src="@{/img/text_logo.png}" class="mobile"/></li>
+            <li class="hea-1" id="EnlaceInicio"><a th:href="@{/web/en}"><img th:src="@{/img/logo_prosemer.png}+'?'+${version}" style="width: 139px; height: 106px;"/></a></li>
+            <li class="hea-2"><img th:src="@{/img/text_logo.png}+'?'+${version}" class="mobile"/></li>
           </ul>
           <ul class="dos_logo">
-            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}"/></a></li>
-            <li class="hea-3"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}"/></a></li>
-            <li class="hea-4"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}" class="bid_movil"/></a><a href="https://www.canada.ca/en.html"><img th:src="@{/img/bandera.jpg}" height="42" width="82" id="CanadianFlag"/></a></li>
+            <li class="hea-5"><a href="http://www.mef.gob.pe"><img th:src="@{/img/ministerio.png}+'?'+${version}"/></a></li>
+            <li class="hea-3"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}+'?'+${version}"/></a></li>
+            <li class="hea-4"><a href="https://www.iadb.org/en"><img th:src="@{/img/img5_footer.png}+'?'+${version}" class="bid_movil"/></a><a href="https://www.canada.ca/en.html"><img th:src="@{/img/bandera.jpg}+'?'+${version}" height="42" width="82" id="CanadianFlag"/></a></li>
           </ul>
         </div>
       </div>
@@ -121,7 +130,7 @@
               <ul class="dropdown-menu">
                 <li><a th:href="@{/web/en/history}">HISTORY</a></li>
                 <li><a th:href="@{/web/en/objectives}">OBJECTIVES</a></li>
-                <li><a th:href="@{/web/en/organitazional-structure}">ORGANITAZIONAL STRUCTURE</a></li>
+                <li><a th:href="@{/web/en/organizational-structure}">ORGANIZATIONAL STRUCTURE</a></li>
                 <li><a th:href="@{/web/en/legal-framework}">LEGAL FRAMEWORK</a></li>
               </ul>
             </li>
@@ -216,11 +225,11 @@
     <footer>
       <div class="container">
         <ul class="logos">
-          <li class="foo-1"><a target="_blank" href="http://www.minem.gob.pe/"><img th:src="@{/img/img1_footer.png}"/></a></li>
-          <li class="foo-2"><a target="_blank" href="http://www.osinergmin.gob.pe/"><img th:src="@{/img/img2_footer.png}"/></a></li>
-          <li class="foo-3"><a target="_blank" href="http://www.fonafe.gob.pe/"><img th:src="@{/img/img3_footer.png}"/></a></li>
-          <li class="foo-4"><a target="_blank" href="https://www.petroperu.com.pe/"><img th:src="@{/img/img4_footer.png}"/></a></li>
-          <li class="foo-5"><a target="_blank" href="https://www.iadb.org/en "><img th:src="@{/img/img5_footer.png}"/></a></li>
+          <li class="foo-1"><a target="_blank" href="http://www.minem.gob.pe/"><img th:src="@{/img/img1_footer.png}+'?'+${version}"/></a></li>
+          <li class="foo-2"><a target="_blank" href="http://www.osinergmin.gob.pe/"><img th:src="@{/img/img2_footer.png}+'?'+${version}"/></a></li>
+          <li class="foo-3"><a target="_blank" href="http://www.fonafe.gob.pe/"><img th:src="@{/img/img3_footer.png}+'?'+${version}"/></a></li>
+          <li class="foo-4"><a target="_blank" href="https://www.petroperu.com.pe/"><img th:src="@{/img/img4_footer.png}+'?'+${version}"/></a></li>
+          <li class="foo-5"><a target="_blank" href="https://www.iadb.org/en "><img th:src="@{/img/img5_footer.png}+'?'+${version}"/></a></li>
         </ul>
       </div>
       <hr style="margin-top: 0px"/>
@@ -234,7 +243,7 @@
               <div class="row text-align-center"><span>Mesa de Partes: Lunes a viernes de 08:30 am a 04:30 pm</span></div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-              <img style="margin-top: 2.5%" th:src="@{/img/peru_primero.jpg}" height="30px"/>
+              <img style="margin-top: 2.5%" th:src="@{/img/peru_primero.jpg}+'?'+${version}" height="30px"/>
             </div>
           </div>
         </div>

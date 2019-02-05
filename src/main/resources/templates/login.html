@@ -1,7 +1,7 @@
 <html  lang="en-us" id="extr-page"
 	  xmlns:th="http://www.thymeleaf.org"
  	  xmlns:sec="http://www.thymeleaf.org"
-	   th:with="version = ${#ctx.servletContext.getAttribute('version')}">
+	  th:with="version = ${#ctx.servletContext.getAttribute('version')}">
 	<head>
 		<meta name="_csrf" th:attr="content=${_csrf.token}"/>
 		<!-- default header name is X-CSRF-TOKEN -->
@@ -53,7 +53,7 @@
 
 		<header id="header">
 			<div id="logo-group">
-				<span id="logo"> <img th:src="@{/img/logo-liferay.png}" alt="Liferay"/> </span>
+				<span id="logo"> <img th:src="@{/img/logo-liferay.png}+'?'+${version}" alt="Liferay"/> </span>
 			</div>
 
 			<span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Deseas ver el portal público?</span> <a th:href="@{/web/inicio}" class="btn btn-danger">Ir al Portal</a> </span>
@@ -116,7 +116,7 @@
 													<a href="javascript:void(0);" class="icon icon-prepend" title="Actualizar captcha" rel="tooltip" data-placement="top" data-original-title="Actualizar captcha">
 														<i class="fa fa-refresh" style="color: skyblue !important; font-size: 1.5em !important;" id="RefreshCaptcha"></i>
 													</a>
-													<input class="text-align-right" type="text" name="captchaCode" placeholder="Captcha" id="captchaCode"/>
+													<input class="text-align-right" type="text" name="captchaCode" placeholder="Captcha" id="captchaCode" maxlength="5"/>
 												</label>
 											</section>
 

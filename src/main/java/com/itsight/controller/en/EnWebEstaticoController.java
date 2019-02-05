@@ -315,7 +315,7 @@ public class EnWebEstaticoController {
 		return new ModelAndView(ViewConstant.EN_MAIN_OBJETIVOS);
 	}
 	
-	@GetMapping(value = "/organitazional-structure")
+	@GetMapping(value = "/organizational-structure")
 	public ModelAndView vistaEstructuraOrganizacional(
 								Model model) {
 		model.addAttribute("array", resumenService.findAllByIdIn((Integer[]) context.getAttribute("INDEX_PAGE_STUDIES_1")));
