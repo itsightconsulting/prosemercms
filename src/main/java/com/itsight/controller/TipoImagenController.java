@@ -44,19 +44,18 @@ public class TipoImagenController {
 	
 	@PostMapping(value = "/agregar")
 	public @ResponseBody String addTipoImagen(@ModelAttribute TipoImagen tipoImagen) {
-			
-			if(tipoImagen.getId() == 0 ){
-				
-				tipoImagenService.add(tipoImagen);
-				return "1";
-			}else {
-				tipoImagenService.update(tipoImagen);
-				return "2";
-			}
+		if(tipoImagen.getId() == 0 ){
+
+			tipoImagenService.add(tipoImagen);
+			return "1";
+		}else {
+			tipoImagenService.update(tipoImagen);
+			return "2";
+		}
 	}
 	
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
-	@PutMapping(value = "/actualizar-margenes")
+	@GetMapping(value = "/actualizar-margenes")
 	public @ResponseBody String actualizarMargenes(@RequestParam int id, @RequestParam Double ancho, @RequestParam Double alto) {
 		if(ancho != null && ancho > 0 && ancho != null && ancho > 0) {
 			TipoImagen ti = tipoImagenService.findOneById(id);

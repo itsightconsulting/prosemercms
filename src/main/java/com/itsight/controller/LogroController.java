@@ -205,7 +205,7 @@ public class LogroController {
 			return lstLogro;
 	}
 	
-	@PutMapping(value = "/desactivar")
+	@GetMapping(value = "/desactivar")
 	public @ResponseBody String disabled(@RequestParam(value = "id") int id, @RequestParam(required=false) List<Integer> lstIds) {
 			Logro logro = logroService.findOneById(id);
 
@@ -225,7 +225,7 @@ public class LogroController {
 			return "1";
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}/{isMultiple}")
+	@GetMapping(value = "/eliminar/{id}/{isMultiple}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id, @PathVariable(value = "isMultiple") String isMultiple){
 		boolean flagCompartido = Boolean.valueOf(isMultiple);
 		if(flagCompartido){

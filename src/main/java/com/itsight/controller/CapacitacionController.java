@@ -275,7 +275,7 @@ public class CapacitacionController {
 			return String.valueOf(contenidoWeb.getId());
 	}
 	
-	@PutMapping(value = "/desactivar")
+	@GetMapping(value = "/desactivar")
 	public @ResponseBody String disabled(@RequestParam(value = "id") int id) {
 
 			Capacitacion capacitacion = capacitacionService.findOneById(id);
@@ -504,7 +504,7 @@ public class CapacitacionController {
 		}
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id){
 		//Obteniendo el cwId para eliminar en caso la capacitacion haya sido elegido como contenido de inicio
 		Integer cwId = capacitacionService.findContenidoIdById(id);

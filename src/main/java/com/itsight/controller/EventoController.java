@@ -217,7 +217,7 @@ public class EventoController {
 		return lstEvento;
     }
 	
-	@PutMapping(value = "/desactivar")
+	@GetMapping(value = "/desactivar")
 	public @ResponseBody String disabled(@RequestParam(value = "id") int id) {
 			Evento evento = eventoService.findOneById(id);
 
@@ -382,7 +382,7 @@ public class EventoController {
 		return "1";
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id){
 		//Cascade
 		eventoService.delete(id);

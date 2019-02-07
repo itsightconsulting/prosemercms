@@ -333,7 +333,7 @@ var $table = $('#tblRegistros');
 					            
 					            $("#load_pace").show();
 					            $.ajax({
-					                type: 'PUT',
+					                type: 'GET',
 					    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 					                url: _ctx+'gestion/capacitacion/desactivar',
 					                dataType: "json",
@@ -607,7 +607,7 @@ var $table = $('#tblRegistros');
 					}
 					
 					$.ajax({
-			            type: 'DELETE',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 			            url: _ctx+'gestion/'+tipoLiteral+'/eliminar/'+contenidoMediaId,
 			            dataType: "json",
@@ -959,7 +959,7 @@ var $table = $('#tblRegistros');
 				function confirmarEliminacion(id, ix){
 					
 					$.ajax({
-			            type: 'DELETE',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 			            url: _ctx+'gestion/capacitacion/eliminar/'+id,
 			            dataType: "json",

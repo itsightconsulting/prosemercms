@@ -168,7 +168,7 @@
 				    
 				    $("#load_pace").show();
 				    $.ajax({
-				        type: 'PUT',
+				        type: 'GET',
 				        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 				        url: _ctx+'gestion/tipo-imagen/actualizar-margenes',
 				        dataType: "json",
@@ -277,7 +277,7 @@
 		            
 		            $("#load_pace").show();
 		            $.ajax({
-		                type: 'PUT',
+		                type: 'GET',
 		    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 		                url: _ctx+'gestion/slider/principal',
 		                dataType: "json",
@@ -458,7 +458,7 @@
 				function confirmarBaja(id) {
 
 				    $.ajax({
-				        type: 'DELETE',
+				        type: 'GET',
 				        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 				        url: _ctx+'gestion/slider/eliminar/' + id,
 				        dataType: "json",

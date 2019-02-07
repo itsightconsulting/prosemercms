@@ -120,7 +120,7 @@ public class SliderController {
 			return "1";
 	}
 	
-	@PutMapping(value = "/principal")
+	@GetMapping(value = "/principal")
 	public @ResponseBody String doPrincipal(@RequestParam(value = "id") int sliderId) {
 
 			sliderService.updateSlidersPrincipal(sliderId);
@@ -182,7 +182,7 @@ public class SliderController {
 		}
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String realizarBaja(@PathVariable(value = "id") int sliderId) {
 			try {
 				sliderService.delete(sliderId);

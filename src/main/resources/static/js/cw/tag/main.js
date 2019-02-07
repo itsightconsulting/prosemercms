@@ -169,7 +169,7 @@ function baja(id, tipo, index) {
 function confirmarBaja(id) {
 
     $.ajax({
-        type: 'DELETE',
+        type: 'GET',
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
         url: _ctx+'gestion/tag/eliminar/' + id,
         dataType: "json",

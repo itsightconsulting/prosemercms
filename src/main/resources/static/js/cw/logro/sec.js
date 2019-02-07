@@ -211,7 +211,7 @@
 					            }
 					            $("#load_pace").show();
 					            $.ajax({
-					                type: 'PUT',
+					                type: 'GET',
 					    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 					                url: _ctx+'gestion/logro/desactivar',
 					                dataType: "json",
@@ -285,7 +285,7 @@
 				
 				function confirmarEliminacion(id, ix, isMultiple){
 					$.ajax({
-			            type: 'DELETE',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 			            url: _ctx+'gestion/logro/eliminar/'+id+'/'+isMultiple,
 			            dataType: "json",

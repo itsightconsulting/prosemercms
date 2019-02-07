@@ -331,7 +331,7 @@
 
 					            $("#load_pace").show();
 					            $.ajax({
-					                type: 'PUT',
+					                type: 'GET',
 					    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 					                url: _ctx+'gestion/estudio/desactivar',
 					                dataType: "json",
@@ -609,7 +609,7 @@
 					}
 
 					$.ajax({
-			            type: 'DELETE',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/'+tipoLiteral+'/eliminar/'+contenidoMediaId,
 			            dataType: "json",
@@ -1073,7 +1073,7 @@
 
 				function preEliminacionAfterVerificario(id, ix, s){
 					$.ajax({
-			            type: 'PUT',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/estudio/relacion/deshacer/'+id+'/'+s,
 			            dataType: "json",
@@ -1100,7 +1100,7 @@
 				function confirmarEliminacionAfterVerificacion(id, ix){
 
 					$.ajax({
-			            type: 'DELETE',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 			            url: _ctx+'gestion/estudio/eliminar/'+id,
 			            dataType: "json",

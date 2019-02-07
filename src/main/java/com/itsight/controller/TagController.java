@@ -71,7 +71,7 @@ public class TagController {
 		return "1";
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id){
 		tagService.delete(id);
 		return "1";

@@ -34,7 +34,7 @@ public class ContenidoImagenController {
 		return contenidoImagenService.findAllByContenidoWebId(contenidoWebId);
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id){
 		contenidoImagenService.delete(id);
 		return "1";

@@ -304,7 +304,7 @@ public class EstudioController {
 		return lstEstudio;
 	}
 	
-	@PutMapping(value = "/desactivar")
+	@GetMapping(value = "/desactivar")
 	public @ResponseBody String disabled(@RequestParam(value = "id") int id) {
 		Estudio estudio = estudioService.findOneById(id);
 		int cwId = estudio.getContenidoWeb().getId();
@@ -608,7 +608,7 @@ public class EstudioController {
 		}
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id){
 		//Obteniendo el cwId para eliminar en caso la capacitacion haya sido elegido como contenido de inicio
 		Integer cwId = estudioService.findContenidoIdById(id);
@@ -675,7 +675,7 @@ public class EstudioController {
 		}
 	}
 	
-	@PutMapping(value = "/relacion/deshacer/{id}/{strategy}")
+	@GetMapping(value = "/relacion/deshacer/{id}/{strategy}")
 	public @ResponseBody String verificarRelaciones(@PathVariable(value = "id") int id, @PathVariable(value = "strategy") int strategy){
 		//Obteniendo el cwId para eliminar en caso la capacitacion haya sido elegido como contenido de inicio
 		switch (strategy) {

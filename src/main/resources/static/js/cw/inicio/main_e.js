@@ -85,7 +85,7 @@ var $table = $('#tblRegistros');
 					            
 					            $("#load_pace").show();
 					            $.ajax({
-					                type: 'PUT',
+					                type: 'GET',
 					    	        contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 					                url: _ctx+'gestion/contenido-web/desactivar/inicio',
 					                dataType: "json",

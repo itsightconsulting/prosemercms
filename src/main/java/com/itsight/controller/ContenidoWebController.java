@@ -116,7 +116,7 @@ public class ContenidoWebController {
 	}
 	
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
-	@PutMapping(value = "/desactivar/inicio")
+	@GetMapping(value = "/desactivar/inicio")
 	public @ResponseBody String disabledContentForInitPage(
 								@RequestParam(value = "id") int id,
 								@RequestParam(value = "tipoContenido") int tipoContenido, 

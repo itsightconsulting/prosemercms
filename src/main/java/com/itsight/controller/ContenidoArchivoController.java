@@ -33,7 +33,7 @@ public class ContenidoArchivoController {
 		return contenidoArchivoService.findAllByContenidoWebId(contenidoWebId);
 	}
 	
-	@DeleteMapping(value = "/eliminar/{id}")
+	@GetMapping(value = "/eliminar/{id}")
 	public @ResponseBody String eliminar(@PathVariable(value = "id") int id){
 		contenidoArchivoService.delete(id);
 		return "1";

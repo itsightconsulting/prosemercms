@@ -330,7 +330,7 @@
 					}
 					
 					$.ajax({
-			            type: 'DELETE',
+			            type: 'GET',
 			            contentType : "application/x-www-form-urlencoded; charset=UTF-8",    
 			            url: '/gestion/'+tipoLiteral+'/eliminar/'+contenidoMediaId,
 			            dataType: "json",
