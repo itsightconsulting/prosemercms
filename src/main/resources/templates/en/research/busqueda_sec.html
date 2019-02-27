@@ -54,11 +54,11 @@
             <div class="contenido estudio_select quienes_somos logros_section">
               <div class="title">
               	<label id="BeneficiarioId" th:text="${beneficiarioId}" hidden="hidden"></label>
-                <h2><strong th:text="${beneficiario}"></strong></h2><img th:src="@{/img/line.png}" class="guion"/>
+                <h2 class="itz" th:text="${beneficiario}"></h2><img th:src="@{/img/line.png}" class="guion"/>
               </div>
               <div id="Coincidencias">
 	              <div class="estudio01" th:each="r : ${lstEstudios}"><a th:href="@{/} + ${r.url + r.id}" class="title">
-	                  <h2><strong th:text="${r.titulo}"></strong></h2></a>
+	                  <h2 class="itz" th:text="${r.titulo}"></h2></a>
 	              </div>
               </div>
             </div>

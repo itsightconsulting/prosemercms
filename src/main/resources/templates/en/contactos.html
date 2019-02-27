@@ -8,18 +8,34 @@
     <meta name="_ctx" th:content="@{/}" />
     <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, miminum-scale=1, user-scalable=no" name="viewport"/>
-    <title>Search of researches | Portal Prosemer | Perú</title>
+    <title>Prosemer's Contacts | Portal Prosemer | Perú </title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.min.css}+'?'+${version}"/>
     <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}"/>
   </head>
+  <style type="text/css">
+  .modal-header {border:none; text-align: center; font-size: 1.4em;font-family: 'Raleway-Regular';background: #bfc8d0;color: white;}
+  .modal-footer {text-align:left;}
+  .modal-footer .pull-left{font-family: 'Raleway-Regular';}
+  </style>
   <body>
     <!-- HEADER -->
     <header th:replace="html-commons/en_header_web :: en-fg-header">
     </header>
     <!-- END HEADER -->
     <div onclick="togglemenu.ocultarMenu()">
+      <style type="text/css">
+        .filtro {
+        	display: none;
+        }
+        .articulo_section .owl-nav {
+            top: 72px;
+        }
+        .owl-item {
+            height: auto;
+        }
+      </style>
       <div class="container">
         <div class="buscador">
           <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
@@ -32,57 +48,36 @@
           </div>
           <div class="icon"><a th:href="@{/web/en/research/search}"><img th:src="@{/img/lupa.png}"/></a></div>
         </div>
-        <div class="row pd_right division">
+        <div class="row division">
           <div class="col-md-4">
             <!-- MENU VERTICAL -->
             <div th:replace="html-commons/en_menu_web :: en-fg-menu-vertical">
             </div>
             <!-- END MENU VERTICAL -->
-            <div class="filtro">
-              <div class="head">
-                <ul>
-                  <li>
-                    <p>RESEARCH DATES</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="body" id="BodyFechas">
-              </div>
-            </div>
-            <div class="filtro">
-              <div class="head">
-                <ul>
-                  <li>
-                    <p>Tags<span></span></p>
-                  </li>
-                </ul>
-              </div>
-              <div class="body-tags" id="BodyTags">
-              	<div>
-				  	<ul class="list-inline">
-					</ul>
-				</div>
-             </div>
-            </div>
           </div>
           <div class="col-md-8">
-            <div class="contenido">
-              <div class="search">
-                <div class="title">
-                  <h2>Research <strong>search</strong></h2>
-                </div>
-                <div class="buscador_estudio">
-                  <label id="Alerta" class="text-danger" style="display:none;">At least <span class="badge">3</span> letters are required for the searching</label><br/>
-                  <input id="Titulo" placeholder="SEARCH" type="text" class="form-control"/><a id="btnConsultar" href="javascript:void(0);"><span class="fa fa-search"></span></a>
-                </div>
-              </div>
-              <div id="Coincidencias">
-	              <div class="estudio01" th:each="r : ${lstEstudios}"><a th:href="@{/} + ${r.url + r.id}" class="title">
-	                  <h2 class="itz" th:text="${r.titulo}"></h2></a>
+	          <div class="contenido estudio_select quienes_somos">
+	              <div class="title">
+	                <h2 class="itz" th:utext="${contacto.nombreMenu}">Contactos</h2>
+	              </div><img th:src="@{/img/line.png}" class="guion"/>
+	              <div>
+	              	<p th:utext="${contacto.contenido}">Texto</p>
 	              </div>
-              </div>
-            </div>
-          </div>
+	          </div>
+	      </div>
+        </div>
+        <div class="otros">
+          <h4>Could <strong>also interest you.</strong></h4>
+        </div>
+        <div class="articulo_section">
+          <ul id="simple" class="owl-carousel">
+              <li th:each="s,i : ${array}">
+                <div class="contenido"><img th:src="@{/} + 'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/>
+                  <h3> <a th:href="@{/} + ${s.url} + ${s.id}"><strong th:text="${s.titulo}">fotovoltaicos aislados</strong></a></h3><img th:src="@{/img/line.png}" class="guion"/>
+                  <p th:text="${s.resumen}"></p>
+                </div>
+              </li>
+           </ul>
         </div>
       </div>
     </div>
@@ -92,6 +87,5 @@
     <!-- END FOOTER  -->
     <script th:src="@{/js/public/vendor/vendor_all.js}+'?'+${version}" type="text/javascript"></script><!--[if lte IE 8]><script src="/static/js/ie/respond.min.js"></script><![endif]-->
     <script th:src="@{/js/public/init.js}+'?'+${version}"></script>
-    <script th:src="@{/js/cw/estudio/search.js}+'?'+${version}"></script>
   </body>
 </html>

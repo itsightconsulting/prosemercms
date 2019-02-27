@@ -18,6 +18,7 @@ public class ViewConstant {
 	public static final String MAIN_ESTRUCTURA_ORGANIZACIONAL = "estructura_organizacional";
 	public static final String MAIN_MARCOLEGAL = "marco_legal";
 	public static final String MAIN_MEMORIA_DEL_PROYECTO = "memoria";
+	public static final String MAIN_CONTACTOS = "contactos";
 
 	
 	//PROSEMER
@@ -45,6 +46,7 @@ public class ViewConstant {
 	public static final String EN_MAIN_OBJETIVOS = "en/objetivos";
 	public static final String EN_MAIN_ESTRUCTURA_ORGANIZACIONAL = "en/estructura_organizacional";
 	public static final String EN_MAIN_MARCOLEGAL = "en/marco_legal";
+	public static final String EN_MAIN_CONTACTOS = "en/contactos";
 
 	public static final String MAIN_PROJECT_MEMORY = "en/memoria";
 	

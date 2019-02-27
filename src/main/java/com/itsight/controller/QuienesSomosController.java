@@ -62,7 +62,7 @@ public class QuienesSomosController {
 	public @ResponseBody String addWhoAreUs(
 							@ModelAttribute QuienesSomos quienesSomos) {
 		
-		if(quienesSomos.getId()>0 && quienesSomos.getId()<5) {
+		if(quienesSomos.getId()>0 && quienesSomos.getId()<6) {
 			QuienesSomos qQuienesSomos = quienesSomosService.findOneById(quienesSomos.getId());
 			qQuienesSomos.setContenido(quienesSomos.getContenido());
 			qQuienesSomos.setFechaModificacion();

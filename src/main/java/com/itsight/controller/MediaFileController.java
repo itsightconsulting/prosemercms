@@ -109,7 +109,6 @@ public class MediaFileController {
 												@PathVariable String uuidName) throws IOException {
 		File serverFile = new File(
 				mainRoute + "/Eventos/Archivos/" + contenidoWebId + "/" + uuidName);
-		
 		if(!serverFile.exists()) {
 			return new ResponseEntity<>("No se ha encontrado el archivo, comuníquese con el administrador. Gracias por su compresión.".getBytes(), HttpStatus.NO_CONTENT);
 		}
@@ -183,7 +182,7 @@ public class MediaFileController {
 			headers.setContentDispositionFormData("Generic File", documentName);	
 		}
 		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
-		ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(contents, headers, HttpStatus.OK);
+		ResponseEntity<byte[]> response = new ResponseEntity<>(contents, headers, HttpStatus.OK);
 		return response;
 	}
 	

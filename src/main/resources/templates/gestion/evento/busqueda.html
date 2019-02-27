@@ -88,7 +88,7 @@
               </div>
               <div id="Coincidencias">
 	              <div class="estudio01" th:each="e : ${lstEventos}"><a th:href="@{/} + ${e.url + e.id}" class="title">
-	                  <h2><strong th:text="${e.titulo}"></strong></h2></a>
+	                  <h2 class="itz" th:text="${e.titulo}"></h2></a>
 	                  <p class="form-group" th:text="${e.resumenRaw}">summary...</p>
 	              </div>
               </div>

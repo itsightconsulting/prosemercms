@@ -35,7 +35,7 @@ function busquedaPorFecha(fecha){
 			            	data.forEach((r, i) => {
 			            		estudiosRaw +=`<div class='estudio01'>
 			            							<a href='${_ctx + r.url + r.id}' class='title'>
-			            								<h2><strong>${r.titulo}</strong></h2>
+			            								<h2 class="itz">${r.titulo}</h2>
 			            							</a>
 			            					   </div>`;
 			            	});

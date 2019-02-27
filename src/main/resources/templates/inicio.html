@@ -16,7 +16,7 @@
     <meta name="_ctx" th:content="@{/}" />
     <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
-    <title>Portal Prosemer</title>
+    <title>Prosemer</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.min.css}+'?'+${version}"/>
@@ -75,6 +75,7 @@
           </li>
           <li><a th:href="@{/web/capacitacion/busqueda}">Capacitaciones</a></li>
           <li><a th:href="@{/web/evento/busqueda}">Eventos</a></li>
+          <li><a th:href="@{/web/contactos}">Contactos</a></li>
           <!-- END MOBILE MENU -->
         </ul>
           <!-- FOOTER IMAGES > MOBILE -->
@@ -152,6 +153,7 @@
 	        </li>
             <li> <a th:href="@{/web/capacitacion/busqueda}">CAPACITACIONES</a></li>
             <li> <a th:href="@{/web/evento/busqueda}">EVENTOS</a></li>
+            <li> <a th:href="@{/web/contactos}">CONTACTOS</a></li>
           </ul>
           <div class="buscador">
             <div class="idioma"><img th:src="@{/img/linea_buscar.jpg}"/>
@@ -170,7 +172,7 @@
             </div>
             <ul id="simple" class="owl-carousel">
               <li th:each="s,i : ${array}">
-                <div class="contenido"><a th:href="@{/}+${s.url} + ${s.id}"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/></a>
+                <div class="contenido"><a th:href="@{/}+${s.url} + ${s.id}"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" th:alt="${s.titulo}" class="img-responsive"/></a>
                   <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
                   <p th:text="${s.resumen}"></p><a th:href="@{/}+${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
                 </div>
@@ -183,7 +185,7 @@
             </div>
             <ul id="simple" class="owl-carousel">
               <li th:each="s,i : ${array1}">
-                <div class="contenido"><a th:href="@{/}+${s.url} + ${s.id}"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" class="img-responsive"/></a>
+                <div class="contenido"><a th:href="@{/}+${s.url} + ${s.id}"><img th:src="@{/}+'media/image/estudio'+${s.rutaImagenPortada}" th:alt="${s.titulo}" class="img-responsive"/></a>
                   <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
                   <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
                 </div>
@@ -202,17 +204,17 @@
             <p th:text="${memoria.resumen}"></p><a th:href="@{/web/memoria-del-programa}" class="btn_leermas">LEER MÁS</a>
           </div>
           <div class="col-md-3"></div>
-          <div class="col-md-5 imagen no_padding"><a th:href="@{/web/memoria-del-programa}"><img th:src="@{/}+'media/image/memoria'+${memoria.rutaImagenPortada}" class="img-responsive"/></a></div>
+          <div class="col-md-5 imagen no_padding"><a th:href="@{/web/memoria-del-programa}"><img th:src="@{/}+'media/image/memoria'+${memoria.rutaImagenPortada}" alt="Memoria del programa" class="img-responsive"/></a></div>
         </div>
       </div>
       <div class="container">
         <div class="articulo_section section3">
           <div class="title">
-            <h2><strong>Capacitaciones</strong></h2>
+            <h2 class="itz">Capacitaciones</h2>
           </div>
           <ul id="simple" class="owl-carousel">
           	<li th:each="s,i : ${array2}">
-                <div class="contenido"><a th:href="@{/} + ${s.url} + ${s.id}"><img th:src="@{/}+'media/image/capacitacion'+${s.rutaImagenPortada}" class="img-responsive"/></a>
+                <div class="contenido"><a th:href="@{/} + ${s.url} + ${s.id}"><img th:src="@{/}+'media/image/capacitacion'+${s.rutaImagenPortada}"  th:alt="${s.titulo}" class="img-responsive"/></a>
                   <h3> <strong th:text="${s.titulo}">fotovoltaicos aislados</strong></h3><img th:src="@{/img/line.png}" class="guion"/>
                   <p th:text="${s.resumen}"></p><a th:href="@{/} + ${s.url} + ${s.id}" class="plus"><span class="fa fa-plus"></span></a>
                 </div>

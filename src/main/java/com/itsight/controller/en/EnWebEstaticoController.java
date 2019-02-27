@@ -330,6 +330,14 @@ public class EnWebEstaticoController {
 		model.addAttribute("marco", quienesSomosService.findOneById(4));
 		return new ModelAndView(ViewConstant.EN_MAIN_MARCOLEGAL);
 	}
+
+	@GetMapping(value = "/contacts")
+	public ModelAndView vistaContactos(
+			Model model) {
+		model.addAttribute("array", resumenService.findAllByIdIn((Integer[]) context.getAttribute("INDEX_PAGE_STUDIES_1")));
+		model.addAttribute("contacto", quienesSomosService.findOneById(5));
+		return new ModelAndView(ViewConstant.EN_MAIN_CONTACTOS);
+	}
 	
 	@GetMapping(value = "/program-memory")
 	public ModelAndView vistaMemoriaDelPrograma(//Memoria del proyecto == Memoria del programa

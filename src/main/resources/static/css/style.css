@@ -1,3 +1,7 @@
+.itz{
+    font-weight: bold
+}
+
 .articulo_section #simple li,
 footer ul li {
     list-style: none
@@ -204,7 +208,7 @@ img.img-responsive.mobil {
     display: inline-block;
     margin-top: 20px;
     text-align: center;
-    margin-right: 80px
+    margin-right: 52px
 }
 
 .buscador .icon,
@@ -1045,7 +1049,7 @@ footer .line-text {
         max-width: 222px
     }
     .menu li {
-        margin-right: 58px
+        margin-right: 28px
     }
     .header_img ul.dos_logo {
         float: right;

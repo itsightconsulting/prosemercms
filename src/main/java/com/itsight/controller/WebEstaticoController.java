@@ -292,6 +292,14 @@ public class WebEstaticoController {
 		model.addAttribute("marco", quienesSomosService.findOneById(4));
 		return new ModelAndView(ViewConstant.MAIN_MARCOLEGAL);
 	}
+
+	@GetMapping(value = "/contactos")
+	public ModelAndView vistaContactos(
+			Model model) {
+		model.addAttribute("array", resumenService.findAllByIdIn((Integer[]) context.getAttribute("INDEX_PAGE_STUDIES_1")));
+		model.addAttribute("contacto", quienesSomosService.findOneById(5));
+		return new ModelAndView(ViewConstant.MAIN_CONTACTOS);
+	}
 	
 	@GetMapping(value = "/memoria-del-programa")
 	public ModelAndView vistaMemoriaDelPrograma(//Memoria del proyecto == Memoria del programa
