@@ -5,10 +5,11 @@
       th:with="version = ${#ctx.servletContext.getAttribute('version')}">
   <head>
     <meta charset="utf-8"/>
+    <meta name="description" th:content="${evento.tituloLargo}"/>
     <meta name="_ctx" th:content="@{/}" />
     <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, miminum-scale=1, user-scalable=no" name="viewport"/>
-    <title th:text="${evento.tituloLargo} + ' | Portal Prosemer | Perú '"></title>
+    <title th:text="${evento.tituloLargo} + ' | PROSEMER | Perú '"></title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/public/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/style.min.css}+'?'+${version}"/>
